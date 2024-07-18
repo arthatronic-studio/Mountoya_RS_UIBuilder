@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../uibuilder/images/node-blue.ico">
+
+    <title>Blank template - Node-RED uibuilder</title>
+    <meta name="description" content="Node-RED uibuilder - Blank template">
+
+    <!-- Your own CSS (defaults to loading uibuilders css)-->
+    <link type="text/css" rel="stylesheet" href="./index.css" media="all">
+
+    <!-- #region Supporting Scripts. These MUST be in the right order. Note no leading / -->
+    <script defer src="../uibuilder/uibuilder.iife.min.js"></script>
+    <!-- <script defer src="./index.js">/* OPTIONAL: Put your custom code in that */</script> -->
+    <!-- #endregion -->
+    <title>Konfirmasi Pemilihan</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .container {
+            background-color: lightgray;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Anda Memilih 250 ml HOT</h2>
+        <p>dengan harga Rp. 0</p>
+        <p>Klik tombol next jika yakin</p>
+    </div>
+    <button class="btn btn-secondary" id="backButton" ui_control="button" ui_button="button" ui_button_label="BACK" ui_button_color="#6c757d" ui_button_style="rounded" ui_button_payload="back">BACK</button>
+    <button class="btn btn-secondary" id="nextButton" ui_control="button" ui_button="button" ui_button_label="NEXT" ui_button_color="#6c757d" ui_button_style="rounded" ui_button_payload="next">NEXT</button>
+    <script src="tk250mlh.js"></script>
+</body>
+
+</html>

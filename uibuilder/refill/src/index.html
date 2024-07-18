@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" href="../uibuilder/images/node-blue.ico">
+
+    <title>Blank template - Node-RED uibuilder</title>
+    <meta name="description" content="Node-RED uibuilder - Blank template">
+
+    <!-- Your own CSS (defaults to loading uibuilders css)-->
+    <link type="text/css" rel="stylesheet" href="./index.css" media="all">
+
+    <!-- #region Supporting Scripts. These MUST be in the right order. Note no leading / -->
+    <script defer src="../uibuilder/uibuilder.iife.min.js"></script>
+    <!-- <script defer src="./index.js">/* OPTIONAL: Put your custom code in that */</script> -->
+    <!-- #endregion -->
+
+</head><body>
+
+    <header>
+        <figure class="logo">
+            <img src="images/logo.svg" alt="">
+        </figure>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="">MENU</a></li>
+                <li><a href="">PERUSAHAAN</a></li>
+                <li><a href="">PRODUK</a></li>
+                <li><a href="">APLIKASI</a></li>
+                <li><a href="">KEMITRAAN</a></li>
+                <li><a href="">KARIR</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="carousel next">
+            <div class="list">
+                <article class="item other_1">
+                    <div class="main-content"
+                    style="background-color: #fff;">
+                        <div class="content">
+                            <h3>Punya Indonesia</h3>
+                            <h2>Pertama Tanpa Label Plastik</h2>
+                            <p class="description">
+                                Mountoya hadir sebagai pelopor air mineral dengan kemasan tanpa label plastik pertama di Indonesia
+                            </p>
+                            <button class="Refill" id="refill1">
+                                Refill
+                            </button>
+                        </div>
+                    </div>
+                    <figure class="image">
+                        <img src="images/20221111064804.webp">
+                        <figcaption>Pertama Tanpa Label Plastik</figcaption>
+                    </figure>
+                </article>
+                <article class="item active">
+                    <div class="main-content"
+                    style="background-color: #A9A9A9 ;">
+                        <div class="content">
+                            <h3>Our Products</h3>
+                            <h2>From Mout to You</h2>
+                            <p class="description">
+                               Bersumber dari mata air Cipaniis, Gunung Ciremai, air mineral
+                               Mountoya diproduksi secara higenis melalui serangkaian proses teruji
+                               dan tersertifikasi untuk menjamin mutu dan kualitas produknya hingga
+                               sampai ke konsumen.
+                            </p>
+                            <button class="Refill" id="refill2">
+                                Refill
+                            </button>
+                        </div>
+                    </div>
+                    <figure class="image">
+                        <img src="images/20221117073043.webp" alt="">
+                        <figcaption>From Mout to You</figcaption>
+                    </figure>
+                </article>
+                <article class="item other_2">
+                    <div class="main-content"
+                    style="background-color: #808080;">
+                        <div class="content">
+                            <h3>Mountoya Apps</h3>
+                            <h2>Mudah, Cepat, Praktis</h2>
+                            <p class="description">
+                                Aplikasi Mountoya hadir untuk memberikan kemudahan dan 
+                                kenyamanan bagi konsumen dalam memperoleh produk Mountoya
+                                dengan experience yang berbeda
+                            </p>
+                            <button class="Refill"  id="refill3">
+                                Refill
+                            </button>
+                        </div>
+                    </div>
+                    <figure class="image">
+                        <img src="images/20221111064819.webp" alt="">
+                        <figcaption>Mudah, Cepat, Praktis</figcaption>
+                    </figure>
+                </article>
+                <article class="item">
+                    <div class="main-content"
+                    style="background-color: #808080;">
+                        <div class="content">
+                            <h3>.</h3>
+                            <h2>...</h2>
+                            <p class="description">
+                                .........
+                            </p>
+                            <button class="Refill"  id="refill4">
+                                Refill
+                            </button>
+                        </div>
+                    </div>
+                    <figure class="image">
+                        <img src="images/20221228104546.webp" alt="">
+                        <figcaption>...</figcaption>
+                    </figure>
+                </article>
+            </div>
+            <div class="arrows">
+                <button id="prev"><</button>
+                <button id="next">></button>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body></html>

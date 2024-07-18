@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../uibuilder/images/node-blue.ico">
+    <title>refill</title>
+    <meta name="description" content="Node-RED uibuilder - Refill">
+    <link type="text/css" rel="stylesheet" href="./index.css" media="all">
+    <script defer src="../uibuilder/uibuilder.iife.min.js"></script>
+    <script defer src="../uibuilder/vendor/socket.io/socket.io.js"></script>
+    <script defer src="../uibuilder/uibuilderfe.min.js"></script>
+    <script defer src="./index.js"></script>
+</head>
+
+<body class="uib">
+    <div style="text-align:center; margin-top: 20px;">
+        <h1>Proses Refill</h1>
+        <br>
+        <div style="display:flex; justify-content:center; gap:20px;">
+            <div id="button1Container">
+                <!-- Button 1 will be dynamically shown/hidden here -->
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-secondary" id="homeButton" ui_control="button" ui_button="button" ui_button_label="HOME" ui_button_color="#6c757d" ui_button_style="rounded" ui_button_payload="home">HOME</button>
+    <script src="../uibuilder/uibuilder.iife.min.js"></script>
+    <script src="r250mln.js"></script>
+</body>
+
+</html>

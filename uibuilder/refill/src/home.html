@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../uibuilder/images/node-blue.ico">
+
+    <title>Blank template - Node-RED uibuilder</title>
+    <meta name="description" content="Node-RED uibuilder - Blank template">
+
+    <!-- Your own CSS (defaults to loading uibuilders css)-->
+    <link type="text/css" rel="stylesheet" href="./index.css" media="all">
+
+    <!-- #region Supporting Scripts. These MUST be in the right order. Note no leading / -->
+    <script defer src="../uibuilder/uibuilder.iife.min.js"></script>
+    <!-- <script defer src="./index.js">/* OPTIONAL: Put your custom code in that */</script> -->
+    <!-- #endregion -->
+
+</head>
+
+<body class="uib">
+
+    <h1 class="with-subtitle">uibuilder Blank Template</h1>
+    <div role="doc-subtitle">Using the IIFE library.</div>
+
+    <div id="more">
+        <!-- '#more' is used as a parent for dynamic HTML content in examples -->
+    </div>
+
+    <div style="text-align:center;">
+        <h1>Pilih volume air yang ingin di refill</h1>
+        <br>
+        <div style="display:flex; justify-content:center; gap:20px;">
+            <div>
+                <h3>HOT</h3>
+                <button class="btn btn-primary" style="width:100px; margin-bottom:10px;" id="hot_250ml" ui_control="button" ui_button="button" ui_button_label="250 ml" ui_button_color="#007bff" ui_button_style="rounded" ui_button_payload="hot_250ml">250 ml</button>
+                <button class="btn btn-primary" style="width:100px;" id="hot_500ml" ui_control="button" ui_button="button" ui_button_label="500 ml" ui_button_color="#007bff" ui_button_style="rounded" ui_button_payload="hot_500ml">500 ml</button>
+            </div>
+            <div>
+                <h3>NORMAL</h3>
+                <button class="btn btn-primary" style="width:100px; margin-bottom:10px;" id="normal_250ml" ui_control="button" ui_button="button" ui_button_label="250 ml" ui_button_color="#007bff" ui_button_style="rounded" ui_button_payload="normal_250ml">250 ml</button>
+                <button class="btn btn-primary" style="width:100px;" id="normal_500ml" ui_control="button" ui_button="button" ui_button_label="500 ml" ui_button_color="#007bff" ui_button_style="rounded" ui_button_payload="normal_500ml">500 ml</button>
+            </div>
+            <div>
+                <h3>COLD</h3>
+                <button class="btn btn-primary" style="width:100px; margin-bottom:10px;" id="cold_250ml" ui_control="button" ui_button="button" ui_button_label="250 ml" ui_button_color="#007bff" ui_button_style="rounded" ui_button_payload="cold_250ml">250 ml</button>
+                <button class="btn btn-primary" style="width:100px;" id="cold_500ml" ui_control="button" ui_button="button" ui_button_label="500 ml" ui_button_color="#007bff" ui_button_style="rounded" ui_button_payload="cold_500ml">500 ml</button>
+            </div>
+        </div>
+        <br>
+        <button class="btn btn-secondary" id="backButton" ui_control="button" ui_button="button" ui_button_label="BACK" ui_button_color="#6c757d" ui_button_style="rounded" ui_button_payload="back">BACK</button>
+    </div>
+    <script src="homeapp.js"></script>
+</body>
+
+</html>
