@@ -230,13 +230,14 @@ header nav {
     }
 }
 
+/* next */
 .next .item.other_1 {
     z-index: 1;
 }
 
 .next .item .image img,
 .next .item .image figcaption {
-    animation: effectNext, 5s ease-in-out 1 forwards;
+    animation: effectNext 0.5s ease-in-out 1 forwards;
 }
 
 @keyframes effectNext {
@@ -261,7 +262,7 @@ header nav {
 
 .next .item.other_2 .image {
     z-index: 3;
-    --transform-from: calc(var(--w-image) *2);
+    --transform-from: calc(var(--w-image) * 2);
 }
 
 .arrows {
@@ -296,7 +297,7 @@ header nav {
 
 .prev .list .item.other_2 .image {
     z-index: 3;
-    --transform-from: var(--w-image)
+    --transform-from: var(--w-image);
 }
 
 .prev .list .item.other_2 .main-content {
@@ -336,3 +337,7 @@ header nav {
         justify-content: center;
     }
 }
+
+@media screen and (max-width: 768px) and (max-height: 1366px) and (orientation: portrait) {
+    :root {
+        --
