@@ -905,7 +905,7 @@
         "z": "ece55f4e9035206b",
         "g": "eed0de0baca1cfc6",
         "name": "",
-        "pin": "8",
+        "pin": "25",
         "intype": "tri",
         "debounce": "25",
         "read": false,
