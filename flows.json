@@ -70,7 +70,7 @@
         "z": "ece55f4e9035206b",
         "g": "eed0de0baca1cfc6",
         "name": "IR Sensor",
-        "pin": "17",
+        "pin": "18",
         "intype": "up",
         "debounce": "25",
         "read": false,
