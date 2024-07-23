@@ -934,7 +934,7 @@
         "name": "",
         "pin": "8",
         "set": true,
-        "level": "0",
+        "level": "1",
         "freq": "",
         "out": "out",
         "bcm": true,
