@@ -57,7 +57,8 @@
             "c8b5177e5627a8b3",
             "e77abeba744d18db",
             "e035a217b107e934",
-            "7f37e1e96dbf9188"
+            "7f37e1e96dbf9188",
+            "1a1ba2d820875aca"
         ],
         "x": -16,
         "y": -1,
@@ -80,7 +81,8 @@
         "wires": [
             [
                 "2c513135fddb56ea",
-                "6b81064160933238"
+                "6b81064160933238",
+                "1a1ba2d820875aca"
             ]
         ]
     },
@@ -923,5 +925,21 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "1a1ba2d820875aca",
+        "type": "rpi-gpio out",
+        "z": "ece55f4e9035206b",
+        "g": "eed0de0baca1cfc6",
+        "name": "",
+        "pin": "8",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 120,
+        "y": 340,
+        "wires": []
     }
 ]
