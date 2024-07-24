@@ -57,9 +57,7 @@
             "c8b5177e5627a8b3",
             "e77abeba744d18db",
             "e035a217b107e934",
-            "7f37e1e96dbf9188",
-            "dbbb3a5cd90828ae",
-            "722db7da23f29023"
+            "7f37e1e96dbf9188"
         ],
         "x": -16,
         "y": -1,
@@ -897,42 +895,6 @@
         ],
         "x": 1885,
         "y": 520,
-        "wires": []
-    },
-    {
-        "id": "dbbb3a5cd90828ae",
-        "type": "rpi-gpio in",
-        "z": "ece55f4e9035206b",
-        "g": "eed0de0baca1cfc6",
-        "name": "",
-        "pin": "25",
-        "intype": "tri",
-        "debounce": "25",
-        "read": false,
-        "bcm": true,
-        "x": 510,
-        "y": 60,
-        "wires": [
-            [
-                "722db7da23f29023"
-            ]
-        ]
-    },
-    {
-        "id": "722db7da23f29023",
-        "type": "debug",
-        "z": "ece55f4e9035206b",
-        "g": "eed0de0baca1cfc6",
-        "name": "debug 34",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 680,
-        "y": 60,
         "wires": []
     }
 ]
