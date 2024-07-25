@@ -307,7 +307,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 6,
-        "x": 980,
+        "x": 960,
         "y": 260,
         "wires": [
             [
