@@ -1,8 +1,31 @@
-/** The simplest use of uibuilder client library
- * See the docs if the client doesn't start on its own.
- */
+document.getElementById('start-button').addEventListener('click', function() {
+  window.location.href = 'home.html';
+})
 
-// Listen for incoming messages from Node-RED and action
-// uibuilder.onChange('msg', (msg) => {
-//     // do stuff with the incoming msg
-// })
+document.addEventListener('DOMContentLoaded', function() {
+  const slideshow = document.createElement('div');
+  slideshow.classList.add('slideshow');
+  
+  const images = [
+      './images/homepage-1.png',
+      './images/homepage-2.png',
+      './images/homepage-3.png'
+  ];
+
+  images.forEach((src) => {
+      const img = document.createElement('img');
+      img.src = src;
+      slideshow.appendChild(img);
+  });
+
+  document.querySelector('main').appendChild(slideshow);
+
+  let currentIndex = 0;
+
+  function showNextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      slideshow.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+
+  setInterval(showNextImage, 5000);
+});

@@ -1,1 +1,4 @@
 *.backup
+node_modules/
+.config.*
+lib/
