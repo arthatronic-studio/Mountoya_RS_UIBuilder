@@ -144,7 +144,7 @@
         "z": "ece55f4e9035206b",
         "g": "eed0de0baca1cfc6",
         "name": "debug 27",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
