@@ -2,7 +2,11 @@
     "name": "TS",
     "description": "REFILL",
     "version": "0.0.1",
-    "dependencies": {},
+    "dependencies": {
+        "node-red-contrib-uibuilder": "^6.8.2",
+        "node-red-node-pi-gpio": "^2.0.6",
+        "onoff": "^6.0.3"
+    },
     "node-red": {
         "settings": {
             "flowFile": "flows.json",

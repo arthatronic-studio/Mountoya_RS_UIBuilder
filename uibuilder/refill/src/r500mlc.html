@@ -1,32 +1,64 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="../uibuilder/images/node-blue.ico">
-    <title>refill</title>
-    <meta name="description" content="Node-RED uibuilder - Refill">
-    <link type="text/css" rel="stylesheet" href="./index.css" media="all">
-    <script defer src="../uibuilder/uibuilder.iife.min.js"></script>
-    <script defer src="../uibuilder/vendor/socket.io/socket.io.js"></script>
-    <script defer src="../uibuilder/uibuilderfe.min.js"></script>
-    <script defer src="./index.js"></script>
-</head>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="../uibuilder/images/node-blue.ico">
+        <title>Refill 500 mL - Cold</title>
+        <meta name="description" content="Node-RED uibuilder - Refill">
+        <!-- Your own CSS (defaults to loading uibuilders css)-->
+        <link type="text/css" rel="stylesheet" href="./check-bottle.css" media="all">
 
-<body class="uib">
-    <div style="text-align:center; margin-top: 20px;">
-        <h1>Proses Refill</h1>
-        <br>
-        <div style="display:flex; justify-content:center; gap:20px;">
+        <!-- Font from Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+            rel="stylesheet">
+
+        <script defer src="../uibuilder/uibuilder.iife.min.js"></script>
+        <script defer src="../uibuilder/vendor/socket.io/socket.io.js"></script>
+        <script defer src="../uibuilder/uibuilderfe.min.js"></script>
+        <script defer src="./index.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+                <figure class="logo">
+                    <img src="./images/mountoya-black-logo.png" alt="Mountoya Logo">
+                </figure>
+            </header>
+            <main>
+                <div class="content-center">
+                    <h1>Silahkan Letakkan Tumbler <br /> di Depan Sensor</h1>
+                    <br>
+                    <div class="image-status"><img id="empty-bottle" src="./images/water-empty.png" alt="" /></div>
+                </div>
+            </main>
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <p id="modal-text"></p>
+                    <p id="modal-subtitle">Lakukan pengisian sekarang?</p>
+                    <hr />
+                    <div class="modal-action">
+                        <button class="btn btn-secondary close-button" id="cancel" ui_control="button"
+                            ui_button="button" ui_button_label="Batalkan" ui_button_color="#6c757d"
+                            ui_button_style="rounded" ui_button_payload="cancel">Batalkan</button>
+                        <button class="btn btn-primary" id="proceed" ui_control="button" ui_button="button"
+                            ui_button_label="500 mL" ui_button_color="#007bff" ui_button_style="rounded">Ya,
+                            Lanjutkan</button>
+                    </div>
+                </div>
+
+            </div>
             <div id="button1Container">
                 <!-- Button 1 will be dynamically shown/hidden here -->
             </div>
         </div>
-    </div>
-    <button class="btn btn-secondary" id="homeButton" ui_control="button" ui_button="button" ui_button_label="HOME" ui_button_color="#6c757d" ui_button_style="rounded" ui_button_payload="home">HOME</button>
-    <script src="../uibuilder/uibuilder.iife.min.js"></script>
-    <script src="r500mlc.js"></script>
-</body>
+        <script src="../uibuilder/uibuilder.iife.min.js"></script>
+        <script src="r500mlc.js"></script>
+    </body>
 
 </html>
