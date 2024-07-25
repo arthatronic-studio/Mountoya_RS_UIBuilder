@@ -573,7 +573,7 @@
         "z": "ece55f4e9035206b",
         "g": "eed0de0baca1cfc6",
         "name": "Button 6 Action 500 ml cold",
-        "func": "msg.payload = 14\nreturn msg;",
+        "func": "msg.payload = 11\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
