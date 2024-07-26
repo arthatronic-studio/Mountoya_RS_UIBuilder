@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('modal').style.display = 'none';
     });
     
-    if (document.getElementById('proceed1')!==null){
+    if (document.getElementById('proceed1')!= null){
         document.getElementById('proceed1').addEventListener('click', function () {
             localStorage.setItem("button", "button1")
             window.location.href = 'refill.html';
@@ -45,28 +45,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
         });
     }
-    if (document.getElementById('proceed3') !== null) {
+    if (document.getElementById('proceed3') != null) {
         document.getElementById('proceed3').addEventListener('click', function () {
             localStorage.setItem("button", "button3")
             window.location.href = 'refill.html';
 
         });
     }
-    if (document.getElementById('proceed4') !== null) {
+    if (document.getElementById('proceed4') != null) {
         document.getElementById('proceed4').addEventListener('click', function () {
             localStorage.setItem("button", "button4")
             window.location.href = 'refill.html';
 
         });
     }
-    if (document.getElementById('proceed5') !== null) {
+    if (document.getElementById('proceed5') != null) {
         document.getElementById('proceed5').addEventListener('click', function () {
             localStorage.setItem("button", "button5")
             window.location.href = 'refill.html';
 
         });
     }
-    if (document.getElementById('proceed6') !== null) {
+    if (document.getElementById('proceed6') != null) {
         document.getElementById('proceed6').addEventListener('click', function () {
             localStorage.setItem("button", "button6")
             window.location.href = 'refill.html';

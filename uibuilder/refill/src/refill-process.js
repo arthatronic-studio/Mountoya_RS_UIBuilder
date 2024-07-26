@@ -6,7 +6,9 @@ document.addEventListener('DOMContentLoaded', function () {
   // Debugging log
   console.log('Setting up uibuilder message listener...');
 
-  sendPayload(localStorage.getItem("button"))
+  setTimeout(function(){
+    sendPayload(localStorage.getItem("button"))
+  },200);
 
   // Listen for messages from Node-RED
   uibuilder.onChange('msg', function (msg) {
