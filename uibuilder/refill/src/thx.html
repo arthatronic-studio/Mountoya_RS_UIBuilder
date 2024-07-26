@@ -1,56 +1,53 @@
 <!doctype html>
 <html lang="en">
 
-<head>
+    <head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="../uibuilder/images/node-blue.ico">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="../uibuilder/images/node-blue.ico">
 
-    <title>Blank template - Node-RED uibuilder</title>
-    <meta name="description" content="Node-RED uibuilder - Blank template">
+        <title>Thank You</title>
+        <meta name="description" content="Node-RED uibuilder - Blank template">
+        <!-- Your own CSS (defaults to loading uibuilders css)-->
+        <link type="text/css" rel="stylesheet" href="./thx.css" media="all">
 
-    <!-- Your own CSS (defaults to loading uibuilders css)-->
-    <!--link type="text/css" rel="stylesheet" href="./index.css" media="all"-->
+        <!-- Font from Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+            rel="stylesheet">
+        <!-- Your own CSS (defaults to loading uibuilders css)-->
+        <!--link type="text/css" rel="stylesheet" href="./index.css" media="all"-->
 
-    <!-- #region Supporting Scripts. These MUST be in the right order. Note no leading / -->
-    <script defer src="../uibuilder/uibuilder.iife.min.js"></script>
-    <!-- <script defer src="./index.js">/* OPTIONAL: Put your custom code in that */</script> -->
-    <!-- #endregion -->
-    <title>Konfirmasi Pemilihan</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            text-align: center;
-            margin-top: 100px;
-        }
+        <!-- #region Supporting Scripts. These MUST be in the right order. Note no leading / -->
+        <script defer src="../uibuilder/uibuilder.iife.min.js"></script>
+        <!-- <script defer src="./index.js">/* OPTIONAL: Put your custom code in that */</script> -->
+        <!-- #endregion -->
 
-        .container {
-            background-color: lightgray;
-            padding: 20px;
-            border-radius: 5px;
-        }
+    </head>
 
-        button {
-            padding: 10px 20px;
-            margin: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    </style>
-</head>
-
-<body>
-    <div class="container">
-        <h2>Terima Kasih</h2>
-        <p></p>
-        <p></p>
-    </div>
-    <button class="btn btn-secondary" id="homeButton" ui_control="button" ui_button="button" ui_button_label="HOME" ui_button_color="#6c757d" ui_button_style="rounded" ui_button_payload="home">HOME</button>
-    <script src="thx.js"></script>
-</body>
+    <body>
+        <div class="container">
+            <header>
+                <figure class="logo">
+                    <img src="./images/mountoya-black-logo.png" alt="Mountoya Logo">
+                </figure>
+            </header>
+            <main>
+                <div class="content-center">
+                    <h1>Proses Refill Selesai!</h1>
+                    <br>
+                    <div id="thank-you-section"><img id="earth-image" src="./images/thank-you.png" alt="" /></div>
+                    <h1>Terima kasih sudah menjaga bumi <br /> lebih hijau bersama Mountoya</h1>
+                    <button class="btn btn-secondary" id="backButton" ui_control="button" ui_button="button"
+                        ui_button_label="Kembali" ui_button_color="#6c757d" ui_button_style="rounded"
+                        ui_button_payload="back">Klik untuk kembali ke halaman utama</button>
+                </div>
+            </main>
+        </div>
+        <script src="thx.js"></script>
+    </body>
 
 </html>

@@ -16,8 +16,6 @@
         <link
             href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
             rel="stylesheet">
-
-        <script defer src="../uibuilder/uibuilder.iife.min.js"></script>
         <script defer src="../uibuilder/vendor/socket.io/socket.io.js"></script>
         <script defer src="../uibuilder/uibuilderfe.min.js"></script>
     </head>
@@ -35,13 +33,10 @@
                     <br>
                     <div class="image-status"><img id="empty-bottle" src="./images/water-empty.png" alt="" /></div>
                 </div>
-                <div id="button1Container">
-                    <!-- Button 1 will be dynamically shown/hidden here -->
-                </div>
             </main>
             <div id="modal" class="modal">
                 <div class="modal-content">
-                    <p id="modal-text"></p>
+                    <p id="modal-text">Tumbler Berhasil Terdeteksi!</p>
                     <p id="modal-subtitle">Lakukan pengisian sekarang?</p>
                     <hr />
                     <div class="modal-action">
@@ -53,13 +48,10 @@
                             Lanjutkan</button>
                     </div>
                 </div>
-
             </div>
 
         </div>
-
-        <script src="../uibuilder/uibuilder.iife.min.js"></script>
-        <script src="r250mlh.js"></script>
+        <script src="refill-confirmation.js"></script>
     </body>
 
 </html>
