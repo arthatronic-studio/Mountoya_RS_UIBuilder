@@ -1,3 +1,3 @@
-document.getElementById('homeButton').addEventListener('click', function () {
-    window.location.href = 'home.html'; // Replace with your desired URL
+document.getElementById('backButton').addEventListener('click', function () {
+    window.location.href = 'index.html'; 
 });

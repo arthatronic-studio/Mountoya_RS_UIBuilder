@@ -71,10 +71,11 @@ main {
 
 .overlay-menu p {
   margin: 0;
-  font-size: 40px;
+  font-size: 52px;
   font-weight: bold;
   text-align: center;
   letter-spacing: 2px;
+  padding-top: 1rem;
 }
 
 .button-action-home {
@@ -82,10 +83,13 @@ main {
   color: #FFFFFF;
   border: none;
   border-radius: 2rem;
-  padding: 0.5rem 2rem;
+  padding: 1rem 2rem;
   cursor: pointer;
   font-size: 24px;
   font-weight: 600;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  letter-spacing: 1px;
 }
 
 .button-action-home:hover {

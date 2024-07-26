@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../uibuilder/images/node-blue.ico">
+    <title>Refill Process</title>
+    <meta name="description" content="Node-RED uibuilder - Refill">
+    <!-- Your own CSS (defaults to loading uibuilders css)-->
+    <link type="text/css" rel="stylesheet" href="./check-bottle.css" media="all">
+
+    <!-- Font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet">
+    <script defer src="../uibuilder/vendor/socket.io/socket.io.js"></script>
+    <script defer src="../uibuilder/uibuilderfe.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <figure class="logo">
+          <img src="./images/mountoya-black-logo.png" alt="Mountoya Logo">
+        </figure>
+      </header>
+      <main>
+        <div class="content-center">
+          <h1>Proses Refill Sedang<br />Berlangsung</h1>
+          <br>
+          <div class="image-status"><img id="full-bottle" src="./images/water-fill.png" alt="" /></div>
+        </div>
+      </main>
+    </div>
+    <script src="refill-process.js"></script>
+  </body>
+
+</html>

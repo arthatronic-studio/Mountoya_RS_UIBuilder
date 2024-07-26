@@ -59,8 +59,7 @@
             "626ec8f2db706571",
             "a4b0ee05af245390",
             "3b4cd70e6ad09aab",
-            "8c9b45ce076a40d1",
-            "49cbb5412f98ed27"
+            "8c9b45ce076a40d1"
         ],
         "x": -16,
         "y": -1,
@@ -145,15 +144,14 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "debug 27",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
+        "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 340,
+        "x": 510,
         "y": 160,
         "wires": []
     },
@@ -272,7 +270,7 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "Switch on type",
-        "property": "payload",
+        "property": "payload.type",
         "propertyType": "msg",
         "rules": [
             {
@@ -309,7 +307,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 6,
-        "x": 960,
+        "x": 980,
         "y": 260,
         "wires": [
             [
@@ -360,7 +358,7 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "Button 3 Action 250 ml cold",
-        "func": "msg.payload = 5.5\nreturn msg;",
+        "func": "msg.payload = 3\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -382,7 +380,7 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "Debug Button 2",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -416,7 +414,7 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "Set Relay Time",
-        "func": "\nlet pin_IR = 18;\nlet pin_Relay = 25;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR = 0;\n\nconst IR = new onoff.Gpio(pin_IR, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nfunction readIR() {\n    if (IR.readSync() === 1) {\n        return 1;\n    }\n    else {\n        return 0;\n    }\n}\n\nfunction writeRelay(value) {\n    if (value === 'ON') {\n        Relay.writeSync(1);\n    }\n    else {\n        Relay.writeSync(0);\n    }\n}\n\nstate_IR = IR.readSync();\nprevCount = Date.now();\ncount = 0;\n\nwhile (count < timer) {\n    state_IR = IR.readSync();\n    if (state_IR === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nmsg.payload = 'done'\n\n\nreturn msg",
+        "func": "\nlet pin_IR = 18;\nlet pin_Relay = 24;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR = 0;\n\nconst IR = new onoff.Gpio(pin_IR, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nfunction readIR() {\n    if (IR.readSync() === 1) {\n        return 1;\n    }\n    else {\n        return 0;\n    }\n}\n\nfunction writeRelay(value) {\n    if (value === 'ON') {\n        Relay.writeSync(1);\n    }\n    else {\n        Relay.writeSync(0);\n    }\n}\n\nstate_IR = IR.readSync();\nprevCount = Date.now();\ncount = 0;\n\nwhile (count < timer) {\n    state_IR = IR.readSync();\n    if (state_IR === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nmsg.payload = 'done'\n\n\nreturn msg",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -575,7 +573,7 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "Button 6 Action 500 ml cold",
-        "func": "msg.payload = 11\nreturn msg;",
+        "func": "msg.payload = 22\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -633,7 +631,7 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "Set Relay Time",
-        "func": "\nlet pin_IR = 18;\nlet pin_Relay = 25;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR = 0;\n\nconst IR = new onoff.Gpio(pin_IR, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nfunction readIR() {\n    if (IR.readSync() === 1) {\n        return 1;\n    }\n    else {\n        return 0;\n    }\n}\n\nfunction writeRelay(value) {\n    if (value === 'ON') {\n        Relay.writeSync(1);\n    }\n    else {\n        Relay.writeSync(0);\n    }\n}\n\nstate_IR = IR.readSync();\nprevCount = Date.now();\ncount = 0;\n\nwhile (count < timer) {\n    state_IR = IR.readSync();\n    if (state_IR === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nmsg.payload = 'done'\n\n\nreturn msg",
+        "func": "\nlet pin_IR = 17;\nlet pin_Relay = 18;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR = 0;\n\nconst IR = new onoff.Gpio(pin_IR, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nfunction readIR() {\n    if (IR.readSync() === 1) {\n        return 1;\n    }\n    else {\n        return 0;\n    }\n}\n\nfunction writeRelay(value) {\n    if (value === 'ON') {\n        Relay.writeSync(1);\n    }\n    else {\n        Relay.writeSync(0);\n    }\n}\n\nstate_IR = IR.readSync();\nprevCount = Date.now();\ncount = 0;\n\nwhile (count < timer) {\n    state_IR = IR.readSync();\n    if (state_IR === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nmsg.payload = 'done'\n\n\nreturn msg",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -790,8 +788,7 @@
         "y": 280,
         "wires": [
             [
-                "17ab1c42ddaf528e",
-                "49cbb5412f98ed27"
+                "17ab1c42ddaf528e"
             ],
             []
         ]
