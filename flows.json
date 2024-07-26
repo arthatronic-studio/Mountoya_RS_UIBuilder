@@ -59,7 +59,10 @@
             "626ec8f2db706571",
             "a4b0ee05af245390",
             "3b4cd70e6ad09aab",
-            "8c9b45ce076a40d1"
+            "8c9b45ce076a40d1",
+            "1542bb694a175939",
+            "f4c26c95e4142031",
+            "d9fdcdddae92825b"
         ],
         "x": -16,
         "y": -1,
@@ -973,6 +976,54 @@
         "statusType": "auto",
         "x": 1950,
         "y": 20,
+        "wires": []
+    },
+    {
+        "id": "1542bb694a175939",
+        "type": "rpi-gpio out",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "",
+        "pin": "8",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 240,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "f4c26c95e4142031",
+        "type": "rpi-gpio out",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "",
+        "pin": "25",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 240,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "d9fdcdddae92825b",
+        "type": "rpi-gpio out",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "",
+        "pin": "24",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 240,
+        "y": 40,
         "wires": []
     }
 ]
