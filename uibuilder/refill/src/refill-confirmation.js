@@ -29,9 +29,50 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('modal').style.display = 'none';
     });
     
-    document.getElementById('proceed').addEventListener('click', function () {
-        window.location.href = 'refill.html'; 
-    });
+    if (document.getElementById('proceed1')!==null){
+        document.getElementById('proceed1').addEventListener('click', function () {
+            localStorage.setItem("button", "button1")
+            window.location.href = 'refill.html';
+            
+        });
+    }
+    
+    console.log(document.getElementById('proceed2'));
+    if (document.getElementById('proceed2') != null) {
+        document.getElementById('proceed2').addEventListener('click', function () {
+            localStorage.setItem("button", "button2")
+            window.location.href = 'refill.html';
+
+        });
+    }
+    if (document.getElementById('proceed3') !== null) {
+        document.getElementById('proceed3').addEventListener('click', function () {
+            localStorage.setItem("button", "button3")
+            window.location.href = 'refill.html';
+
+        });
+    }
+    if (document.getElementById('proceed4') !== null) {
+        document.getElementById('proceed4').addEventListener('click', function () {
+            localStorage.setItem("button", "button4")
+            window.location.href = 'refill.html';
+
+        });
+    }
+    if (document.getElementById('proceed5') !== null) {
+        document.getElementById('proceed5').addEventListener('click', function () {
+            localStorage.setItem("button", "button5")
+            window.location.href = 'refill.html';
+
+        });
+    }
+    if (document.getElementById('proceed6') !== null) {
+        document.getElementById('proceed6').addEventListener('click', function () {
+            localStorage.setItem("button", "button6")
+            window.location.href = 'refill.html';
+
+        });
+    }
 
     // Debugging log for DOM ready
     console.log('DOM fully loaded');
@@ -40,8 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // Function to send payload
 function sendPayload(button) {
     let payload = {};
-    if (button === 'button1') {
-        payload = { type: 'button1', value: '1' };
-    }
+    console.log(button);
+    payload = { type: button, value: '1' };
     uibuilder.send({ payload: payload });
 }

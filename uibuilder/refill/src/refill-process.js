@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', function () {
   // Debugging log
   console.log('Setting up uibuilder message listener...');
 
+  sendPayload(localStorage.getItem("button"))
+
   // Listen for messages from Node-RED
   uibuilder.onChange('msg', function (msg) {
       console.log('Message received from Node-RED:', msg);
@@ -26,8 +28,6 @@ document.addEventListener('DOMContentLoaded', function () {
 // Function to send payload
 function sendPayload(button) {
   let payload = {};
-  if (button === 'button1') {
-      payload = { type: 'button1', value: '1' };
-  }
+  payload = { type: button, value: '1' };
   uibuilder.send({ payload: payload });
 }
