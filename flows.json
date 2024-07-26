@@ -272,7 +272,7 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "Switch on type",
-        "property": "payload.type",
+        "property": "payload",
         "propertyType": "msg",
         "rules": [
             {
