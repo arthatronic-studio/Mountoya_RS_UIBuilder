@@ -507,7 +507,7 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "debug button 1",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -788,8 +788,7 @@
         "y": 280,
         "wires": [
             [
-                "17ab1c42ddaf528e",
-                "49cbb5412f98ed27"
+                "17ab1c42ddaf528e"
             ],
             []
         ]
