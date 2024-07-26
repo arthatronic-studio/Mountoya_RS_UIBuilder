@@ -19,7 +19,6 @@
 
         <!-- #region Supporting Scripts. These MUST be in the right order. Note no leading / -->
         <script defer src="../uibuilder/uibuilder.iife.min.js"></script>
-        <!-- <script defer src="./index.js">/* OPTIONAL: Put your custom code in that */</script> -->
         <!-- #endregion -->
 
     </head>
@@ -38,7 +37,7 @@
                     <div class="button-group">
                         <div class="button-column">
                             <div class="icon-image"><img id="icon-option-hot" src="./images/hot.png" alt="hot" /></div>
-                            <h3>Panas</h3>
+                            <h3 id="condition">Panas</h3>
                             <button class="btn btn-primary" id="hot_250ml" ui_control="button" ui_button="button"
                                 ui_button_label="250 ml" ui_button_color="#007bff" ui_button_style="rounded"
                                 ui_button_payload="hot_250ml">250 mL</button>
@@ -49,7 +48,7 @@
                         <div class="button-column">
                             <div class="icon-image"><img id="icon-option-normal" src="./images/normal.png"
                                     alt="normal" /></div>
-                            <h3>Normal</h3>
+                            <h3 id="condition">Normal</h3>
                             <button class="btn btn-primary" id="normal_250ml" ui_control="button" ui_button="button"
                                 ui_button_label="250 mL" ui_button_color="#007bff" ui_button_style="rounded"
                                 ui_button_payload="normal_250ml">250 mL</button>
@@ -60,7 +59,7 @@
                         <div class="button-column">
                             <div class="icon-image"><img id="icon-option-cold" src="./images/cold.png" alt="cold" />
                             </div>
-                            <h3>Dingin</h3>
+                            <h3 id="condition">Dingin</h3>
                             <button class="btn btn-primary" id="cold_250ml" ui_control="button" ui_button="button"
                                 ui_button_label="250 mL" ui_button_color="#007bff" ui_button_style="rounded"
                                 ui_button_payload="cold_250ml">250 mL</button>
@@ -79,6 +78,8 @@
                     <p id="modal-text"></p>
                     <p id="modal-subtitle">Apakah pilihanmu sudah benar?</p>
                     <hr />
+                    <p id="modal-text-2">PERHATIAN!</p>
+                    <p id="modal-subtitle-2">Pengisian air panas hanya dapat <br /> menggunakan tumbler stainless</p>
                     <div class="modal-action">
                         <button class="btn btn-secondary close-button" id="cancel" ui_control="button"
                             ui_button="button" ui_button_label="Kembali" ui_button_color="#6c757d"
