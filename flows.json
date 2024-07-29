@@ -555,7 +555,7 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "Button 5 Action 500 ml normal",
-        "func": "msg.payload = 11\nreturn msg",
+        "func": "msg.payload = 11.5\nreturn msg",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
