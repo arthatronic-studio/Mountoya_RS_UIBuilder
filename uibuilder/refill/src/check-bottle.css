@@ -46,18 +46,20 @@ main {
 .btn {
   font-family: "Figtree", sans-serif;
   font-optical-sizing: auto;
-  width: 200px;
+  width: 275px;
   margin-bottom: 10px;
+  margin-top: 10px;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 35px;
   border-radius: 2rem;
+  padding: 1rem 2rem;
 }
 
 .btn-primary {
   background-color: #08243C;
   color: #FFFFFF;
   border: none;
-  padding: 1rem 2rem;
+  border-radius: 100px;
 }
 
 .btn-primary:hover {
@@ -70,13 +72,13 @@ main {
   border-color: #08243C;
   color: #08243C;
   cursor: pointer;
-  font-size: 20px;
-  border-radius: 2rem;
+  font-size: 35px;
+  border-radius: 100px;
   padding: 1rem 2rem;
 }
 
 #backButton {
-  margin-top: 10rem;
+  margin-top: 25rem;
 }
 
 /* Modal Styles */
@@ -107,7 +109,7 @@ main {
 
 #modal-text {
   color: #08243C;
-  font-size: 36px;
+  font-size: 40px;
   font-weight: bold;
 }
 
@@ -115,14 +117,14 @@ main {
   font-family: "Figtree", sans-serif;
   font-optical-sizing: auto;
   color: #08243C;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .modal-action {
   display: flex;
   justify-content: center;
   margin-top: 2rem;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .image-status {
@@ -134,9 +136,15 @@ main {
 }
 
 #empty-bottle {
-  width: 600px;
+  width: 100%;
 }
 
 #full-bottle {
   width: 600px;
+}
+
+h1 {
+  font-size: 60px;
+  color: #08243C;
+  letter-spacing: 1px;
 }

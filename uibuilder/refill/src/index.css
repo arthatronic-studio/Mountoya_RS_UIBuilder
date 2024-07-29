@@ -53,11 +53,11 @@ main {
 }
 
 .overlay-menu {
-  background: linear-gradient(#FFFFFF56, #FFFFFF90);
-  border-top-left-radius: 2rem;
-  border-top-right-radius: 2rem;
+  background: linear-gradient(#FFFFFF, #FFFFFF90);
+  border-top-left-radius: 5rem;
+  border-top-right-radius: 5rem;
   width: 100%;
-  padding: 2rem;
+  height: 33%;
   box-sizing: border-box;
   position: absolute;
   bottom: 0;
@@ -71,21 +71,23 @@ main {
 
 .overlay-menu p {
   margin: 0;
-  font-size: 52px;
+  font-size: 90px;
   font-weight: bold;
   text-align: center;
   letter-spacing: 2px;
   padding-top: 1rem;
+  color: #08243C;
 }
 
 .button-action-home {
   background-color: #08243C;
   color: #FFFFFF;
   border: none;
-  border-radius: 2rem;
-  padding: 1rem 2rem;
+  width: 60%;
+  border-radius: 5rem;
+  padding: 2rem 2rem;
   cursor: pointer;
-  font-size: 24px;
+  font-size: 50px;
   font-weight: 600;
   margin-bottom: 2rem;
   margin-top: 1rem;
