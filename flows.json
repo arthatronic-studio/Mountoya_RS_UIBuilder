@@ -680,7 +680,7 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "Button 4 Action 500 ml hot",
-        "func": "msg.payload = 13\nreturn msg;",
+        "func": "msg.payload = 13.2\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
