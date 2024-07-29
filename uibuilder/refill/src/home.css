@@ -46,8 +46,8 @@ main {
 .button-group {
   display: flex;
   justify-content: center;
-  gap: 4rem;
- margin-top: 8rem;
+  gap: 2rem;
+  margin-top: 20rem;
 }
 
 .button-column {
@@ -56,7 +56,7 @@ main {
   flex-direction: column;
   align-items: center;
   background-color: #E9E9E9;
-  padding: 3.5rem 2rem 1rem 2rem;
+  padding: 3.5rem 2rem 3rem 2rem;
   border-radius: 1rem;
 }
 
@@ -67,11 +67,11 @@ main {
 .btn {
   font-family: "Figtree", sans-serif;
   font-optical-sizing: auto;
-  width: 200px;
+  width: 235px;
   margin-bottom: 10px;
   margin-top: 10px;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 35px;
   border-radius: 2rem;
   padding: 1rem 2rem;
 }
@@ -80,6 +80,7 @@ main {
   background-color: #08243C;
   color: #FFFFFF;
   border: none;
+  border-radius: 100px;
 }
 
 .btn-primary:hover {
@@ -92,21 +93,21 @@ main {
   border-color: #08243C;
   color: #08243C;
   cursor: pointer;
-  font-size: 20px;
-  border-radius: 2rem;
+  font-size: 35px;
+  border-radius: 100px;
   padding: 1rem 2rem;
 }
 
 #backButton {
-  margin-top: 10rem;
+  margin-top: 25rem;
 }
 
 .icon-image {
   position: absolute;
   top: -27%;
   background-color: #FFFFFF;
-  width: 120px;
-  height: 120px;
+  width: 200px;
+  height: 200px;
   border-radius: 100%;
   display: flex;
   align-items: center;
@@ -115,22 +116,22 @@ main {
 }
 
 #icon-option-hot {
-  width:64px;
-  height:64px;
+  width:120px;
+  height:120px;
 }
 
 #icon-option-cold {
-  width:80px;
-  height:80px;
+  width:150px;
+  height:150px;
 }
 
 #icon-option-normal {
-  width:64px;
-  height:80px;
+  width:100px;
+  height:130px;
 }
 
 h3 {
-  font-size: 28px;
+  font-size: 40px;
   color: #08243C;
 }
 
@@ -153,7 +154,7 @@ h3 {
 .modal-content {
   background-color: #f7f7f7;
   padding: 1rem 2rem 2rem 2rem;
-  width: 500px;
+  width: 700px;
   text-align: center;
   border-radius: 32px;
   box-shadow: 10px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -162,20 +163,49 @@ h3 {
 
 #modal-text {
   color: #08243C;
-  font-size: 36px;
+  font-size: 40px;
   font-weight: bold;
+}
+
+#modal-text-2 {
+  display: none;
+  font-family: "Figtree", sans-serif;
+  color: #08243C;
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 0;
+  margin: 0 ;
+  padding-top: 2rem;
 }
 
 #modal-subtitle {
   font-family: "Figtree", sans-serif;
   font-optical-sizing: auto;
   color: #08243C;
-  font-size: 20px;
+  font-size: 25px;
+}
+
+#modal-subtitle-2 {
+  display: none;
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  color: #08243C;
+  font-size: 25px;
 }
 
 .modal-action {
   display: flex;
   justify-content: center;
   margin-top: 2rem;
-  gap: 1rem;
+  gap: 2rem;
+}
+
+
+h1 {
+  font-size: 60px;
+}
+
+#condition {
+  padding-top: 5rem;
+  font-size: 40px;
 }
