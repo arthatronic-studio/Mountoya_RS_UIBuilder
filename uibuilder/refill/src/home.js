@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
         modalText.innerHTML = text;
         selectedOption = option;
         modal.style.display = 'flex';
-        
+
         // Show or hide additional hot water warning based on option
         if (option === 'hot_250ml' || option === 'hot_500ml') {
             hotText.style.display = 'block';
