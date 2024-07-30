@@ -5,8 +5,21 @@ document.addEventListener('DOMContentLoaded', function () {
     const proceedButton = document.getElementById('proceed');
     const hotText = document.getElementById('modal-text-2');
     const hotSubtitle = document.getElementById('modal-subtitle-2');
+    const totalVolumeElement = document.getElementById('total-volume');
+    // const resetButton = document.getElementById('resetButton');
+    const initialVolume = 19000;
 
     let selectedOption = '';
+
+    // Initialize x from localStorage or set to initial value
+    let x = localStorage.getItem('totalVolume') ? parseInt(localStorage.getItem('totalVolume')) : initialVolume;
+
+    // Update the displayed total volume
+    function updateTotalVolumeDisplay() {
+        totalVolumeElement.innerHTML = `Sisa Air Galon = ${x} ml`;
+    }
+
+    updateTotalVolumeDisplay();
 
     function showModal(text, option) {
         modalText.innerHTML = text;
@@ -45,33 +58,59 @@ document.addEventListener('DOMContentLoaded', function () {
 
     proceedButton.addEventListener('click', () => {
         let url = '';
+        let volume = 0;
+
         switch (selectedOption) {
             case 'hot_250ml':
                 url = 'r250mlh.html';
+                volume = 250;
                 break;
             case 'hot_500ml':
                 url = 'r500mlh.html';
+                volume = 500;
                 break;
             case 'normal_250ml':
                 url = 'r250mln.html';
+                volume = 250;
                 break;
             case 'normal_500ml':
                 url = 'r500mln.html';
+                volume = 500;
                 break;
             case 'cold_250ml':
                 url = 'r250mlc.html';
+                volume = 250;
                 break;
             case 'cold_500ml':
                 url = 'r500mlc.html';
+                volume = 500;
                 break;
             default:
                 url = 'index.html';
                 break;
         }
+
+        // Calculate the new total volume
+        // x -= volume;
+
+        // Save the new total volume to localStorage
+        localStorage.setItem('volume_air', volume);
+
+        // Update the displayed total volume
+        updateTotalVolumeDisplay();
+
+        // Redirect to the chosen URL
         window.location.href = url;
     });
-});
 
-document.getElementById('backButton').addEventListener('click', function () {
-    window.location.href = 'index.html';
+    // Reset button logic
+    // resetButton.addEventListener('click', () => {
+    //     x = initialVolume;
+    //     localStorage.setItem('totalVolume', x);
+    //     updateTotalVolumeDisplay();
+    // });
+
+    document.getElementById('backButton').addEventListener('click', function () {
+        window.location.href = 'index.html';
+    });
 });

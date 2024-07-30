@@ -47,7 +47,7 @@ main {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  margin-top: 20rem;
+  margin-top: 15rem;
 }
 
 .button-column {
@@ -73,7 +73,7 @@ main {
   cursor: pointer;
   font-size: 35px;
   border-radius: 2rem;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
 }
 
 .btn-primary {
