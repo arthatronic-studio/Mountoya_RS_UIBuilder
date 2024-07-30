@@ -86,7 +86,7 @@ main {
   width: 60%;
   border-radius: 5rem;
   padding: 2rem 2rem;
-  cursor: pointer;
+  cursor: default;
   font-size: 50px;
   font-weight: 600;
   margin-bottom: 2rem;
@@ -103,4 +103,70 @@ main {
   display: flex;
   justify-content: center;
   padding: 1rem 0;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  right:0;
+  bottom: 0;
+  width: 100%;
+  height: 90%;
+  overflow: auto;
+  background-color: rgba(255, 255, 255, 0);
+  justify-content: center;
+  align-items: center;
+
+}
+
+.modal-content {
+  background-color: #f7f7f7;
+  padding: 3rem 2rem 3rem 2rem;
+  width: 700px;
+  text-align: center;
+  border-radius: 32px;
+  box-shadow: 10px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 0;
+}
+
+#modal-text {
+  color: #08243C;
+  font-size:60px;
+  font-weight: bold;
+}
+
+#modal-text-2 {
+  display: none;
+  font-family: "Figtree", sans-serif;
+  color: #08243C;
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 0;
+  margin: 0;
+  padding-top: 2rem;
+}
+
+#modal-subtitle {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  color: #ff0000;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+#modal-subtitle-2 {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  color: #ff0000;
+  font-size: 25px;
+}
+
+.modal-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 2rem;
 }

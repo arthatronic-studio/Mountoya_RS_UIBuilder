@@ -70,7 +70,7 @@ main {
   width: 235px;
   margin-bottom: 10px;
   margin-top: 10px;
-  cursor: pointer;
+  cursor: default;
   font-size: 35px;
   border-radius: 2rem;
   padding: 0.5rem 2rem;
@@ -83,16 +83,16 @@ main {
   border-radius: 100px;
 }
 
-.btn-primary:hover {
+/* .btn-primary:hover {
   background-color: #0056b3;
   border-color: #004085;
-}
+} */
 
 .btn-secondary {
   background-color: #FFFFFF;
   border-color: #08243C;
   color: #08243C;
-  cursor: pointer;
+  cursor: default;
   font-size: 35px;
   border-radius: 100px;
   padding: 1rem 2rem;

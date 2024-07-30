@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const totalVolumeElement = document.getElementById('total-volume');
     // const resetButton = document.getElementById('resetButton');
     const initialVolume = 19000;
+    const waktuTimeout = 30000;
 
     let selectedOption = '';
 
@@ -20,6 +21,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     updateTotalVolumeDisplay();
+
+    let timeOutBalik = setTimeout(function () {
+        window.location.href = 'index.html';
+    }, waktuTimeout)
 
     function showModal(text, option) {
         modalText.innerHTML = text;
@@ -48,10 +53,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const buttons = document.querySelectorAll('.btn-primary');
     buttons.forEach(button => {
+        
         button.addEventListener('click', () => {
             const value = button.innerText;
             const group = button.parentElement.querySelector('h3').innerText;
             const option = button.id;
+            clearTimeout(timeOutBalik);
+            timeOutBalik = setTimeout(function () {
+                window.location.href = 'index.html';
+            }, waktuTimeout)
             showModal(`Kamu memilih suhu ${group} dengan volume ${value}`, option);
         });
     });
@@ -59,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
     proceedButton.addEventListener('click', () => {
         let url = '';
         let volume = 0;
-
+        
         switch (selectedOption) {
             case 'hot_250ml':
                 url = 'r250mlh.html';
@@ -97,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
         localStorage.setItem('volume_air', volume);
 
         // Update the displayed total volume
-        updateTotalVolumeDisplay();
+        // updateTotalVolumeDisplay();
 
         // Redirect to the chosen URL
         window.location.href = url;
@@ -109,6 +119,33 @@ document.addEventListener('DOMContentLoaded', function () {
     //     localStorage.setItem('totalVolume', x);
     //     updateTotalVolumeDisplay();
     // });
+
+    
+
+    uibuilder.onChange('msg', function (msg) {
+        console.log('Message received from Node-RED:', msg);
+        clearTimeout(timeOutBalik);
+        timeOutBalik = setTimeout(function () {
+            window.location.href = 'index.html';
+        }, waktuTimeout)
+        const modal = document.getElementById('modal');
+        if (msg.payload === '1') {
+            // Show the modal
+            localStorage.setItem("sensor",1);
+            console.log('Showing modal');
+            // modal.style.display = 'flex';
+        } else if (msg.payload === '0') {
+            // Hide the modal
+            localStorage.setItem("sensor", 0);
+            console.log('Hiding modal');
+            // modal.style.display = 'none';
+        } else {
+            // Debugging log for unexpected payload
+            console.log('Unexpected payload:', msg.payload);
+        }
+    });
+
+    
 
     document.getElementById('backButton').addEventListener('click', function () {
         window.location.href = 'index.html';
