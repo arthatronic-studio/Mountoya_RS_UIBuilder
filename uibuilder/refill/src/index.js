@@ -33,7 +33,9 @@ document.addEventListener('DOMContentLoaded', function() {
   const images = [
       './images/homepage-1.png',
       './images/homepage-2.png',
-      './images/homepage-3.png'
+      './images/homepage-3.png',
+      './images/homepage-4.png',
+      './images/homepage-5.png'
   ];
 
   images.forEach((src) => {
