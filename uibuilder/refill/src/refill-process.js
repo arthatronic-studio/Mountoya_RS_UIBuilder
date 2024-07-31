@@ -17,7 +17,11 @@ document.addEventListener('DOMContentLoaded', function () {
           // Navigate to thank you page
           console.log('Navigating to thank you page');
           window.location.href = 'thx.html';
-      } else {
+      } else if (msg.payload === '0'){
+        localStorage.setItem("sensor", 0);
+      } else if (msg.payload === '1') {
+        localStorage.setItem("sensor", 1);
+      } else{
           // Debugging log for unexpected payload
           console.log('Unexpected payload:', msg.payload);
       }
