@@ -1,21 +1,41 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Initialize uibuilder
+    const waktuTimeout = 30000;
     console.log('Initializing uibuilder...');
     uibuilder.start();
-
+    let timeOutBalik = setTimeout(function () {
+        window.location.href = 'index.html';
+    }, waktuTimeout)
     // Debugging log
     console.log('Setting up uibuilder message listener...');
+    if(Number(localStorage.getItem("sensor")) === 1){
+        const modal = document.getElementById('modal');
+        console.log('Showing modal');
+        modal.style.display = 'flex';
+    } else if (Number(localStorage.getItem("sensor")) === 0){
+        // Hide the modal
+        const modal = document.getElementById('modal');
+        console.log('Hiding modal');
+        modal.style.display = 'none';
+    }
 
+    
     // Listen for messages from Node-RED
     uibuilder.onChange('msg', function (msg) {
         console.log('Message received from Node-RED:', msg);
         const modal = document.getElementById('modal');
+        clearTimeout(timeOutBalik);
+        timeOutBalik = setTimeout(function () {
+            window.location.href = 'index.html';
+        }, waktuTimeout)
         if (msg.payload === '1') {
             // Show the modal
+            localStorage.setItem("sensor",1);
             console.log('Showing modal');
             modal.style.display = 'flex';
         } else if (msg.payload === '0') {
             // Hide the modal
+            localStorage.setItem("sensor", 0);
             console.log('Hiding modal');
             modal.style.display = 'none';
          } else {
@@ -27,6 +47,10 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('cancel').addEventListener('click', function () {
         console.log('Closing modal');
         document.getElementById('modal').style.display = 'none';
+        clearTimeout(timeOutBalik);
+        timeOutBalik = setTimeout(function () {
+            window.location.href = 'index.html';
+        }, waktuTimeout)
     });
     
     if (document.getElementById('proceed1')!= null){

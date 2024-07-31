@@ -17,10 +17,8 @@
         href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
 
-    <!-- #region Supporting Scripts. These MUST be in the right order. Note no leading / -->
+    <!-- Supporting Scripts -->
     <script defer src="../uibuilder/uibuilder.iife.min.js"></script>
-    <!-- #endregion -->
-
 </head>
 
 <body>
@@ -33,44 +31,30 @@
         <main>
             <div class="content-center">
                 <h1>Pilih Suhu <br /> dan Volume Air</h1>
-                <br>
                 <div class="button-group">
                     <div class="button-column">
                         <div class="icon-image"><img id="icon-option-hot" src="./images/hot.png" alt="hot" /></div>
                         <h3 id="condition">Panas</h3>
-                        <button class="btn btn-primary" id="hot_250ml" ui_control="button" ui_button="button"
-                                ui_button_label="250 ml" ui_button_color="#007bff" ui_button_style="rounded"
-                                ui_button_payload="hot_250ml">250 mL</button>
-                        <button class="btn btn-primary" id="hot_500ml" ui_control="button" ui_button="button"
-                                ui_button_label="500 mL" ui_button_color="#007bff" ui_button_style="rounded"
-                                ui_button_payload="hot_500ml">500 mL</button>
+                        <button class="btn btn-primary" id="hot_250ml">250 mL</button>
+                        <button class="btn btn-primary" id="hot_500ml">500 mL</button>
                     </div>
                     <div class="button-column">
-                        <div class="icon-image"><img id="icon-option-normal" src="./images/normal.png"
-                                    alt="normal" /></div>
-                        <h3 id="condition">Normal</h3>
-                        <button class="btn btn-primary" id="normal_250ml" ui_control="button" ui_button="button"
-                                ui_button_label="250 mL" ui_button_color="#007bff" ui_button_style="rounded"
-                                ui_button_payload="normal_250ml">250 mL</button>
-                        <button class="btn btn-primary" id="normal_500ml" ui_control="button" ui_button="button"
-                                ui_button_label="500 mL" ui_button_color="#007bff" ui_button_style="rounded"
-                                ui_button_payload="normal_500ml">500 mL</button>
-                    </div>
-                    <div class="button-column">
-                        <div class="icon-image"><img id="icon-option-cold" src="./images/cold.png" alt="cold" />
+                        <div class="icon-image"><img id="icon-option-normal" src="./images/normal.png" alt="normal" />
                         </div>
+                        <h3 id="condition">Normal</h3>
+                        <button class="btn btn-primary" id="normal_250ml">250 mL</button>
+                        <button class="btn btn-primary" id="normal_500ml">500 mL</button>
+                    </div>
+                    <div class="button-column">
+                        <div class="icon-image"><img id="icon-option-cold" src="./images/cold.png" alt="cold" /></div>
                         <h3 id="condition">Dingin</h3>
-                        <button class="btn btn-primary" id="cold_250ml" ui_control="button" ui_button="button"
-                                ui_button_label="250 mL" ui_button_color="#007bff" ui_button_style="rounded"
-                                ui_button_payload="cold_250ml">250 mL</button>
-                        <button class="btn btn-primary" id="cold_500ml" ui_control="button" ui_button="button"
-                                ui_button_label="500 mL" ui_button_color="#007bff" ui_button_style="rounded"
-                                ui_button_payload="cold_500ml">500 mL</button>
+                        <button class="btn btn-primary" id="cold_250ml">250 mL</button>
+                        <button class="btn btn-primary" id="cold_500ml">500 mL</button>
                     </div>
                 </div>
-                <button class="btn btn-secondary" id="backButton" ui_control="button" ui_button="button"
-                        ui_button_label="Kembali" ui_button_color="#6c757d" ui_button_style="rounded"
-                        ui_button_payload="back">Kembali</button>
+                <p id="total-volume" style="margin-top:5vh; font-size: 2rem">Sisa Air Galon: 19000 ml</p>
+                <!-- <button class="btn btn-secondary" id="resetButton">Reset Volume</button> -->
+                <button class="btn btn-secondary" id="backButton">Kembali</button>
             </div>
         </main>
         <div id="modal" class="modal">
@@ -81,15 +65,10 @@
                 <p id="modal-text-2">PERHATIAN!</p>
                 <p id="modal-subtitle-2">Pengisian air panas hanya dapat <br /> menggunakan tumbler stainless</p>
                 <div class="modal-action">
-                    <button class="btn btn-secondary close-button" id="cancel" ui_control="button"
-                            ui_button="button" ui_button_label="Kembali" ui_button_color="#6c757d"
-                            ui_button_style="rounded" ui_button_payload="cancel">Kembali</button>
-                    <button class="btn btn-primary" id="proceed" ui_control="button" ui_button="button"
-                            ui_button_label="500 mL" ui_button_color="#007bff"
-                            ui_button_style="rounded">Lanjutkan</button>
+                    <button class="btn btn-secondary close-button" id="cancel">Kembali</button>
+                    <button class="btn btn-primary" id="proceed">Lanjutkan</button>
                 </div>
             </div>
-
         </div>
     </div>
     <script src="home.js"></script>

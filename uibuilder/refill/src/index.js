@@ -1,11 +1,35 @@
 document.getElementById('start-button').addEventListener('click', function() {
+  localStorage.setItem("admin", 0);
   window.location.href = 'home.html';
 })
+
+localStorage.setItem("admin", 0);
+
+document.getElementById('logo').addEventListener('click', function () {
+  if(Number(localStorage.getItem("admin"))<5){
+    console.log(Number(localStorage.getItem("admin")));
+    localStorage.setItem("admin", Number(localStorage.getItem("admin")) + 1);
+  } else {
+    localStorage.setItem("admin", 0);
+    localStorage.setItem("totalVolume",19000);
+    modalGalon.style.display = 'none';
+  }
+  
+  
+})
+
+const modalGalon = document.getElementById('modal');
+
+if(Number(localStorage.getItem("totalVolume"))<1000){
+  modalGalon.style.display = 'flex';
+} else{
+  modalGalon.style.display = 'none';
+}
 
 document.addEventListener('DOMContentLoaded', function() {
   const slideshow = document.createElement('div');
   slideshow.classList.add('slideshow');
-  
+
   const images = [
       './images/homepage-1.png',
       './images/homepage-2.png',
@@ -16,6 +40,25 @@ document.addEventListener('DOMContentLoaded', function() {
       const img = document.createElement('img');
       img.src = src;
       slideshow.appendChild(img);
+  });
+
+  uibuilder.onChange('msg', function (msg) {
+    console.log('Message received from Node-RED:', msg);
+    // const modal = document.getElementById('modal');
+    if (msg.payload === '1') {
+      // Show the modal
+      localStorage.setItem("sensor", 1);
+      console.log('Showing modal');
+      // modal.style.display = 'flex';
+    } else if (msg.payload === '0') {
+      // Hide the modal
+      localStorage.setItem("sensor", 0);
+      console.log('Hiding modal');
+      // modal.style.display = 'none';
+    } else {
+      // Debugging log for unexpected payload
+      console.log('Unexpected payload:', msg.payload);
+    }
   });
 
   document.querySelector('main').appendChild(slideshow);
