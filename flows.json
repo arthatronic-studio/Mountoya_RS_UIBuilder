@@ -34,22 +34,16 @@
             "469a305550126563",
             "2b3d8e25f51d2891",
             "8b747e424369f1f9",
-            "a2f90802f95ed6ed",
             "cf2b40f45ed03ce3",
             "5abc403c3b97e6f1",
-            "b3baee873a06e1eb",
             "37e623f6372fce6f",
-            "2495491911df3be4",
             "c02cf9ec2d477c84",
             "394d191e7e96a9a4",
             "680821e32dba97e7",
             "842999d09d5414c6",
-            "73b77f45dc231067",
             "1c9aad3d83444baa",
             "134758b8c75a732d",
-            "fac80dde8a05bfa6",
             "9860e6549b7ce023",
-            "2f065b22bd7d13fd",
             "ce57fc889764cc90",
             "601ead6dbd164430",
             "f5b5f22f06ec8307",
@@ -62,7 +56,16 @@
             "8c9b45ce076a40d1",
             "1542bb694a175939",
             "f4c26c95e4142031",
-            "d9fdcdddae92825b"
+            "d9fdcdddae92825b",
+            "8180848f581502a1",
+            "e70a7eac5aa1292c",
+            "23be0e7fda0f1269",
+            "8a9efa6ca4907eb8",
+            "4095d80339d4fc03",
+            "dc639336ccb6d507",
+            "7de43cfe5c5c9225",
+            "497afc4d7511892e",
+            "5dce08f35cb8b6cf"
         ],
         "x": -16,
         "y": -1,
@@ -351,7 +354,7 @@
         "wires": [
             [
                 "2b3d8e25f51d2891",
-                "2495491911df3be4"
+                "4095d80339d4fc03"
             ]
         ]
     },
@@ -373,7 +376,7 @@
         "wires": [
             [
                 "8b747e424369f1f9",
-                "a2f90802f95ed6ed"
+                "dc639336ccb6d507"
             ]
         ]
     },
@@ -412,33 +415,6 @@
         "wires": []
     },
     {
-        "id": "a2f90802f95ed6ed",
-        "type": "function",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "Set Relay Time",
-        "func": "\nlet pin_IR = 18;\nlet pin_Relay = 24;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR = 0;\n\nconst IR = new onoff.Gpio(pin_IR, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nfunction readIR() {\n    if (IR.readSync() === 1) {\n        return 1;\n    }\n    else {\n        return 0;\n    }\n}\n\nfunction writeRelay(value) {\n    if (value === 'ON') {\n        Relay.writeSync(1);\n    }\n    else {\n        Relay.writeSync(0);\n    }\n}\n\nstate_IR = IR.readSync();\nprevCount = Date.now();\nlet stopTimer = Date.now();\ncount = 0;\n\nwhile (count < timer && Date.now()-stopTimer < 5000) {\n    state_IR = IR.readSync();\n    if (state_IR === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        stopTimer = Date.now();\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nmsg.payload = 'done'\n\n\nreturn msg",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "onoff",
-                "module": "onoff"
-            }
-        ],
-        "x": 1700,
-        "y": 240,
-        "wires": [
-            [
-                "cf2b40f45ed03ce3",
-                "312281ef99a7932b"
-            ]
-        ]
-    },
-    {
         "id": "cf2b40f45ed03ce3",
         "type": "debug",
         "z": "93cd7eb94b5de81b",
@@ -473,35 +449,8 @@
         "y": 120,
         "wires": [
             [
-                "b3baee873a06e1eb",
-                "37e623f6372fce6f"
-            ]
-        ]
-    },
-    {
-        "id": "b3baee873a06e1eb",
-        "type": "function",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "Set Relay Time",
-        "func": "\nlet pin_IR = 18;\nlet pin_Relay = 8;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR = 0;\n\nconst IR = new onoff.Gpio(pin_IR, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nfunction readIR() {\n    if (IR.readSync() === 1) {\n        return 1;\n    }\n    else {\n        return 0;\n    }\n}\n\nfunction writeRelay(value) {\n    if (value === 'ON') {\n        Relay.writeSync(1);\n    }\n    else {\n        Relay.writeSync(0);\n    }\n}\n\nstate_IR = IR.readSync();\nprevCount = Date.now();\nlet stopTimer = Date.now();\ncount = 0;\n\nwhile (count < timer && Date.now()-stopTimer < 5000) {\n    state_IR = IR.readSync();\n    if (state_IR === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        stopTimer = Date.now();\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nmsg.payload = 'done'\n\n\nreturn msg",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "onoff",
-                "module": "onoff"
-            }
-        ],
-        "x": 1705.6666259765625,
-        "y": 85.6666259765625,
-        "wires": [
-            [
-                "f5b5f22f06ec8307",
-                "49cbb5412f98ed27"
+                "37e623f6372fce6f",
+                "8a9efa6ca4907eb8"
             ]
         ]
     },
@@ -524,32 +473,6 @@
         "wires": []
     },
     {
-        "id": "2495491911df3be4",
-        "type": "function",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "Set Relay Time",
-        "func": "\nlet pin_IR = 18;\nlet pin_Relay = 25;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR = 0;\n\nconst IR = new onoff.Gpio(pin_IR, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nfunction readIR() {\n    if (IR.readSync() === 1) {\n        return 1;\n    }\n    else {\n        return 0;\n    }\n}\n\nfunction writeRelay(value) {\n    if (value === 'ON') {\n        Relay.writeSync(1);\n    }\n    else {\n        Relay.writeSync(0);\n    }\n}\n\nstate_IR = IR.readSync();\nprevCount = Date.now();\nlet stopTimer = Date.now();\ncount = 0;\n\nwhile (count < timer && Date.now() - stopTimer < 5000) {\n    state_IR = IR.readSync();\n    if (state_IR === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        stopTimer = Date.now();\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nmsg.payload = 'done'\n\n\nreturn msg",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "onoff",
-                "module": "onoff"
-            }
-        ],
-        "x": 1780,
-        "y": 160,
-        "wires": [
-            [
-                "eb7f14736e65d017"
-            ]
-        ]
-    },
-    {
         "id": "c02cf9ec2d477c84",
         "type": "function",
         "z": "93cd7eb94b5de81b",
@@ -567,7 +490,7 @@
         "wires": [
             [
                 "680821e32dba97e7",
-                "2f065b22bd7d13fd"
+                "497afc4d7511892e"
             ]
         ]
     },
@@ -589,7 +512,7 @@
         "wires": [
             [
                 "842999d09d5414c6",
-                "73b77f45dc231067"
+                "5dce08f35cb8b6cf"
             ]
         ]
     },
@@ -630,33 +553,6 @@
         "wires": []
     },
     {
-        "id": "73b77f45dc231067",
-        "type": "function",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "Set Relay Time",
-        "func": "\nlet pin_IR = 18;\nlet pin_Relay = 24;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR = 0;\n\nconst IR = new onoff.Gpio(pin_IR, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nfunction readIR() {\n    if (IR.readSync() === 1) {\n        return 1;\n    }\n    else {\n        return 0;\n    }\n}\n\nfunction writeRelay(value) {\n    if (value === 'ON') {\n        Relay.writeSync(1);\n    }\n    else {\n        Relay.writeSync(0);\n    }\n}\n\nstate_IR = IR.readSync();\nprevCount = Date.now();\nlet stopTimer = Date.now();\ncount = 0;\n\nwhile (count < timer && Date.now() - stopTimer < 5000) {\n    state_IR = IR.readSync();\n    if (state_IR === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        stopTimer = Date.now();\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nmsg.payload = 'done'\n\n\nreturn msg",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "onoff",
-                "module": "onoff"
-            }
-        ],
-        "x": 1640,
-        "y": 520,
-        "wires": [
-            [
-                "1c9aad3d83444baa",
-                "a4b0ee05af245390"
-            ]
-        ]
-    },
-    {
         "id": "1c9aad3d83444baa",
         "type": "debug",
         "z": "93cd7eb94b5de81b",
@@ -691,34 +587,8 @@
         "y": 340,
         "wires": [
             [
-                "fac80dde8a05bfa6",
-                "9860e6549b7ce023"
-            ]
-        ]
-    },
-    {
-        "id": "fac80dde8a05bfa6",
-        "type": "function",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "Set Relay Time",
-        "func": "\nlet pin_IR = 18;\nlet pin_Relay = 8;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR = 0;\n\nconst IR = new onoff.Gpio(pin_IR, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nfunction readIR() {\n    if (IR.readSync() === 1) {\n        return 1;\n    }\n    else {\n        return 0;\n    }\n}\n\nfunction writeRelay(value) {\n    if (value === 'ON') {\n        Relay.writeSync(1);\n    }\n    else {\n        Relay.writeSync(0);\n    }\n}\n\nstate_IR = IR.readSync();\nprevCount = Date.now();\nlet stopTimer = Date.now();\ncount = 0;\n\nwhile (count < timer && Date.now() - stopTimer < 5000) {\n    state_IR = IR.readSync();\n    if (state_IR === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        stopTimer = Date.now();\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nmsg.payload = 'done'\n\n\nreturn msg",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "onoff",
-                "module": "onoff"
-            }
-        ],
-        "x": 1640,
-        "y": 340,
-        "wires": [
-            [
-                "3fe8a8f19bd636d7"
+                "9860e6549b7ce023",
+                "7de43cfe5c5c9225"
             ]
         ]
     },
@@ -739,32 +609,6 @@
         "x": 1560,
         "y": 280,
         "wires": []
-    },
-    {
-        "id": "2f065b22bd7d13fd",
-        "type": "function",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "Set Relay Time",
-        "func": "\nlet pin_IR = 18;\nlet pin_Relay = 25;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR = 0;\n\nconst IR = new onoff.Gpio(pin_IR, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nfunction readIR() {\n    if (IR.readSync() === 1) {\n        return 1;\n    }\n    else {\n        return 0;\n    }\n}\n\nfunction writeRelay(value) {\n    if (value === 'ON') {\n        Relay.writeSync(1);\n    }\n    else {\n        Relay.writeSync(0);\n    }\n}\n\nstate_IR = IR.readSync();\nprevCount = Date.now();\nlet stopTimer = Date.now();\ncount = 0;\n\nwhile (count < timer && Date.now() - stopTimer < 5000) {\n    state_IR = IR.readSync();\n    if (state_IR === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        stopTimer = Date.now();\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nmsg.payload = 'done'\n\n\nreturn msg",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "onoff",
-                "module": "onoff"
-            }
-        ],
-        "x": 1660,
-        "y": 440,
-        "wires": [
-            [
-                "626ec8f2db706571"
-            ]
-        ]
     },
     {
         "id": "ce57fc889764cc90",
@@ -1025,5 +869,219 @@
         "x": 240,
         "y": 40,
         "wires": []
+    },
+    {
+        "id": "8180848f581502a1",
+        "type": "rpi-gpio in",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "",
+        "pin": "16",
+        "intype": "up",
+        "debounce": "25",
+        "read": false,
+        "bcm": true,
+        "x": 520,
+        "y": 500,
+        "wires": [
+            [
+                "e70a7eac5aa1292c"
+            ]
+        ]
+    },
+    {
+        "id": "e70a7eac5aa1292c",
+        "type": "function",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "function 2",
+        "func": "let pulseCount = context.get('pulseCount') || 0;\nlet totalLiters = context.get('totalLiters') || 0;\nconst calibrationFactor = 4.5; // Ganti dengan faktor kalibrasi sensor Anda\n\n// Menghitung aliran dan total liter setiap detik\nif (msg.payload === 1) { // Sensor mengirimkan pulsa (misalnya, 1) setiap kali terjadi\n    pulseCount++;\n}\n\nconst duration = 1.0; // durasi dalam detik\nlet flowRate = (pulseCount / calibrationFactor) / duration; // aliran dalam liter per menit\ntotalLiters += flowRate * (duration / 60.0); // hitung total liter yang sudah mengalir\n\npulseCount = 0; // reset pulse count\n\n// Simpan nilai di context\ncontext.set('pulseCount', pulseCount);\ncontext.set('totalLiters', totalLiters);\n\nmsg.payload = {\n    flowRate: flowRate.toFixed(2),\n    totalLiters: totalLiters.toFixed(2)\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 480,
+        "wires": [
+            [
+                "23be0e7fda0f1269",
+                "ce57fc889764cc90"
+            ]
+        ]
+    },
+    {
+        "id": "23be0e7fda0f1269",
+        "type": "debug",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "debug 102",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1010,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "8a9efa6ca4907eb8",
+        "type": "function",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Set Relay Time",
+        "func": "\nlet pin_IR_ATAS = 18;\nlet pin_IR_BAWAH = 23;\nlet pin_Relay = 8;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR_ATAS = 0;\nlet state_IR_BAWAH = 0;\n\nconst IR_ATAS = new onoff.Gpio(pin_IR_ATAS, 'in', 'both');\nconst IR_BAWAH = new onoff.Gpio(pin_IR_BAWAH, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nstate_IR_ATAS = IR_ATAS.readSync();\nstate_IR_BAWAH = IR_BAWAH.readSync();\nprevCount = Date.now();\nlet stopTimer = Date.now();\ncount = 0;\n\nwhile (count < timer && Date.now()-stopTimer < 5000) {\n    state_IR_ATAS = IR_ATAS.readSync();\n    state_IR_BAWAH = IR_BAWAH.readSync();\n    if (state_IR_ATAS === 1 || state_IR_BAWAH === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        stopTimer = Date.now();\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nmsg.payload = 'done'\n\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "onoff",
+                "module": "onoff"
+            }
+        ],
+        "x": 1700,
+        "y": 80,
+        "wires": [
+            [
+                "f5b5f22f06ec8307"
+            ]
+        ]
+    },
+    {
+        "id": "4095d80339d4fc03",
+        "type": "function",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Set Relay Time",
+        "func": "\nlet pin_IR_ATAS = 18;\nlet pin_IR_BAWAH = 23;\nlet pin_Relay = 25;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR_ATAS = 0;\nlet state_IR_BAWAH = 0;\n\nconst IR_ATAS = new onoff.Gpio(pin_IR_ATAS, 'in', 'both');\nconst IR_BAWAH = new onoff.Gpio(pin_IR_BAWAH, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nstate_IR_ATAS = IR_ATAS.readSync();\nstate_IR_BAWAH = IR_BAWAH.readSync();\nprevCount = Date.now();\nlet stopTimer = Date.now();\ncount = 0;\n\nwhile (count < timer && Date.now()-stopTimer < 5000) {\n    state_IR_ATAS = IR_ATAS.readSync();\n    state_IR_BAWAH = IR_BAWAH.readSync();\n    if (state_IR_ATAS === 1 || state_IR_BAWAH === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        stopTimer = Date.now();\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nmsg.payload = 'done'\n\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "onoff",
+                "module": "onoff"
+            }
+        ],
+        "x": 1774.3333740234375,
+        "y": 154.3333740234375,
+        "wires": [
+            [
+                "eb7f14736e65d017"
+            ]
+        ]
+    },
+    {
+        "id": "dc639336ccb6d507",
+        "type": "function",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Set Relay Time",
+        "func": "\nlet pin_IR_ATAS = 18;\nlet pin_IR_BAWAH = 23;\nlet pin_Relay = 24;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR_ATAS = 0;\nlet state_IR_BAWAH = 0;\n\nconst IR_ATAS = new onoff.Gpio(pin_IR_ATAS, 'in', 'both');\nconst IR_BAWAH = new onoff.Gpio(pin_IR_BAWAH, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nstate_IR_ATAS = IR_ATAS.readSync();\nstate_IR_BAWAH = IR_BAWAH.readSync();\nprevCount = Date.now();\nlet stopTimer = Date.now();\ncount = 0;\n\nwhile (count < timer && Date.now()-stopTimer < 5000) {\n    state_IR_ATAS = IR_ATAS.readSync();\n    state_IR_BAWAH = IR_BAWAH.readSync();\n    if (state_IR_ATAS === 1 || state_IR_BAWAH === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        stopTimer = Date.now();\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nmsg.payload = 'done'\n\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "onoff",
+                "module": "onoff"
+            }
+        ],
+        "x": 1694.3333740234375,
+        "y": 234.3333740234375,
+        "wires": [
+            [
+                "312281ef99a7932b"
+            ]
+        ]
+    },
+    {
+        "id": "7de43cfe5c5c9225",
+        "type": "function",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Set Relay Time",
+        "func": "\nlet pin_IR_ATAS = 18;\nlet pin_IR_BAWAH = 23;\nlet pin_Relay = 8;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR_ATAS = 0;\nlet state_IR_BAWAH = 0;\n\nconst IR_ATAS = new onoff.Gpio(pin_IR_ATAS, 'in', 'both');\nconst IR_BAWAH = new onoff.Gpio(pin_IR_BAWAH, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nstate_IR_ATAS = IR_ATAS.readSync();\nstate_IR_BAWAH = IR_BAWAH.readSync();\nprevCount = Date.now();\nlet stopTimer = Date.now();\ncount = 0;\n\nwhile (count < timer && Date.now()-stopTimer < 5000) {\n    state_IR_ATAS = IR_ATAS.readSync();\n    state_IR_BAWAH = IR_BAWAH.readSync();\n    if (state_IR_ATAS === 1 || state_IR_BAWAH === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        stopTimer = Date.now();\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nmsg.payload = 'done'\n\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "onoff",
+                "module": "onoff"
+            }
+        ],
+        "x": 1600,
+        "y": 340,
+        "wires": [
+            [
+                "3fe8a8f19bd636d7"
+            ]
+        ]
+    },
+    {
+        "id": "497afc4d7511892e",
+        "type": "function",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Set Relay Time",
+        "func": "\nlet pin_IR_ATAS = 18;\nlet pin_IR_BAWAH = 23;\nlet pin_Relay = 25;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR_ATAS = 0;\nlet state_IR_BAWAH = 0;\n\nconst IR_ATAS = new onoff.Gpio(pin_IR_ATAS, 'in', 'both');\nconst IR_BAWAH = new onoff.Gpio(pin_IR_BAWAH, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nstate_IR_ATAS = IR_ATAS.readSync();\nstate_IR_BAWAH = IR_BAWAH.readSync();\nprevCount = Date.now();\nlet stopTimer = Date.now();\ncount = 0;\n\nwhile (count < timer && Date.now()-stopTimer < 5000) {\n    state_IR_ATAS = IR_ATAS.readSync();\n    state_IR_BAWAH = IR_BAWAH.readSync();\n    if (state_IR_ATAS === 1 || state_IR_BAWAH === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        stopTimer = Date.now();\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nmsg.payload = 'done'\n\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "onoff",
+                "module": "onoff"
+            }
+        ],
+        "x": 1654.3333740234375,
+        "y": 434.3333740234375,
+        "wires": [
+            [
+                "626ec8f2db706571"
+            ]
+        ]
+    },
+    {
+        "id": "5dce08f35cb8b6cf",
+        "type": "function",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Set Relay Time",
+        "func": "\nlet pin_IR_ATAS = 18;\nlet pin_IR_BAWAH = 23;\nlet pin_Relay = 24;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR_ATAS = 0;\nlet state_IR_BAWAH = 0;\n\nconst IR_ATAS = new onoff.Gpio(pin_IR_ATAS, 'in', 'both');\nconst IR_BAWAH = new onoff.Gpio(pin_IR_BAWAH, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nstate_IR_ATAS = IR_ATAS.readSync();\nstate_IR_BAWAH = IR_BAWAH.readSync();\nprevCount = Date.now();\nlet stopTimer = Date.now();\ncount = 0;\n\nwhile (count < timer && Date.now()-stopTimer < 5000) {\n    state_IR_ATAS = IR_ATAS.readSync();\n    state_IR_BAWAH = IR_BAWAH.readSync();\n    if (state_IR_ATAS === 1 || state_IR_BAWAH === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        stopTimer = Date.now();\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nmsg.payload = 'done'\n\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "onoff",
+                "module": "onoff"
+            }
+        ],
+        "x": 1634.3333740234375,
+        "y": 514.3333740234375,
+        "wires": [
+            [
+                "a4b0ee05af245390"
+            ]
+        ]
     }
 ]
