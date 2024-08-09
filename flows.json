@@ -68,8 +68,7 @@
             "5dce08f35cb8b6cf",
             "cfa57155488fe092",
             "fdecb8c68516383c",
-            "46bc2f93d48c087d",
-            "d4e8968127cff999"
+            "46bc2f93d48c087d"
         ],
         "x": -16,
         "y": -1,
@@ -1140,7 +1139,7 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "function 3",
-        "func": "\nreturn msg;",
+        "func": "msg.payload = 10;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1149,34 +1148,6 @@
         "libs": [],
         "x": 1000,
         "y": 360,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d4e8968127cff999",
-        "type": "inject",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "10",
-        "payloadType": "num",
-        "x": 890,
-        "y": 400,
         "wires": [
             [
                 "e70a7eac5aa1292c"
