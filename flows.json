@@ -65,7 +65,8 @@
             "dc639336ccb6d507",
             "7de43cfe5c5c9225",
             "497afc4d7511892e",
-            "5dce08f35cb8b6cf"
+            "5dce08f35cb8b6cf",
+            "cfa57155488fe092"
         ],
         "x": -16,
         "y": -1,
@@ -1081,6 +1082,26 @@
         "wires": [
             [
                 "a4b0ee05af245390"
+            ]
+        ]
+    },
+    {
+        "id": "cfa57155488fe092",
+        "type": "rpi-gpio in",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "IR Sensor Top",
+        "pin": "23",
+        "intype": "up",
+        "debounce": "25",
+        "read": false,
+        "bcm": true,
+        "x": 90,
+        "y": 320,
+        "wires": [
+            [
+                "aaaf2463dd0534cd",
+                "58cd9e4840d784ae"
             ]
         ]
     }
