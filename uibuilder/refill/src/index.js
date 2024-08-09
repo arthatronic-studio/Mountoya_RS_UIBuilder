@@ -12,6 +12,11 @@ document.getElementById('logo').addEventListener('click', function () {
   } else {
     localStorage.setItem("admin", 0);
     localStorage.setItem("totalVolume",19000);
+    
+    let payload = {};
+    payload = { type: 'reset', value: '1' };
+    uibuilder.send({ payload: payload });
+    
     modalGalon.style.display = 'none';
   }
   
