@@ -67,7 +67,9 @@
             "497afc4d7511892e",
             "5dce08f35cb8b6cf",
             "cfa57155488fe092",
-            "fdecb8c68516383c"
+            "fdecb8c68516383c",
+            "46bc2f93d48c087d",
+            "d4e8968127cff999"
         ],
         "x": -16,
         "y": -1,
@@ -342,7 +344,9 @@
             [
                 "394d191e7e96a9a4"
             ],
-            []
+            [
+                "46bc2f93d48c087d"
+            ]
         ]
     },
     {
@@ -904,7 +908,7 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "function 2",
-        "func": "let pulseCount = context.get('pulseCount') || 0;\nlet totalLiters = context.get('totalLiters') || 0;\nlet volumeliters = context.get('volumeliters') || 0;\nconst calibrationFactor = 4.5; // Ganti dengan faktor kalibrasi sensor Anda\n\n// Menghitung aliran dan total liter setiap detik\nif (msg.payload === 1) { // Sensor mengirimkan pulsa (misalnya, 1) setiap kali terjadi\n    pulseCount++;\n}\n\nconst duration = 1.0; // durasi dalam detik\nlet flowRate = (pulseCount / calibrationFactor); // aliran dalam liter per detik\ntotalLiters += flowRate * duration; // hitung total liter yang sudah mengalir\nvolumeliters = totalLiters * 1000; // konversi ke mililiter\n\npulseCount = 0; // reset pulse count\n\n// Simpan nilai di context\ncontext.set('pulseCount', pulseCount);\ncontext.set('totalLiters', totalLiters);\ncontext.set('volumeliters', volumeliters);\n\nmsg.payload = {\n    flowRate: flowRate.toFixed(2),\n    totalLiters: totalLiters.toFixed(2),\n    volumeliters: volumeliters.toFixed(2)\n};\n\nreturn msg;\n",
+        "func": "\n\nlet pulseCount = context.get('pulseCount') || 0;\nlet totalLiters = context.get('totalLiters') || 0;\nlet volumeliters = context.get('volumeliters') || 0;\nconst calibrationFactor = 4.5; // Ganti dengan faktor kalibrasi sensor Anda\n\nif (msg.payload === 10) {\n    totalLiters = 0;\n    volumeliters = 0;\n} \n\n// Menghitung aliran dan total liter setiap detik\nif (msg.payload === 1) { // Sensor mengirimkan pulsa (misalnya, 1) setiap kali terjadi\n    pulseCount++;\n}\n\nconst duration = 1.0; // durasi dalam detik\nlet flowRate = (pulseCount / calibrationFactor); // aliran dalam liter per detik\ntotalLiters += flowRate * duration; // hitung total liter yang sudah mengalir\nvolumeliters = totalLiters * 1000; // konversi ke mililiter\n\npulseCount = 0; // reset pulse count\n\n// Simpan nilai di context\ncontext.set('pulseCount', pulseCount);\ncontext.set('totalLiters', totalLiters);\ncontext.set('volumeliters', volumeliters);\n\nmsg.payload = {\n    flowRate: flowRate.toFixed(2),\n    totalLiters: totalLiters.toFixed(2),\n    volumeliters: volumeliters.toFixed(2)\n};\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1129,5 +1133,54 @@
         "x": 1170,
         "y": 80,
         "wires": []
+    },
+    {
+        "id": "46bc2f93d48c087d",
+        "type": "function",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "function 3",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d4e8968127cff999",
+        "type": "inject",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "10",
+        "payloadType": "num",
+        "x": 890,
+        "y": 400,
+        "wires": [
+            [
+                "e70a7eac5aa1292c"
+            ]
+        ]
     }
 ]
