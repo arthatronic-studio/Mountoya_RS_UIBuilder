@@ -66,7 +66,8 @@
             "7de43cfe5c5c9225",
             "497afc4d7511892e",
             "5dce08f35cb8b6cf",
-            "cfa57155488fe092"
+            "cfa57155488fe092",
+            "fdecb8c68516383c"
         ],
         "x": -16,
         "y": -1,
@@ -309,16 +310,22 @@
                 "t": "eq",
                 "v": "button6",
                 "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "reset",
+                "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 6,
+        "outputs": 7,
         "x": 980,
         "y": 260,
         "wires": [
             [
-                "5abc403c3b97e6f1"
+                "5abc403c3b97e6f1",
+                "fdecb8c68516383c"
             ],
             [
                 "758999591f8ebe39"
@@ -334,7 +341,8 @@
             ],
             [
                 "394d191e7e96a9a4"
-            ]
+            ],
+            []
         ]
     },
     {
@@ -1104,5 +1112,22 @@
                 "58cd9e4840d784ae"
             ]
         ]
+    },
+    {
+        "id": "fdecb8c68516383c",
+        "type": "debug",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "debug 103",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1170,
+        "y": 80,
+        "wires": []
     }
 ]
