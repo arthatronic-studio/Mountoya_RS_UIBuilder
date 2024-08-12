@@ -1103,7 +1103,7 @@
         "g": "d578f4fe739b97e1",
         "name": "IR Sensor Top",
         "pin": "23",
-        "intype": "up",
+        "intype": "down",
         "debounce": "25",
         "read": false,
         "bcm": true,
