@@ -1184,7 +1184,7 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "function 4",
-        "func": "msg.payload = msg.payload.volumeliters;\nconsole.log(\"Test\")\nreturn msg * 10000;",
+        "func": "let  test = msg.payload.volumeliters;\nmsg.payload = test * 100000\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
