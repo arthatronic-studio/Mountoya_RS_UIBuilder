@@ -69,7 +69,9 @@
             "cfa57155488fe092",
             "fdecb8c68516383c",
             "46bc2f93d48c087d",
-            "42138cb1cb3b3dcd"
+            "42138cb1cb3b3dcd",
+            "eafb83a76ba58f94",
+            "7d3c367185e43937"
         ],
         "x": -16,
         "y": -1,
@@ -920,7 +922,8 @@
         "wires": [
             [
                 "23be0e7fda0f1269",
-                "ce57fc889764cc90"
+                "ce57fc889764cc90",
+                "eafb83a76ba58f94"
             ]
         ]
     },
@@ -937,8 +940,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1010,
-        "y": 480,
+        "x": 1030,
+        "y": 500,
         "wires": []
     },
     {
@@ -1173,5 +1176,43 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "eafb83a76ba58f94",
+        "type": "function",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "function 4",
+        "func": "let test = msg.payload.volumeliters;\nreturn test;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1060,
+        "y": 560,
+        "wires": [
+            [
+                "7d3c367185e43937"
+            ]
+        ]
+    },
+    {
+        "id": "7d3c367185e43937",
+        "type": "debug",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "debug 104",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1250,
+        "y": 560,
+        "wires": []
     }
 ]
