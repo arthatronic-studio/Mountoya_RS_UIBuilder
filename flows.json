@@ -69,9 +69,7 @@
             "fdecb8c68516383c",
             "46bc2f93d48c087d",
             "42138cb1cb3b3dcd",
-            "04e96e931192cd25",
-            "98722ae804a5ca2c",
-            "1b3ea647d58a8213"
+            "04e96e931192cd25"
         ],
         "x": -16,
         "y": -1,
@@ -931,7 +929,7 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "Set Relay Time",
-        "func": "\nlet pin_IR_ATAS = 18;\nlet pin_IR_BAWAH = 23;\nlet pin_Relay = 8;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR_ATAS = 0;\nlet state_IR_BAWAH = 0;\n\nconst IR_ATAS = new onoff.Gpio(pin_IR_ATAS, 'in', 'both');\nconst IR_BAWAH = new onoff.Gpio(pin_IR_BAWAH, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nstate_IR_ATAS = IR_ATAS.readSync();\nstate_IR_BAWAH = IR_BAWAH.readSync();\nprevCount = Date.now();\nlet stopTimer = Date.now();\ncount = 0;\n\nwhile (count < timer && Date.now()-stopTimer < 5000) {\n    state_IR_ATAS = IR_ATAS.readSync();\n    state_IR_BAWAH = IR_BAWAH.readSync();\n    if (state_IR_ATAS === 1 || state_IR_BAWAH === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        stopTimer = Date.now();\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nmsg.payload = {\n    finish: 'done',\n    size: 250,\n    temperature: 'hot'\n}\n\n\nreturn msg",
+        "func": "\nlet pin_IR_ATAS = 18;\nlet pin_IR_BAWAH = 23;\nlet pin_Relay = 8;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR_ATAS = 0;\nlet state_IR_BAWAH = 0;\n\nconst IR_ATAS = new onoff.Gpio(pin_IR_ATAS, 'in', 'both');\nconst IR_BAWAH = new onoff.Gpio(pin_IR_BAWAH, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nstate_IR_ATAS = IR_ATAS.readSync();\nstate_IR_BAWAH = IR_BAWAH.readSync();\nprevCount = Date.now();\nlet stopTimer = Date.now();\ncount = 0;\n\nwhile (count < timer && Date.now()-stopTimer < 5000) {\n    state_IR_ATAS = IR_ATAS.readSync();\n    state_IR_BAWAH = IR_BAWAH.readSync();\n    if (state_IR_ATAS === 1 || state_IR_BAWAH === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        stopTimer = Date.now();\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nconst d = new Date();\n\nmsg.payload = {\n    finish: 'done',\n    time: d.getHours() + \":\" + d.getMinutes() + \":\" + d.getSeconds(),\n    date: d.getFullYear() + \"-\" + d.getMonth() + \"-\" + d.getDate(),\n    size: 250,\n    temperature: 'hot'\n}\n\n\nreturn msg",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -957,7 +955,7 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "Set Relay Time",
-        "func": "\nlet pin_IR_ATAS = 18;\nlet pin_IR_BAWAH = 23;\nlet pin_Relay = 25;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR_ATAS = 0;\nlet state_IR_BAWAH = 0;\n\nconst IR_ATAS = new onoff.Gpio(pin_IR_ATAS, 'in', 'both');\nconst IR_BAWAH = new onoff.Gpio(pin_IR_BAWAH, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nstate_IR_ATAS = IR_ATAS.readSync();\nstate_IR_BAWAH = IR_BAWAH.readSync();\nprevCount = Date.now();\nlet stopTimer = Date.now();\ncount = 0;\n\nwhile (count < timer && Date.now()-stopTimer < 5000) {\n    state_IR_ATAS = IR_ATAS.readSync();\n    state_IR_BAWAH = IR_BAWAH.readSync();\n    if (state_IR_ATAS === 1 || state_IR_BAWAH === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        stopTimer = Date.now();\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nmsg.payload = {\n    finish: 'done',\n    size: 250,\n    temperature: 'normal'\n}\n\nreturn msg",
+        "func": "\nlet pin_IR_ATAS = 18;\nlet pin_IR_BAWAH = 23;\nlet pin_Relay = 25;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR_ATAS = 0;\nlet state_IR_BAWAH = 0;\n\nconst IR_ATAS = new onoff.Gpio(pin_IR_ATAS, 'in', 'both');\nconst IR_BAWAH = new onoff.Gpio(pin_IR_BAWAH, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nstate_IR_ATAS = IR_ATAS.readSync();\nstate_IR_BAWAH = IR_BAWAH.readSync();\nprevCount = Date.now();\nlet stopTimer = Date.now();\ncount = 0;\n\nwhile (count < timer && Date.now()-stopTimer < 5000) {\n    state_IR_ATAS = IR_ATAS.readSync();\n    state_IR_BAWAH = IR_BAWAH.readSync();\n    if (state_IR_ATAS === 1 || state_IR_BAWAH === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        stopTimer = Date.now();\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nconst d = new Date();\n\nmsg.payload = {\n    finish: 'done',\n    time: d.getHours() + \":\" + d.getMinutes() + \":\" + d.getSeconds(),\n    date: d.getFullYear() + \"-\" + d.getMonth() + \"-\" + d.getDate(),\n    size: 250,\n    temperature: 'normal'\n}\n\nreturn msg",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -983,7 +981,7 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "Set Relay Time",
-        "func": "\nlet pin_IR_ATAS = 18;\nlet pin_IR_BAWAH = 23;\nlet pin_Relay = 24;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR_ATAS = 0;\nlet state_IR_BAWAH = 0;\n\nconst IR_ATAS = new onoff.Gpio(pin_IR_ATAS, 'in', 'both');\nconst IR_BAWAH = new onoff.Gpio(pin_IR_BAWAH, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nstate_IR_ATAS = IR_ATAS.readSync();\nstate_IR_BAWAH = IR_BAWAH.readSync();\nprevCount = Date.now();\nlet stopTimer = Date.now();\ncount = 0;\n\nwhile (count < timer && Date.now()-stopTimer < 5000) {\n    state_IR_ATAS = IR_ATAS.readSync();\n    state_IR_BAWAH = IR_BAWAH.readSync();\n    if (state_IR_ATAS === 1 || state_IR_BAWAH === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        stopTimer = Date.now();\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nmsg.payload = {\n    finish: 'done',\n    date: Date(),\n    size: 250,\n    temperature: 'cold'\n}\n\n\nreturn msg",
+        "func": "\nlet pin_IR_ATAS = 18;\nlet pin_IR_BAWAH = 23;\nlet pin_Relay = 24;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR_ATAS = 0;\nlet state_IR_BAWAH = 0;\n\nconst IR_ATAS = new onoff.Gpio(pin_IR_ATAS, 'in', 'both');\nconst IR_BAWAH = new onoff.Gpio(pin_IR_BAWAH, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nstate_IR_ATAS = IR_ATAS.readSync();\nstate_IR_BAWAH = IR_BAWAH.readSync();\nprevCount = Date.now();\nlet stopTimer = Date.now();\ncount = 0;\n\nwhile (count < timer && Date.now()-stopTimer < 5000) {\n    state_IR_ATAS = IR_ATAS.readSync();\n    state_IR_BAWAH = IR_BAWAH.readSync();\n    if (state_IR_ATAS === 1 || state_IR_BAWAH === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        stopTimer = Date.now();\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nconst d = new Date();\n\nmsg.payload = {\n    finish: 'done',\n    time: d.getHours() + \":\" + d.getMinutes() + \":\" + d.getSeconds(),\n    date: d.getFullYear() + \"-\" + d.getMonth() + \"-\" + d.getDate(),\n    size: 250,\n    temperature: 'cold'\n}\n\n\nreturn msg",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -1010,7 +1008,7 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "Set Relay Time",
-        "func": "\nlet pin_IR_ATAS = 18;\nlet pin_IR_BAWAH = 23;\nlet pin_Relay = 8;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR_ATAS = 0;\nlet state_IR_BAWAH = 0;\n\nconst IR_ATAS = new onoff.Gpio(pin_IR_ATAS, 'in', 'both');\nconst IR_BAWAH = new onoff.Gpio(pin_IR_BAWAH, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nstate_IR_ATAS = IR_ATAS.readSync();\nstate_IR_BAWAH = IR_BAWAH.readSync();\nprevCount = Date.now();\nlet stopTimer = Date.now();\ncount = 0;\n\nwhile (count < timer && Date.now()-stopTimer < 5000) {\n    state_IR_ATAS = IR_ATAS.readSync();\n    state_IR_BAWAH = IR_BAWAH.readSync();\n    if (state_IR_ATAS === 1 || state_IR_BAWAH === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        stopTimer = Date.now();\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nmsg.payload = {\n    finish: 'done',\n    size: 500,\n    temperature: 'hot'\n}\n\n\nreturn msg",
+        "func": "\nlet pin_IR_ATAS = 18;\nlet pin_IR_BAWAH = 23;\nlet pin_Relay = 8;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR_ATAS = 0;\nlet state_IR_BAWAH = 0;\n\nconst IR_ATAS = new onoff.Gpio(pin_IR_ATAS, 'in', 'both');\nconst IR_BAWAH = new onoff.Gpio(pin_IR_BAWAH, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nstate_IR_ATAS = IR_ATAS.readSync();\nstate_IR_BAWAH = IR_BAWAH.readSync();\nprevCount = Date.now();\nlet stopTimer = Date.now();\ncount = 0;\n\nwhile (count < timer && Date.now()-stopTimer < 5000) {\n    state_IR_ATAS = IR_ATAS.readSync();\n    state_IR_BAWAH = IR_BAWAH.readSync();\n    if (state_IR_ATAS === 1 || state_IR_BAWAH === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        stopTimer = Date.now();\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nconst d = new Date();\n\n\nmsg.payload = {\n    finish: 'done',\n    time: d.getHours() + \":\" + d.getMinutes() + \":\" + d.getSeconds(),\n    date: d.getFullYear() + \"-\" + d.getMonth() + \"-\" + d.getDate(),\n    size: 500,\n    temperature: 'hot'\n}\n\n\nreturn msg",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -1036,7 +1034,7 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "Set Relay Time",
-        "func": "\nlet pin_IR_ATAS = 18;\nlet pin_IR_BAWAH = 23;\nlet pin_Relay = 25;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR_ATAS = 0;\nlet state_IR_BAWAH = 0;\n\nconst IR_ATAS = new onoff.Gpio(pin_IR_ATAS, 'in', 'both');\nconst IR_BAWAH = new onoff.Gpio(pin_IR_BAWAH, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nstate_IR_ATAS = IR_ATAS.readSync();\nstate_IR_BAWAH = IR_BAWAH.readSync();\nprevCount = Date.now();\nlet stopTimer = Date.now();\ncount = 0;\n\nwhile (count < timer && Date.now()-stopTimer < 5000) {\n    state_IR_ATAS = IR_ATAS.readSync();\n    state_IR_BAWAH = IR_BAWAH.readSync();\n    if (state_IR_ATAS === 1 || state_IR_BAWAH === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        stopTimer = Date.now();\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nmsg.payload = {\n    finish: 'done',\n    size: 500,\n    temperature: 'normal'\n}\n\n\nreturn msg",
+        "func": "\nlet pin_IR_ATAS = 18;\nlet pin_IR_BAWAH = 23;\nlet pin_Relay = 25;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR_ATAS = 0;\nlet state_IR_BAWAH = 0;\n\nconst IR_ATAS = new onoff.Gpio(pin_IR_ATAS, 'in', 'both');\nconst IR_BAWAH = new onoff.Gpio(pin_IR_BAWAH, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nstate_IR_ATAS = IR_ATAS.readSync();\nstate_IR_BAWAH = IR_BAWAH.readSync();\nprevCount = Date.now();\nlet stopTimer = Date.now();\ncount = 0;\n\nwhile (count < timer && Date.now()-stopTimer < 5000) {\n    state_IR_ATAS = IR_ATAS.readSync();\n    state_IR_BAWAH = IR_BAWAH.readSync();\n    if (state_IR_ATAS === 1 || state_IR_BAWAH === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        stopTimer = Date.now();\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nconst d = new Date();\n\n\nmsg.payload = {\n    finish: 'done',\n    time: d.getHours() + \":\" + d.getMinutes() + \":\" + d.getSeconds(),\n    date: d.getFullYear() + \"-\" + d.getMonth() + \"-\" + d.getDate(),\n    size: 500,\n    temperature: 'normal'\n}\n\n\nreturn msg",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -1062,7 +1060,7 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "Set Relay Time",
-        "func": "\nlet pin_IR_ATAS = 18;\nlet pin_IR_BAWAH = 23;\nlet pin_Relay = 24;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR_ATAS = 0;\nlet state_IR_BAWAH = 0;\n\nconst IR_ATAS = new onoff.Gpio(pin_IR_ATAS, 'in', 'both');\nconst IR_BAWAH = new onoff.Gpio(pin_IR_BAWAH, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nstate_IR_ATAS = IR_ATAS.readSync();\nstate_IR_BAWAH = IR_BAWAH.readSync();\nprevCount = Date.now();\nlet stopTimer = Date.now();\ncount = 0;\n\nwhile (count < timer && Date.now()-stopTimer < 5000) {\n    state_IR_ATAS = IR_ATAS.readSync();\n    state_IR_BAWAH = IR_BAWAH.readSync();\n    if (state_IR_ATAS === 1 || state_IR_BAWAH === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        stopTimer = Date.now();\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nmsg.payload = {\n    finish: 'done',\n    size: 500,\n    temperature: 'cold'\n}\n\n\nreturn msg",
+        "func": "\nlet pin_IR_ATAS = 18;\nlet pin_IR_BAWAH = 23;\nlet pin_Relay = 24;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR_ATAS = 0;\nlet state_IR_BAWAH = 0;\n\nconst IR_ATAS = new onoff.Gpio(pin_IR_ATAS, 'in', 'both');\nconst IR_BAWAH = new onoff.Gpio(pin_IR_BAWAH, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nstate_IR_ATAS = IR_ATAS.readSync();\nstate_IR_BAWAH = IR_BAWAH.readSync();\nprevCount = Date.now();\nlet stopTimer = Date.now();\ncount = 0;\n\nwhile (count < timer && Date.now()-stopTimer < 5000) {\n    state_IR_ATAS = IR_ATAS.readSync();\n    state_IR_BAWAH = IR_BAWAH.readSync();\n    if (state_IR_ATAS === 1 || state_IR_BAWAH === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        stopTimer = Date.now();\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nconst d = new Date();\n\n\nmsg.payload = {\n    finish: 'done',\n    time: d.getHours() + \":\" + d.getMinutes() + \":\" + d.getSeconds(),\n    date: d.getFullYear() + \"-\" + d.getMonth() + \"-\" + d.getDate(),\n    size: 500,\n    temperature: 'cold'\n}\n\n\nreturn msg",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -1199,53 +1197,6 @@
         "y": 640,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "98722ae804a5ca2c",
-        "type": "inject",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "1",
-        "payloadType": "num",
-        "x": 370,
-        "y": 640,
-        "wires": [
-            [
-                "1b3ea647d58a8213"
-            ]
-        ]
-    },
-    {
-        "id": "1b3ea647d58a8213",
-        "type": "function",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "function 4",
-        "func": "const d = new Date();\nif (msg.payload === 1){\n    msg.payload = {\n        finish: 'done',\n        time: d.getHours() + \":\" + d.getMinutes() + \":\" + d.getSeconds(),\n        date: d.getFullYear() + \"-\" + d.getMonth() + \"-\" + d.getDate(),\n        size: 250,\n        temperature: 'cold'\n    }\n}\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 540,
-        "y": 640,
-        "wires": [
-            [
-                "04e96e931192cd25"
-            ]
         ]
     }
 ]
