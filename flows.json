@@ -1203,7 +1203,7 @@
         "spec": "rfc",
         "sep": ",",
         "hdrin": "",
-        "hdrout": "once",
+        "hdrout": "all",
         "multi": "one",
         "ret": "\\n",
         "temp": "test,tust",
