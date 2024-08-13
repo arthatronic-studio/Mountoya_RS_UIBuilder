@@ -69,7 +69,9 @@
             "fdecb8c68516383c",
             "46bc2f93d48c087d",
             "42138cb1cb3b3dcd",
-            "04e96e931192cd25"
+            "04e96e931192cd25",
+            "98722ae804a5ca2c",
+            "1b3ea647d58a8213"
         ],
         "x": -16,
         "y": -1,
@@ -653,8 +655,7 @@
         "y": 400,
         "wires": [
             [
-                "ce57fc889764cc90",
-                "04e96e931192cd25"
+                "ce57fc889764cc90"
             ]
         ]
     },
@@ -1198,6 +1199,53 @@
         "y": 640,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "98722ae804a5ca2c",
+        "type": "inject",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 370,
+        "y": 640,
+        "wires": [
+            [
+                "1b3ea647d58a8213"
+            ]
+        ]
+    },
+    {
+        "id": "1b3ea647d58a8213",
+        "type": "function",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "function 4",
+        "func": "if (msg.payload === 1){\n    msg.payload = {\n        finish: 'done',\n        date: Date().getFullYear() + Date().getMonth(),\n        size: 250,\n        temperature: 'cold'\n    }\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 640,
+        "wires": [
+            [
+                "04e96e931192cd25"
+            ]
         ]
     }
 ]
