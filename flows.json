@@ -1291,6 +1291,9 @@
         "ret": "\\n",
         "temp": "name,age,city",
         "skip": "0",
+        "strings": true,
+        "include_empty_strings": false,
+        "include_null_values": false,
         "x": 540,
         "y": 260,
         "wires": [
