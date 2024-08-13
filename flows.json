@@ -1169,7 +1169,7 @@
         "hdrin": "",
         "hdrout": "once",
         "multi": "one",
-        "ret": "\\n",
+        "ret": "\\r\\n",
         "temp": "time,date,volume,temperature",
         "skip": "0",
         "strings": true,
