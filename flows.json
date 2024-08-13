@@ -1252,5 +1252,62 @@
         "x": 670,
         "y": 720,
         "wires": []
+    },
+    {
+        "id": "1",
+        "type": "inject",
+        "z": "efd1fb07c17be297",
+        "name": "Inject JSON Data",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[{\"name\":\"John Doe\",\"age\":30,\"city\":\"New York\"},{\"name\":\"Jane Smith\",\"age\":25,\"city\":\"Los Angeles\"}]",
+        "payloadType": "json",
+        "x": 320,
+        "y": 260,
+        "wires": [
+            [
+                "2"
+            ]
+        ]
+    },
+    {
+        "id": "2",
+        "type": "csv",
+        "z": "efd1fb07c17be297",
+        "name": "Convert JSON to CSV",
+        "sep": ",",
+        "hdrin": true,
+        "hdrout": "all",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "name,age,city",
+        "skip": "0",
+        "x": 540,
+        "y": 260,
+        "wires": [
+            [
+                "3"
+            ]
+        ]
+    },
+    {
+        "id": "3",
+        "type": "file",
+        "z": "efd1fb07c17be297",
+        "name": "Write to CSV File",
+        "filename": "/path/to/output.csv",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 770,
+        "y": 260,
+        "wires": [
+            []
+        ]
     }
 ]
