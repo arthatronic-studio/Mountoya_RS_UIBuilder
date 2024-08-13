@@ -1171,7 +1171,7 @@
         "hdrout": "once",
         "multi": "one",
         "ret": "\\n",
-        "temp": "date,size,temperature",
+        "temp": "time,date,size,temperature",
         "skip": "0",
         "strings": true,
         "include_empty_strings": "",
