@@ -1233,7 +1233,7 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "function 4",
-        "func": "const d = new Date();\nif (msg.payload === 1){\n    msg.payload = {\n        finish: 'done',\n        date: d.getFullYear() + \"-\" + d.getMonth(),\n        size: 250,\n        temperature: 'cold'\n    }\n}\nreturn msg;",
+        "func": "const d = new Date();\nif (msg.payload === 1){\n    msg.payload = {\n        finish: 'done',\n        time: d.getHours + \"-\" + d.getMinutes + \"-\" + d.getSeconds,\n        date: d.getFullYear() + \"-\" + d.getMonth() + \"-\" + d.getDay(),\n        size: 250,\n        temperature: 'cold'\n    }\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
