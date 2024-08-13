@@ -1190,7 +1190,7 @@
         "name": "Log Data",
         "filename": "/home/arthatronic/Documents/log_rs.csv",
         "filenameType": "str",
-        "appendNewline": true,
+        "appendNewline": false,
         "createDir": true,
         "overwriteFile": "false",
         "encoding": "none",
