@@ -1258,14 +1258,18 @@
         "type": "inject",
         "z": "efd1fb07c17be297",
         "name": "Inject JSON Data",
-        "props": [],
+        "props": [
+            {
+                "p": "payload.test",
+                "v": "aaa",
+                "vt": "str"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "[{\"name\":\"John Doe\",\"age\":30,\"city\":\"New York\"},{\"name\":\"Jane Smith\",\"age\":25,\"city\":\"Los Angeles\"}]",
-        "payloadType": "json",
         "x": 320,
         "y": 260,
         "wires": [
