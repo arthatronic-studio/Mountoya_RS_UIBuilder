@@ -1155,5 +1155,76 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "8cf19c712808b008",
+        "type": "inject",
+        "z": "93cd7eb94b5de81b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload.test",
+                "v": "mantap",
+                "vt": "str"
+            },
+            {
+                "p": "payload.tust",
+                "v": "100",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 570,
+        "y": 640,
+        "wires": [
+            [
+                "04e96e931192cd25"
+            ]
+        ]
+    },
+    {
+        "id": "04e96e931192cd25",
+        "type": "csv",
+        "z": "93cd7eb94b5de81b",
+        "name": "",
+        "spec": "rfc",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "none",
+        "multi": "one",
+        "ret": "\\r\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 730,
+        "y": 660,
+        "wires": [
+            [
+                "f7de393883dfc617"
+            ]
+        ]
+    },
+    {
+        "id": "f7de393883dfc617",
+        "type": "file",
+        "z": "93cd7eb94b5de81b",
+        "name": "Log Data",
+        "filename": "/home/arthatronic/Documents/log.csv",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 900,
+        "y": 640,
+        "wires": [
+            []
+        ]
     }
 ]
