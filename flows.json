@@ -95,7 +95,7 @@
         "read": false,
         "bcm": true,
         "x": 120,
-        "y": 260,
+        "y": 240,
         "wires": [
             [
                 "58cd9e4840d784ae"
@@ -865,7 +865,7 @@
         "read": false,
         "bcm": true,
         "x": 130,
-        "y": 300,
+        "y": 320,
         "wires": [
             [
                 "58cd9e4840d784ae"
