@@ -1001,7 +1001,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "payload",
+                "p": "payload.top",
                 "pt": "msg",
                 "to": "11",
                 "tot": "str"
@@ -1012,7 +1012,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 500,
+        "x": 520,
         "y": 140,
         "wires": [
             [
@@ -1029,7 +1029,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "payload",
+                "p": "payload.top",
                 "pt": "msg",
                 "to": "10",
                 "tot": "str"
@@ -1040,7 +1040,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 500,
+        "x": 520,
         "y": 180,
         "wires": [
             [
