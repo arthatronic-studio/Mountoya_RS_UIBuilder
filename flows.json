@@ -77,7 +77,7 @@
         "createDir": true,
         "overwriteFile": "false",
         "encoding": "none",
-        "x": 960,
+        "x": 820,
         "y": 560,
         "wires": [
             []
@@ -929,7 +929,7 @@
         "strings": true,
         "include_empty_strings": "",
         "include_null_values": "",
-        "x": 810,
+        "x": 670,
         "y": 560,
         "wires": [
             [
