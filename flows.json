@@ -87,13 +87,13 @@
         "type": "rpi-gpio in",
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
-        "name": "IR Sensor",
+        "name": "IR Sensor Bott",
         "pin": "18",
         "intype": "up",
         "debounce": "25",
         "read": false,
         "bcm": true,
-        "x": 160,
+        "x": 180,
         "y": 280,
         "wires": [
             [
