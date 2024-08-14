@@ -797,7 +797,7 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "payload.",
+        "complete": "payload",
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
