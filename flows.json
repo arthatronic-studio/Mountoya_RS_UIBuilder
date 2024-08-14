@@ -57,7 +57,8 @@
             "c261d518ebc079f0",
             "ae945c1acac3f873",
             "58cd9e4840d784ae",
-            "996331d83b614a49"
+            "996331d83b614a49",
+            "ddc37712c1a0b1b6"
         ],
         "x": 74,
         "y": -1,
@@ -96,7 +97,9 @@
         "x": 180,
         "y": 280,
         "wires": [
-            []
+            [
+                "ddc37712c1a0b1b6"
+            ]
         ]
     },
     {
@@ -907,6 +910,27 @@
         "y": 100,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "ddc37712c1a0b1b6",
+        "type": "function",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Change to Object",
+        "func": "if (msg.payload === 1){\n    msg.payload = {\n        bott: '1'\n    }\n}\nelse if (msg.payload === 0){\n    msg.payload = {\n        bott: '0'\n    }\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 280,
+        "wires": [
+            [
+                "ce57fc889764cc90"
+            ]
         ]
     }
 ]
