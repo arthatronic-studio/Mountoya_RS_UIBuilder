@@ -492,13 +492,13 @@
         "type": "rpi-gpio in",
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
-        "name": "",
+        "name": "Waterflow Pin",
         "pin": "16",
         "intype": "up",
         "debounce": "25",
         "read": false,
         "bcm": true,
-        "x": 720,
+        "x": 730,
         "y": 440,
         "wires": [
             [
