@@ -203,7 +203,7 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "Button 3 Action 250 ml cold",
-        "func": "// msg.payload = 6 // Calibrated\nmsg.payload = 2\nreturn msg;",
+        "func": "// msg.payload = 6 // Calibrated\nmsg.payload = 4\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
