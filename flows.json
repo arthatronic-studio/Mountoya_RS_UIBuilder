@@ -952,7 +952,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 440,
+        "x": 600,
         "y": 540,
         "wires": [
             [
@@ -974,7 +974,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 780,
+        "x": 940,
         "y": 600,
         "wires": []
     },
@@ -991,7 +991,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 620,
+        "x": 780,
         "y": 540,
         "wires": [
             [
