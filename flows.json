@@ -703,12 +703,10 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1140,
-        "y": 340,
+        "x": 1400,
+        "y": 460,
         "wires": [
-            [
-                "e70a7eac5aa1292c"
-            ]
+            []
         ]
     },
     {
@@ -769,8 +767,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1180,
-        "y": 440,
+        "x": 1140,
+        "y": 460,
         "wires": []
     },
     {
