@@ -62,7 +62,8 @@
             "e6d167a8f11d18c3",
             "a96796d7a57369e9",
             "8180848f581502a1",
-            "674226255c184b27"
+            "674226255c184b27",
+            "97a3c2112af1fec0"
         ],
         "x": 74,
         "y": -1,
@@ -696,7 +697,7 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "Reset Waterflow",
-        "func": "msg.payload = 'resetWaterFlow';\nreturn msg;",
+        "func": "msg.payload = 0;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1027,6 +1028,24 @@
             [
                 "f04b7f82a4777b77"
             ]
+        ]
+    },
+    {
+        "id": "97a3c2112af1fec0",
+        "type": "file",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Log Data",
+        "filename": "/home/arthatronic/Documents/waterflow.txt",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1600,
+        "y": 460,
+        "wires": [
+            []
         ]
     }
 ]
