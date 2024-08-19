@@ -40,7 +40,6 @@
             "1542bb694a175939",
             "f4c26c95e4142031",
             "d9fdcdddae92825b",
-            "8180848f581502a1",
             "e70a7eac5aa1292c",
             "8a9efa6ca4907eb8",
             "4095d80339d4fc03",
@@ -62,7 +61,7 @@
             "f04b7f82a4777b77",
             "e6d167a8f11d18c3",
             "a96796d7a57369e9",
-            "11ba3a4835079223"
+            "8180848f581502a1"
         ],
         "x": 74,
         "y": -1,
@@ -492,25 +491,6 @@
         "x": 240,
         "y": 40,
         "wires": []
-    },
-    {
-        "id": "8180848f581502a1",
-        "type": "rpi-gpio in",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "Waterflow Pin",
-        "pin": "21",
-        "intype": "up",
-        "debounce": "25",
-        "read": false,
-        "bcm": true,
-        "x": 710,
-        "y": 440,
-        "wires": [
-            [
-                "e70a7eac5aa1292c"
-            ]
-        ]
     },
     {
         "id": "e70a7eac5aa1292c",
@@ -1001,28 +981,17 @@
         ]
     },
     {
-        "id": "11ba3a4835079223",
-        "type": "inject",
+        "id": "8180848f581502a1",
+        "type": "rpi-gpio in",
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 420,
+        "name": "Waterflow Pin",
+        "pin": "21",
+        "intype": "up",
+        "debounce": "25",
+        "read": false,
+        "bcm": true,
+        "x": 410,
         "y": 540,
         "wires": [
             [
