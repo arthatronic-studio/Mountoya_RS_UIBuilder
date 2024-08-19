@@ -58,12 +58,14 @@
             "ae945c1acac3f873",
             "58cd9e4840d784ae",
             "996331d83b614a49",
-            "9dbc0a797a97d227"
+            "9dbc0a797a97d227",
+            "f04b7f82a4777b77",
+            "e6d167a8f11d18c3"
         ],
         "x": 74,
-        "y": -1,
+        "y": -21,
         "w": 1842,
-        "h": 522
+        "h": 542
     },
     {
         "id": "f7de393883dfc617",
@@ -934,6 +936,45 @@
         "statusType": "auto",
         "x": 590,
         "y": 400,
+        "wires": []
+    },
+    {
+        "id": "f04b7f82a4777b77",
+        "type": "file in",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Data Waterflow",
+        "filename": "/home/arthatronic/Documents/waterflow.txt",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 980,
+        "y": 80,
+        "wires": [
+            [
+                "e6d167a8f11d18c3"
+            ]
+        ]
+    },
+    {
+        "id": "e6d167a8f11d18c3",
+        "type": "debug",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 20,
         "wires": []
     }
 ]
