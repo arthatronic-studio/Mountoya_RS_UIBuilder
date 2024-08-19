@@ -65,7 +65,8 @@
             "674226255c184b27",
             "97a3c2112af1fec0",
             "ee35fa8f00e5fb60",
-            "813a5d152d4efffd"
+            "813a5d152d4efffd",
+            "f1c25ce41202d813"
         ],
         "x": 74,
         "y": -1,
@@ -514,7 +515,7 @@
         "wires": [
             [
                 "ce57fc889764cc90",
-                "813a5d152d4efffd"
+                "f1c25ce41202d813"
             ]
         ]
     },
@@ -772,7 +773,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1340,
+        "x": 1520,
         "y": 520,
         "wires": []
     },
@@ -1084,12 +1085,31 @@
         "createDir": true,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 1140,
+        "x": 1320,
         "y": 520,
         "wires": [
             [
                 "9e715bfcb567f4aa"
             ]
+        ]
+    },
+    {
+        "id": "f1c25ce41202d813",
+        "type": "function",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "function 1",
+        "func": "msg.payload = msg.payload.volumeliters;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1140,
+        "y": 520,
+        "wires": [
+            []
         ]
     }
 ]
