@@ -998,9 +998,9 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 800,
+        "payload": "1",
+        "payloadType": "str",
+        "x": 790,
         "y": 180,
         "wires": [
             [
