@@ -1015,7 +1015,7 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "function 1",
-        "func": "msg.payload = msg.payload\nreturn msg;",
+        "func": "msg.payload = parseInt(msg.payload);\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
