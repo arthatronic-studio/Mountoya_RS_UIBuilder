@@ -1038,14 +1038,14 @@
         "type": "file",
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
-        "name": "Log Data",
+        "name": "Data Waterflow",
         "filename": "/home/arthatronic/Documents/waterflow.txt",
         "filenameType": "str",
         "appendNewline": false,
         "createDir": true,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 1600,
+        "x": 1620,
         "y": 460,
         "wires": [
             [
