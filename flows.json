@@ -61,13 +61,12 @@
             "9dbc0a797a97d227",
             "f04b7f82a4777b77",
             "e6d167a8f11d18c3",
-            "fdb5e871475519d1",
             "a96796d7a57369e9"
         ],
         "x": 74,
-        "y": -21,
+        "y": -1,
         "w": 1842,
-        "h": 542
+        "h": 602
     },
     {
         "id": "f7de393883dfc617",
@@ -953,8 +952,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 980,
-        "y": 80,
+        "x": 440,
+        "y": 560,
         "wires": [
             [
                 "a96796d7a57369e9"
@@ -975,55 +974,25 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1300,
-        "y": 20,
+        "x": 780,
+        "y": 560,
         "wires": []
-    },
-    {
-        "id": "fdb5e871475519d1",
-        "type": "inject",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "1",
-        "payloadType": "str",
-        "x": 790,
-        "y": 180,
-        "wires": [
-            [
-                "f04b7f82a4777b77"
-            ]
-        ]
     },
     {
         "id": "a96796d7a57369e9",
         "type": "function",
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
-        "name": "Parse",
-        "func": "msg.payload = parseInt(msg.payload);\nreturn msg;",
+        "name": "function 1",
+        "func": "\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1150,
-        "y": 80,
+        "x": 620,
+        "y": 560,
         "wires": [
             [
                 "e6d167a8f11d18c3"
