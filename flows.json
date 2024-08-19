@@ -977,7 +977,7 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "Waterflow Pin",
-        "pin": "21",
+        "pin": "16",
         "intype": "up",
         "debounce": "25",
         "read": false,
