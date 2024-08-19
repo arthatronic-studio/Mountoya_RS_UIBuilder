@@ -67,7 +67,9 @@
             "813a5d152d4efffd",
             "f1c25ce41202d813",
             "9e715bfcb567f4aa",
-            "61dfb309423f349f"
+            "61dfb309423f349f",
+            "8259c8deb91a5620",
+            "ab6dc3d12e5bfd40"
         ],
         "x": 74,
         "y": -1,
@@ -1034,7 +1036,8 @@
         "y": 460,
         "wires": [
             [
-                "ee35fa8f00e5fb60"
+                "ee35fa8f00e5fb60",
+                "8259c8deb91a5620"
             ]
         ]
     },
@@ -1052,8 +1055,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1750,
-        "y": 460,
+        "x": 1770,
+        "y": 520,
         "wires": []
     },
     {
@@ -1142,6 +1145,37 @@
         "wires": [
             [
                 "46bc2f93d48c087d"
+            ]
+        ]
+    },
+    {
+        "id": "8259c8deb91a5620",
+        "type": "link out",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Waterflow",
+        "mode": "link",
+        "links": [
+            "ab6dc3d12e5bfd40"
+        ],
+        "x": 1755,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "ab6dc3d12e5bfd40",
+        "type": "link in",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "link in 3",
+        "links": [
+            "8259c8deb91a5620"
+        ],
+        "x": 315,
+        "y": 500,
+        "wires": [
+            [
+                "f04b7f82a4777b77"
             ]
         ]
     }
