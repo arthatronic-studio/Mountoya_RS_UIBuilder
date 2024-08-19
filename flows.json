@@ -61,7 +61,8 @@
             "9dbc0a797a97d227",
             "f04b7f82a4777b77",
             "e6d167a8f11d18c3",
-            "fdb5e871475519d1"
+            "fdb5e871475519d1",
+            "a96796d7a57369e9"
         ],
         "x": 74,
         "y": -21,
@@ -956,7 +957,7 @@
         "y": 80,
         "wires": [
             [
-                "e6d167a8f11d18c3"
+                "a96796d7a57369e9"
             ]
         ]
     },
@@ -974,7 +975,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1100,
+        "x": 1300,
         "y": 20,
         "wires": []
     },
@@ -1005,6 +1006,27 @@
         "wires": [
             [
                 "f04b7f82a4777b77"
+            ]
+        ]
+    },
+    {
+        "id": "a96796d7a57369e9",
+        "type": "function",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "function 1",
+        "func": "msg.payload = msg.payload\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1160,
+        "y": 80,
+        "wires": [
+            [
+                "e6d167a8f11d18c3"
             ]
         ]
     }
