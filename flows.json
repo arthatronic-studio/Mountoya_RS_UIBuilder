@@ -745,7 +745,7 @@
         "spec": "rfc",
         "sep": ",",
         "hdrin": "",
-        "hdrout": "once",
+        "hdrout": "none",
         "multi": "one",
         "ret": "\\n",
         "temp": "time,date,volume,temperature",
