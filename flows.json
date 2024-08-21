@@ -1011,8 +1011,8 @@
         "topic": "",
         "payload": "1",
         "payloadType": "num",
-        "x": 230,
-        "y": 520,
+        "x": 250,
+        "y": 540,
         "wires": [
             [
                 "f04b7f82a4777b77"
