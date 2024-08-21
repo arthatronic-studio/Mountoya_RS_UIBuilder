@@ -6,27 +6,26 @@ document.addEventListener('DOMContentLoaded', function () {
     const hotText = document.getElementById('modal-text-2');
     const hotSubtitle = document.getElementById('modal-subtitle-2');
     const totalVolumeElement = document.getElementById('total-volume');
-    const volumelitersElement = document.getElementById('volumeliters'); // Pastikan elemen ini ada
     const initialVolume = 19000; // Initial volume in ml
     const waktuTimeout = 30000;
+
+    let volumeliters = 0;
+
     let selectedOption = '';
 
-    // Initialize x from localStorage or set to initial value
-    let x = localStorage.getItem('totalVolume') ? parseInt(localStorage.getItem('totalVolume')) : initialVolume;
+    // Inisialisasi volume dari localStorage atau nilai default
+    let storedVolume = localStorage.getItem('volumeliters');
+    let Volume = storedVolume ? parseInt(storedVolume, 10) : initialVolume;
+    let x = localStorage.getItem('totalVolume') ? parseInt(localStorage.getItem('totalVolume'), 10) : initialVolume;
+    let wf = localStorage.getItem('waterFlow') ? parseInt(localStorage.getItem('waterFlow'), 10) : 0;
 
-    // Update the displayed total volume
+    // Fungsi untuk memperbarui tampilan volume total
     function updateTotalVolumeDisplay() {
         totalVolumeElement.innerHTML = `Sisa Air Galon = ${x} ml`;
     }
 
-    // Update the displayed volume in liters
-    function updatevolumelitersDisplay(volumeliters) {
-        volumelitersElement.innerText = `Sisa Air Galon: ${volumeliters} ml`;
-    }
-
-    // Initial display update
+    // Pembaruan tampilan awal
     updateTotalVolumeDisplay();
-    updatevolumelitersDisplay(0); // Set initial value for volumeliters
 
     let timeOutBalik = setTimeout(function () {
         window.location.href = 'index.html';
@@ -107,23 +106,35 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Save the new volume to localStorage
         localStorage.setItem('volume_air', volume);
-
-        // Update the remaining volume
-        x -= volume;
-        localStorage.setItem('totalVolume', x);
-        updateTotalVolumeDisplay();
-
-        // Redirect to the chosen URL
         window.location.href = url;
     });
 
     uibuilder.onChange('msg', function (msg) {
         console.log('Message received from Node-RED:', msg);
 
+        if (msg.payload === '1') {
+            // Show the modal
+            localStorage.setItem("sensor", 1);
+            console.log('Showing modal');
+            // modal.style.display = 'flex';
+        } else if (msg.payload === '0') {
+            // Hide the modal
+            localStorage.setItem("sensor", 0);
+            console.log('Hiding modal');
+            // modal.style.display = 'none';
+        } else {
+            // Debugging log for unexpected payload
+            console.log('Unexpected payload:', msg.payload);
+        }
         // Update volumeliters with the value received from Node-RED
         if (msg.payload && msg.payload.volumeliters !== undefined) {
-            const volumeliters = msg.payload.volumeliters;
-            updatevolumelitersDisplay(volumeliters);
+            volumeliters = msg.payload.volumeliters;
+            // localStorage.setItem('volumeliters', volumeliters);
+            // x -= volumeliters;
+            x = initialVolume - volumeliters;
+            localStorage.setItem('totalVolume', x);
+            localStorage.setItem('waterFlow', volumeliters);
+            updateTotalVolumeDisplay();
         } else {
             console.log('Payload does not contain volumeliters:', msg.payload);
         }

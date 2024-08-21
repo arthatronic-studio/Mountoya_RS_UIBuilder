@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Initialize uibuilder
     const waktuTimeout = 30000;
+    let stateBottomSensor = '0';
+    let stateTopSensor = '0';
+
     console.log('Initializing uibuilder...');
     uibuilder.start();
     let timeOutBalik = setTimeout(function () {
@@ -8,18 +11,18 @@ document.addEventListener('DOMContentLoaded', function () {
     }, waktuTimeout)
     // Debugging log
     console.log('Setting up uibuilder message listener...');
-    if(Number(localStorage.getItem("sensor")) === 1){
+    if (Number(localStorage.getItem("sensor")) === 1) {
         const modal = document.getElementById('modal');
         console.log('Showing modal');
         modal.style.display = 'flex';
-    } else if (Number(localStorage.getItem("sensor")) === 0){
+    } else if (Number(localStorage.getItem("sensor")) === 0) {
         // Hide the modal
         const modal = document.getElementById('modal');
         console.log('Hiding modal');
         modal.style.display = 'none';
     }
 
-    
+
     // Listen for messages from Node-RED
     uibuilder.onChange('msg', function (msg) {
         console.log('Message received from Node-RED:', msg);
@@ -28,19 +31,29 @@ document.addEventListener('DOMContentLoaded', function () {
         timeOutBalik = setTimeout(function () {
             window.location.href = 'index.html';
         }, waktuTimeout)
-        if (msg.payload === '1') {
+        stateBottomSensor = msg.payload;
+        stateTopSensor = msg.payload.top;
+        if (stateBottomSensor === '1' || stateTopSensor === '1') {
             // Show the modal
-            localStorage.setItem("sensor",1);
+            localStorage.setItem("sensor", 1);
             console.log('Showing modal');
             modal.style.display = 'flex';
-        } else if (msg.payload === '0') {
+        } else if (stateBottomSensor === '0') {
             // Hide the modal
             localStorage.setItem("sensor", 0);
             console.log('Hiding modal');
             modal.style.display = 'none';
-         } else {
+        } else {
             // Debugging log for unexpected payload
             console.log('Unexpected payload:', msg.payload);
+        }
+        if (msg.payload && msg.payload.volumeliters !== undefined) {
+            let volumeliters = msg.payload.volumeliters;
+            // localStorage.setItem('volumeliters', volumeliters);
+            // let x = localStorage.getItem('totalVolume') ? parseInt(localStorage.getItem('totalVolume'), 10) : 19000;
+            // x -= volumeliters;
+            let x = 19000 - volumeliters;
+            localStorage.setItem('totalVolume', x);
         }
     });
 
@@ -52,15 +65,15 @@ document.addEventListener('DOMContentLoaded', function () {
             window.location.href = 'index.html';
         }, waktuTimeout)
     });
-    
-    if (document.getElementById('proceed1')!= null){
+
+    if (document.getElementById('proceed1') != null) {
         document.getElementById('proceed1').addEventListener('click', function () {
             localStorage.setItem("button", "button1")
             window.location.href = 'refill.html';
-            
+
         });
     }
-    
+
     console.log(document.getElementById('proceed2'));
     if (document.getElementById('proceed2') != null) {
         document.getElementById('proceed2').addEventListener('click', function () {
