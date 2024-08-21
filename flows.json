@@ -22,34 +22,13 @@
         },
         "nodes": [
             "b8c02fcd2c609e5c",
-            "c76d1813b12e5438",
-            "9385390fe813aad3",
-            "aaaf2463dd0534cd",
-            "ae945c1acac3f873",
-            "58cd9e4840d784ae",
-            "996331d83b614a49",
-            "aecf70ca0b5e17ee",
             "17ab1c42ddaf528e",
             "758999591f8ebe39",
             "469a305550126563",
-            "2b3d8e25f51d2891",
-            "8b747e424369f1f9",
-            "a2f90802f95ed6ed",
-            "cf2b40f45ed03ce3",
             "5abc403c3b97e6f1",
-            "b3baee873a06e1eb",
-            "37e623f6372fce6f",
-            "2495491911df3be4",
             "c02cf9ec2d477c84",
             "394d191e7e96a9a4",
-            "680821e32dba97e7",
-            "842999d09d5414c6",
-            "73b77f45dc231067",
-            "1c9aad3d83444baa",
             "134758b8c75a732d",
-            "fac80dde8a05bfa6",
-            "9860e6549b7ce023",
-            "2f065b22bd7d13fd",
             "ce57fc889764cc90",
             "601ead6dbd164430",
             "f5b5f22f06ec8307",
@@ -58,105 +37,62 @@
             "3fe8a8f19bd636d7",
             "626ec8f2db706571",
             "a4b0ee05af245390",
-            "3b4cd70e6ad09aab",
-            "8c9b45ce076a40d1",
             "1542bb694a175939",
             "f4c26c95e4142031",
-            "d9fdcdddae92825b"
+            "d9fdcdddae92825b",
+            "e70a7eac5aa1292c",
+            "8a9efa6ca4907eb8",
+            "4095d80339d4fc03",
+            "dc639336ccb6d507",
+            "7de43cfe5c5c9225",
+            "497afc4d7511892e",
+            "5dce08f35cb8b6cf",
+            "cfa57155488fe092",
+            "46bc2f93d48c087d",
+            "42138cb1cb3b3dcd",
+            "f7de393883dfc617",
+            "d5c78e7d3ece6868",
+            "c261d518ebc079f0",
+            "ae945c1acac3f873",
+            "58cd9e4840d784ae",
+            "996331d83b614a49",
+            "9dbc0a797a97d227",
+            "f04b7f82a4777b77",
+            "e6d167a8f11d18c3",
+            "a96796d7a57369e9",
+            "8180848f581502a1",
+            "674226255c184b27",
+            "97a3c2112af1fec0",
+            "ee35fa8f00e5fb60",
+            "813a5d152d4efffd",
+            "f1c25ce41202d813",
+            "9e715bfcb567f4aa",
+            "8259c8deb91a5620",
+            "ab6dc3d12e5bfd40"
         ],
-        "x": -16,
+        "x": 74,
         "y": -1,
-        "w": 2042,
-        "h": 722
+        "w": 1842,
+        "h": 582
     },
     {
         "id": "b8c02fcd2c609e5c",
         "type": "rpi-gpio in",
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
-        "name": "IR Sensor",
+        "name": "IR Sensor Bott",
         "pin": "18",
         "intype": "up",
         "debounce": "25",
         "read": false,
         "bcm": true,
-        "x": 70,
-        "y": 260,
+        "x": 180,
+        "y": 280,
         "wires": [
             [
-                "aaaf2463dd0534cd",
                 "58cd9e4840d784ae"
             ]
         ]
-    },
-    {
-        "id": "c76d1813b12e5438",
-        "type": "inject",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "Simulate Sensor (1)",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "1",
-        "payloadType": "str",
-        "x": 300,
-        "y": 370,
-        "wires": [
-            [
-                "ce57fc889764cc90"
-            ]
-        ]
-    },
-    {
-        "id": "9385390fe813aad3",
-        "type": "inject",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "Simulate Sensor (0)",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "0",
-        "payloadType": "str",
-        "x": 300,
-        "y": 470,
-        "wires": [
-            [
-                "ce57fc889764cc90"
-            ]
-        ]
-    },
-    {
-        "id": "aaaf2463dd0534cd",
-        "type": "debug",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "debug 27",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 510,
-        "y": 160,
-        "wires": []
     },
     {
         "id": "ae945c1acac3f873",
@@ -178,11 +114,10 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 510,
-        "y": 240,
+        "x": 520,
+        "y": 260,
         "wires": [
             [
-                "aecf70ca0b5e17ee",
                 "ce57fc889764cc90"
             ]
         ]
@@ -210,7 +145,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 320,
+        "x": 370,
         "y": 280,
         "wires": [
             [
@@ -241,31 +176,13 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 510,
+        "x": 520,
         "y": 300,
         "wires": [
             [
-                "aecf70ca0b5e17ee",
                 "ce57fc889764cc90"
             ]
         ]
-    },
-    {
-        "id": "aecf70ca0b5e17ee",
-        "type": "debug",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "debug 28",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 750,
-        "y": 160,
-        "wires": []
     },
     {
         "id": "17ab1c42ddaf528e",
@@ -305,13 +222,18 @@
                 "t": "eq",
                 "v": "button6",
                 "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "reset",
+                "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 6,
-        "x": 980,
-        "y": 260,
+        "outputs": 7,
+        "x": 1120,
+        "y": 240,
         "wires": [
             [
                 "5abc403c3b97e6f1"
@@ -330,6 +252,9 @@
             ],
             [
                 "394d191e7e96a9a4"
+            ],
+            [
+                "46bc2f93d48c087d"
             ]
         ]
     },
@@ -339,19 +264,18 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "Button 2 Action 250 ml normal",
-        "func": "msg.payload = 5.5\nreturn msg;\n",
+        "func": "msg.payload = 6\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1410,
+        "x": 1450,
         "y": 160,
         "wires": [
             [
-                "2b3d8e25f51d2891",
-                "2495491911df3be4"
+                "4095d80339d4fc03"
             ]
         ]
     },
@@ -361,100 +285,20 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "Button 3 Action 250 ml cold",
-        "func": "msg.payload = 6\nreturn msg;",
+        "func": "// msg.payload = 6 // Calibrated\nmsg.payload = 4\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1400,
-        "y": 220,
-        "wires": [
-            [
-                "8b747e424369f1f9",
-                "a2f90802f95ed6ed"
-            ]
-        ]
-    },
-    {
-        "id": "2b3d8e25f51d2891",
-        "type": "debug",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "Debug Button 2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1780,
-        "y": 120,
-        "wires": []
-    },
-    {
-        "id": "8b747e424369f1f9",
-        "type": "debug",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "Debug Button 3",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 1700,
+        "x": 1440,
         "y": 200,
-        "wires": []
-    },
-    {
-        "id": "a2f90802f95ed6ed",
-        "type": "function",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "Set Relay Time",
-        "func": "\nlet pin_IR = 18;\nlet pin_Relay = 24;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR = 0;\n\nconst IR = new onoff.Gpio(pin_IR, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nfunction readIR() {\n    if (IR.readSync() === 1) {\n        return 1;\n    }\n    else {\n        return 0;\n    }\n}\n\nfunction writeRelay(value) {\n    if (value === 'ON') {\n        Relay.writeSync(1);\n    }\n    else {\n        Relay.writeSync(0);\n    }\n}\n\nstate_IR = IR.readSync();\nprevCount = Date.now();\nlet stopTimer = Date.now();\ncount = 0;\n\nwhile (count < timer && Date.now()-stopTimer < 5000) {\n    state_IR = IR.readSync();\n    if (state_IR === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        stopTimer = Date.now();\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nmsg.payload = 'done'\n\n\nreturn msg",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "onoff",
-                "module": "onoff"
-            }
-        ],
-        "x": 1700,
-        "y": 240,
         "wires": [
             [
-                "cf2b40f45ed03ce3",
-                "312281ef99a7932b"
+                "dc639336ccb6d507"
             ]
         ]
-    },
-    {
-        "id": "cf2b40f45ed03ce3",
-        "type": "debug",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "debug 29",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1890,
-        "y": 340,
-        "wires": []
     },
     {
         "id": "5abc403c3b97e6f1",
@@ -462,90 +306,18 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "Button 1 Action 250 ml hot",
-        "func": "msg.payload = 6.5\n\nreturn msg;",
+        "func": "msg.payload = 7\n\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1410,
+        "x": 1430,
         "y": 120,
         "wires": [
             [
-                "b3baee873a06e1eb",
-                "37e623f6372fce6f"
-            ]
-        ]
-    },
-    {
-        "id": "b3baee873a06e1eb",
-        "type": "function",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "Set Relay Time",
-        "func": "\nlet pin_IR = 18;\nlet pin_Relay = 8;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR = 0;\n\nconst IR = new onoff.Gpio(pin_IR, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nfunction readIR() {\n    if (IR.readSync() === 1) {\n        return 1;\n    }\n    else {\n        return 0;\n    }\n}\n\nfunction writeRelay(value) {\n    if (value === 'ON') {\n        Relay.writeSync(1);\n    }\n    else {\n        Relay.writeSync(0);\n    }\n}\n\nstate_IR = IR.readSync();\nprevCount = Date.now();\nlet stopTimer = Date.now();\ncount = 0;\n\nwhile (count < timer && Date.now()-stopTimer < 5000) {\n    state_IR = IR.readSync();\n    if (state_IR === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        stopTimer = Date.now();\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nmsg.payload = 'done'\n\n\nreturn msg",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "onoff",
-                "module": "onoff"
-            }
-        ],
-        "x": 1705.6666259765625,
-        "y": 85.6666259765625,
-        "wires": [
-            [
-                "f5b5f22f06ec8307",
-                "49cbb5412f98ed27"
-            ]
-        ]
-    },
-    {
-        "id": "37e623f6372fce6f",
-        "type": "debug",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "debug button 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1720,
-        "y": 40,
-        "wires": []
-    },
-    {
-        "id": "2495491911df3be4",
-        "type": "function",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "Set Relay Time",
-        "func": "\nlet pin_IR = 18;\nlet pin_Relay = 25;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR = 0;\n\nconst IR = new onoff.Gpio(pin_IR, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nfunction readIR() {\n    if (IR.readSync() === 1) {\n        return 1;\n    }\n    else {\n        return 0;\n    }\n}\n\nfunction writeRelay(value) {\n    if (value === 'ON') {\n        Relay.writeSync(1);\n    }\n    else {\n        Relay.writeSync(0);\n    }\n}\n\nstate_IR = IR.readSync();\nprevCount = Date.now();\nlet stopTimer = Date.now();\ncount = 0;\n\nwhile (count < timer && Date.now() - stopTimer < 5000) {\n    state_IR = IR.readSync();\n    if (state_IR === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        stopTimer = Date.now();\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nmsg.payload = 'done'\n\n\nreturn msg",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "onoff",
-                "module": "onoff"
-            }
-        ],
-        "x": 1780,
-        "y": 160,
-        "wires": [
-            [
-                "eb7f14736e65d017"
+                "8a9efa6ca4907eb8"
             ]
         ]
     },
@@ -555,19 +327,18 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "Button 5 Action 500 ml normal",
-        "func": "msg.payload = 11\nreturn msg",
+        "func": "msg.payload = 11.5\nreturn msg",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1290,
-        "y": 400,
+        "x": 1450,
+        "y": 300,
         "wires": [
             [
-                "680821e32dba97e7",
-                "2f065b22bd7d13fd"
+                "497afc4d7511892e"
             ]
         ]
     },
@@ -577,102 +348,20 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "Button 6 Action 500 ml cold",
-        "func": "msg.payload = 12\nreturn msg;",
+        "func": "// msg.payload = 12.5 // Calibrated\nmsg.payload = 10\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1260,
-        "y": 480,
+        "x": 1440,
+        "y": 340,
         "wires": [
             [
-                "842999d09d5414c6",
-                "73b77f45dc231067"
+                "5dce08f35cb8b6cf"
             ]
         ]
-    },
-    {
-        "id": "680821e32dba97e7",
-        "type": "debug",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "Debug Button 5",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1640,
-        "y": 400,
-        "wires": []
-    },
-    {
-        "id": "842999d09d5414c6",
-        "type": "debug",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "Debug Button 6",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1640,
-        "y": 480,
-        "wires": []
-    },
-    {
-        "id": "73b77f45dc231067",
-        "type": "function",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "Set Relay Time",
-        "func": "\nlet pin_IR = 18;\nlet pin_Relay = 24;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR = 0;\n\nconst IR = new onoff.Gpio(pin_IR, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nfunction readIR() {\n    if (IR.readSync() === 1) {\n        return 1;\n    }\n    else {\n        return 0;\n    }\n}\n\nfunction writeRelay(value) {\n    if (value === 'ON') {\n        Relay.writeSync(1);\n    }\n    else {\n        Relay.writeSync(0);\n    }\n}\n\nstate_IR = IR.readSync();\nprevCount = Date.now();\nlet stopTimer = Date.now();\ncount = 0;\n\nwhile (count < timer && Date.now() - stopTimer < 5000) {\n    state_IR = IR.readSync();\n    if (state_IR === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        stopTimer = Date.now();\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nmsg.payload = 'done'\n\n\nreturn msg",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "onoff",
-                "module": "onoff"
-            }
-        ],
-        "x": 1640,
-        "y": 520,
-        "wires": [
-            [
-                "1c9aad3d83444baa",
-                "a4b0ee05af245390"
-            ]
-        ]
-    },
-    {
-        "id": "1c9aad3d83444baa",
-        "type": "debug",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "debug 33",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1840,
-        "y": 680,
-        "wires": []
     },
     {
         "id": "134758b8c75a732d",
@@ -680,89 +369,18 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "Button 4 Action 500 ml hot",
-        "func": "msg.payload = 13.5\nreturn msg;",
+        "func": "msg.payload = 14\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1270,
-        "y": 340,
+        "x": 1430,
+        "y": 260,
         "wires": [
             [
-                "fac80dde8a05bfa6",
-                "9860e6549b7ce023"
-            ]
-        ]
-    },
-    {
-        "id": "fac80dde8a05bfa6",
-        "type": "function",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "Set Relay Time",
-        "func": "\nlet pin_IR = 18;\nlet pin_Relay = 8;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR = 0;\n\nconst IR = new onoff.Gpio(pin_IR, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nfunction readIR() {\n    if (IR.readSync() === 1) {\n        return 1;\n    }\n    else {\n        return 0;\n    }\n}\n\nfunction writeRelay(value) {\n    if (value === 'ON') {\n        Relay.writeSync(1);\n    }\n    else {\n        Relay.writeSync(0);\n    }\n}\n\nstate_IR = IR.readSync();\nprevCount = Date.now();\nlet stopTimer = Date.now();\ncount = 0;\n\nwhile (count < timer && Date.now() - stopTimer < 5000) {\n    state_IR = IR.readSync();\n    if (state_IR === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        stopTimer = Date.now();\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nmsg.payload = 'done'\n\n\nreturn msg",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "onoff",
-                "module": "onoff"
-            }
-        ],
-        "x": 1640,
-        "y": 340,
-        "wires": [
-            [
-                "3fe8a8f19bd636d7"
-            ]
-        ]
-    },
-    {
-        "id": "9860e6549b7ce023",
-        "type": "debug",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "debug 4",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1560,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "2f065b22bd7d13fd",
-        "type": "function",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "Set Relay Time",
-        "func": "\nlet pin_IR = 18;\nlet pin_Relay = 25;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR = 0;\n\nconst IR = new onoff.Gpio(pin_IR, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nfunction readIR() {\n    if (IR.readSync() === 1) {\n        return 1;\n    }\n    else {\n        return 0;\n    }\n}\n\nfunction writeRelay(value) {\n    if (value === 'ON') {\n        Relay.writeSync(1);\n    }\n    else {\n        Relay.writeSync(0);\n    }\n}\n\nstate_IR = IR.readSync();\nprevCount = Date.now();\nlet stopTimer = Date.now();\ncount = 0;\n\nwhile (count < timer && Date.now() - stopTimer < 5000) {\n    state_IR = IR.readSync();\n    if (state_IR === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        stopTimer = Date.now();\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nmsg.payload = 'done'\n\n\nreturn msg",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "onoff",
-                "module": "onoff"
-            }
-        ],
-        "x": 1660,
-        "y": 440,
-        "wires": [
-            [
-                "626ec8f2db706571"
+                "7de43cfe5c5c9225"
             ]
         ]
     },
@@ -811,11 +429,13 @@
             "626ec8f2db706571",
             "a4b0ee05af245390"
         ],
-        "x": 625,
-        "y": 420,
+        "x": 275,
+        "y": 460,
         "wires": [
             [
-                "ce57fc889764cc90"
+                "ce57fc889764cc90",
+                "04e96e931192cd25",
+                "9dbc0a797a97d227"
             ]
         ]
     },
@@ -829,8 +449,8 @@
         "links": [
             "601ead6dbd164430"
         ],
-        "x": 1985,
-        "y": 60,
+        "x": 1875,
+        "y": 120,
         "wires": []
     },
     {
@@ -843,7 +463,7 @@
         "links": [
             "601ead6dbd164430"
         ],
-        "x": 1985,
+        "x": 1875,
         "y": 160,
         "wires": []
     },
@@ -857,8 +477,8 @@
         "links": [
             "601ead6dbd164430"
         ],
-        "x": 1965,
-        "y": 240,
+        "x": 1875,
+        "y": 200,
         "wires": []
     },
     {
@@ -871,8 +491,8 @@
         "links": [
             "601ead6dbd164430"
         ],
-        "x": 1785,
-        "y": 340,
+        "x": 1875,
+        "y": 260,
         "wires": []
     },
     {
@@ -885,8 +505,8 @@
         "links": [
             "601ead6dbd164430"
         ],
-        "x": 1885,
-        "y": 440,
+        "x": 1875,
+        "y": 300,
         "wires": []
     },
     {
@@ -899,83 +519,8 @@
         "links": [
             "601ead6dbd164430"
         ],
-        "x": 1885,
-        "y": 520,
-        "wires": []
-    },
-    {
-        "id": "3b4cd70e6ad09aab",
-        "type": "inject",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "v": "1",
-                "vt": "num"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "1",
-        "payloadType": "num",
-        "x": 130,
-        "y": 200,
-        "wires": [
-            [
-                "58cd9e4840d784ae"
-            ]
-        ]
-    },
-    {
-        "id": "8c9b45ce076a40d1",
-        "type": "inject",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "Simulate Sensor (done)",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "done",
-        "payloadType": "str",
-        "x": 360,
-        "y": 560,
-        "wires": [
-            [
-                "ce57fc889764cc90"
-            ]
-        ]
-    },
-    {
-        "id": "49cbb5412f98ed27",
-        "type": "debug",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "debug 100",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1950,
-        "y": 20,
+        "x": 1875,
+        "y": 340,
         "wires": []
     },
     {
@@ -990,8 +535,8 @@
         "freq": "",
         "out": "out",
         "bcm": true,
-        "x": 240,
-        "y": 120,
+        "x": 520,
+        "y": 40,
         "wires": []
     },
     {
@@ -1006,8 +551,8 @@
         "freq": "",
         "out": "out",
         "bcm": true,
-        "x": 240,
-        "y": 80,
+        "x": 380,
+        "y": 40,
         "wires": []
     },
     {
@@ -1025,5 +570,582 @@
         "x": 240,
         "y": 40,
         "wires": []
+    },
+    {
+        "id": "f7de393883dfc617",
+        "type": "file",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Log Data",
+        "filename": "/home/arthatronic/Documents/log_rs.csv",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 560,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e70a7eac5aa1292c",
+        "type": "function",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "waterflow_Function v2",
+        "func": "\n\nlet pulseCount = context.get('pulseCount') || 0;\nlet totalLiters = context.get('totalLiters') || 0;\n// let volumeliters = context.get('volumeliters') || 0;\nlet volumeliters = msg.payload.nilaiWaterflow || 0;\nconst calibrationFactor = 1; // Ganti dengan faktor kalibrasi sensor Anda\n\n// Menghitung aliran dan total liter setiap detik\nif (msg.payload === 1) { // Sensor mengirimkan pulsa (misalnya, 1) setiap kali terjadi\n    pulseCount++;\n}\n\nlet sendPulse = pulseCount;\n\nconst duration = 1.0; // durasi dalam detik\nlet flowRate = (pulseCount / calibrationFactor); // aliran dalam liter per detik\nif (msg.payload.status === 'send') {\n    totalLiters = msg.payload.nilaiWaterflow;\n    volumeliters = msg.payload.nilaiWaterflow;\n}\nelse {\n    totalLiters += flowRate * duration; // hitung total liter yang sudah mengalir\n    volumeliters += totalLiters;\n    // volumeliters = volumeliters * 6;\n    volumeliters = 6.647*totalLiters + 9.328;\n}\n\n\npulseCount = 0; // reset pulse count\n\n// Simpan nilai di context\ncontext.set('pulseCount', pulseCount);\ncontext.set('totalLiters', totalLiters);\ncontext.set('volumeliters', volumeliters);\n\nmsg.payload = {\n    flowRate: flowRate.toFixed(2),\n    totalLiters: totalLiters.toFixed(2),\n    volumeliters: parseInt(volumeliters.toFixed(0)),\n    // volumeliters: sendPulse\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 440,
+        "wires": [
+            [
+                "ce57fc889764cc90",
+                "f1c25ce41202d813"
+            ]
+        ]
+    },
+    {
+        "id": "8a9efa6ca4907eb8",
+        "type": "function",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Set Relay Time",
+        "func": "\nlet pin_IR_ATAS = 18;\nlet pin_IR_BAWAH = 23;\nlet pin_Relay = 8;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR_ATAS = 0;\nlet state_IR_BAWAH = 0;\n\nconst IR_ATAS = new onoff.Gpio(pin_IR_ATAS, 'in', 'both');\nconst IR_BAWAH = new onoff.Gpio(pin_IR_BAWAH, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nstate_IR_ATAS = IR_ATAS.readSync();\nstate_IR_BAWAH = IR_BAWAH.readSync();\nprevCount = Date.now();\nlet stopTimer = Date.now();\ncount = 0;\n\nwhile (count < timer && Date.now()-stopTimer < 5000) {\n    state_IR_ATAS = IR_ATAS.readSync();\n    state_IR_BAWAH = IR_BAWAH.readSync();\n    if (state_IR_ATAS === 1 || state_IR_BAWAH === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        stopTimer = Date.now();\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nconst d = new Date();\n\nmsg.payload = {\n    finish: 'done',\n    time: d.getHours() + \":\" + d.getMinutes() + \":\" + d.getSeconds(),\n    date: d.getFullYear() + \"-\" + d.getMonth() + \"-\" + d.getDate(),\n    volume: 250,\n    temperature: 'hot'\n}\n\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "onoff",
+                "module": "onoff"
+            }
+        ],
+        "x": 1720,
+        "y": 120,
+        "wires": [
+            [
+                "f5b5f22f06ec8307"
+            ]
+        ]
+    },
+    {
+        "id": "4095d80339d4fc03",
+        "type": "function",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Set Relay Time",
+        "func": "\nlet pin_IR_ATAS = 18;\nlet pin_IR_BAWAH = 23;\nlet pin_Relay = 25;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR_ATAS = 0;\nlet state_IR_BAWAH = 0;\n\nconst IR_ATAS = new onoff.Gpio(pin_IR_ATAS, 'in', 'both');\nconst IR_BAWAH = new onoff.Gpio(pin_IR_BAWAH, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nstate_IR_ATAS = IR_ATAS.readSync();\nstate_IR_BAWAH = IR_BAWAH.readSync();\nprevCount = Date.now();\nlet stopTimer = Date.now();\ncount = 0;\n\nwhile (count < timer && Date.now()-stopTimer < 5000) {\n    state_IR_ATAS = IR_ATAS.readSync();\n    state_IR_BAWAH = IR_BAWAH.readSync();\n    if (state_IR_ATAS === 1 || state_IR_BAWAH === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        stopTimer = Date.now();\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nconst d = new Date();\n\nmsg.payload = {\n    finish: 'done',\n    time: d.getHours() + \":\" + d.getMinutes() + \":\" + d.getSeconds(),\n    date: d.getFullYear() + \"-\" + d.getMonth() + \"-\" + d.getDate(),\n    volume: 250,\n    temperature: 'normal'\n}\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "onoff",
+                "module": "onoff"
+            }
+        ],
+        "x": 1720,
+        "y": 160,
+        "wires": [
+            [
+                "eb7f14736e65d017"
+            ]
+        ]
+    },
+    {
+        "id": "dc639336ccb6d507",
+        "type": "function",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Set Relay Time",
+        "func": "\nlet pin_IR_ATAS = 18;\nlet pin_IR_BAWAH = 23;\nlet pin_Relay = 24;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR_ATAS = 0;\nlet state_IR_BAWAH = 0;\n\nconst IR_ATAS = new onoff.Gpio(pin_IR_ATAS, 'in', 'both');\nconst IR_BAWAH = new onoff.Gpio(pin_IR_BAWAH, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nstate_IR_ATAS = IR_ATAS.readSync();\nstate_IR_BAWAH = IR_BAWAH.readSync();\nprevCount = Date.now();\nlet stopTimer = Date.now();\ncount = 0;\n\nwhile (count < timer && Date.now()-stopTimer < 5000) {\n    state_IR_ATAS = IR_ATAS.readSync();\n    state_IR_BAWAH = IR_BAWAH.readSync();\n    if (state_IR_ATAS === 1 || state_IR_BAWAH === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        stopTimer = Date.now();\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nconst d = new Date();\n\nmsg.payload = {\n    finish: 'done',\n    time: d.getHours() + \":\" + d.getMinutes() + \":\" + d.getSeconds(),\n    date: d.getFullYear() + \"-\" + d.getMonth() + \"-\" + d.getDate(),\n    volume: 250,\n    temperature: 'cold'\n}\n\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "onoff",
+                "module": "onoff"
+            }
+        ],
+        "x": 1720,
+        "y": 200,
+        "wires": [
+            [
+                "312281ef99a7932b"
+            ]
+        ]
+    },
+    {
+        "id": "7de43cfe5c5c9225",
+        "type": "function",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Set Relay Time",
+        "func": "\nlet pin_IR_ATAS = 18;\nlet pin_IR_BAWAH = 23;\nlet pin_Relay = 8;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR_ATAS = 0;\nlet state_IR_BAWAH = 0;\n\nconst IR_ATAS = new onoff.Gpio(pin_IR_ATAS, 'in', 'both');\nconst IR_BAWAH = new onoff.Gpio(pin_IR_BAWAH, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nstate_IR_ATAS = IR_ATAS.readSync();\nstate_IR_BAWAH = IR_BAWAH.readSync();\nprevCount = Date.now();\nlet stopTimer = Date.now();\ncount = 0;\n\nwhile (count < timer && Date.now()-stopTimer < 5000) {\n    state_IR_ATAS = IR_ATAS.readSync();\n    state_IR_BAWAH = IR_BAWAH.readSync();\n    if (state_IR_ATAS === 1 || state_IR_BAWAH === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        stopTimer = Date.now();\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nconst d = new Date();\n\n\nmsg.payload = {\n    finish: 'done',\n    time: d.getHours() + \":\" + d.getMinutes() + \":\" + d.getSeconds(),\n    date: d.getFullYear() + \"-\" + d.getMonth() + \"-\" + d.getDate(),\n    volume: 500,\n    temperature: 'hot'\n}\n\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "onoff",
+                "module": "onoff"
+            }
+        ],
+        "x": 1720,
+        "y": 260,
+        "wires": [
+            [
+                "3fe8a8f19bd636d7"
+            ]
+        ]
+    },
+    {
+        "id": "497afc4d7511892e",
+        "type": "function",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Set Relay Time",
+        "func": "\nlet pin_IR_ATAS = 18;\nlet pin_IR_BAWAH = 23;\nlet pin_Relay = 25;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR_ATAS = 0;\nlet state_IR_BAWAH = 0;\n\nconst IR_ATAS = new onoff.Gpio(pin_IR_ATAS, 'in', 'both');\nconst IR_BAWAH = new onoff.Gpio(pin_IR_BAWAH, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nstate_IR_ATAS = IR_ATAS.readSync();\nstate_IR_BAWAH = IR_BAWAH.readSync();\nprevCount = Date.now();\nlet stopTimer = Date.now();\ncount = 0;\n\nwhile (count < timer && Date.now()-stopTimer < 5000) {\n    state_IR_ATAS = IR_ATAS.readSync();\n    state_IR_BAWAH = IR_BAWAH.readSync();\n    if (state_IR_ATAS === 1 || state_IR_BAWAH === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        stopTimer = Date.now();\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nconst d = new Date();\n\n\nmsg.payload = {\n    finish: 'done',\n    time: d.getHours() + \":\" + d.getMinutes() + \":\" + d.getSeconds(),\n    date: d.getFullYear() + \"-\" + d.getMonth() + \"-\" + d.getDate(),\n    volume: 500,\n    temperature: 'normal'\n}\n\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "onoff",
+                "module": "onoff"
+            }
+        ],
+        "x": 1720,
+        "y": 300,
+        "wires": [
+            [
+                "626ec8f2db706571"
+            ]
+        ]
+    },
+    {
+        "id": "5dce08f35cb8b6cf",
+        "type": "function",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Set Relay Time",
+        "func": "\nlet pin_IR_ATAS = 18;\nlet pin_IR_BAWAH = 23;\nlet pin_Relay = 24;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR_ATAS = 0;\nlet state_IR_BAWAH = 0;\n\nconst IR_ATAS = new onoff.Gpio(pin_IR_ATAS, 'in', 'both');\nconst IR_BAWAH = new onoff.Gpio(pin_IR_BAWAH, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nstate_IR_ATAS = IR_ATAS.readSync();\nstate_IR_BAWAH = IR_BAWAH.readSync();\nprevCount = Date.now();\nlet stopTimer = Date.now();\ncount = 0;\n\nwhile (count < timer && Date.now()-stopTimer < 5000) {\n    state_IR_ATAS = IR_ATAS.readSync();\n    state_IR_BAWAH = IR_BAWAH.readSync();\n    if (state_IR_ATAS === 1 || state_IR_BAWAH === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        stopTimer = Date.now();\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nconst d = new Date();\n\n\nmsg.payload = {\n    finish: 'done',\n    time: d.getHours() + \":\" + d.getMinutes() + \":\" + d.getSeconds(),\n    date: d.getFullYear() + \"-\" + d.getMonth() + \"-\" + d.getDate(),\n    volume: 500,\n    temperature: 'cold'\n}\n\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "onoff",
+                "module": "onoff"
+            }
+        ],
+        "x": 1720,
+        "y": 340,
+        "wires": [
+            [
+                "a4b0ee05af245390"
+            ]
+        ]
+    },
+    {
+        "id": "cfa57155488fe092",
+        "type": "rpi-gpio in",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "IR Sensor Top",
+        "pin": "23",
+        "intype": "down",
+        "debounce": "25",
+        "read": false,
+        "bcm": true,
+        "x": 170,
+        "y": 160,
+        "wires": [
+            [
+                "c261d518ebc079f0"
+            ]
+        ]
+    },
+    {
+        "id": "46bc2f93d48c087d",
+        "type": "function",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Reset Waterflow",
+        "func": "msg.payload = 0;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1400,
+        "y": 460,
+        "wires": [
+            [
+                "97a3c2112af1fec0"
+            ]
+        ]
+    },
+    {
+        "id": "42138cb1cb3b3dcd",
+        "type": "function",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "waterflow_Function v1",
+        "func": "\n\nlet pulseCount = context.get('pulseCount') || 0;\nlet totalLiters = context.get('totalLiters') || 0;\nlet volumeliters = context.get('volumeliters') || 0;\nconst calibrationFactor = 1; // Ganti dengan faktor kalibrasi sensor Anda\n\nif (msg.payload === 10) {\n    totalLiters = 0;\n    volumeliters = 0;\n} \n\n// Menghitung aliran dan total liter setiap detik\nif (msg.payload === 1) { // Sensor mengirimkan pulsa (misalnya, 1) setiap kali terjadi\n    pulseCount++;\n}\n\nconst duration = 1.0; // durasi dalam detik\nlet flowRate = (pulseCount / calibrationFactor); // aliran dalam liter per detik\ntotalLiters += flowRate * duration; // hitung total liter yang sudah mengalir\nvolumeliters = totalLiters;\n\npulseCount = 0; // reset pulse count\n\n// Simpan nilai di context\ncontext.set('pulseCount', pulseCount);\ncontext.set('totalLiters', totalLiters);\ncontext.set('volumeliters', volumeliters);\n\nmsg.payload = {\n    flowRate: flowRate.toFixed(2),\n    totalLiters: totalLiters.toFixed(2),\n    volumeliters: volumeliters.toFixed(2)\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "04e96e931192cd25",
+        "type": "csv",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "",
+        "spec": "rfc",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "none",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "time,date,volume,temperature",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 410,
+        "y": 460,
+        "wires": [
+            [
+                "f7de393883dfc617"
+            ]
+        ]
+    },
+    {
+        "id": "d5c78e7d3ece6868",
+        "type": "debug",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "c261d518ebc079f0",
+        "type": "function",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Change to Object",
+        "func": "if (msg.payload === 1){\n    msg.payload = {\n        top: '1'\n    }\n}\nelse if (msg.payload === 0){\n    msg.payload = {\n        top: '0'\n    }\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 160,
+        "wires": [
+            [
+                "d5c78e7d3ece6868",
+                "ce57fc889764cc90"
+            ]
+        ]
+    },
+    {
+        "id": "9dbc0a797a97d227",
+        "type": "debug",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Debug Link",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 590,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "f04b7f82a4777b77",
+        "type": "file in",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Data Waterflow",
+        "filename": "/home/arthatronic/Documents/waterflow.txt",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 440,
+        "y": 540,
+        "wires": [
+            [
+                "a96796d7a57369e9"
+            ]
+        ]
+    },
+    {
+        "id": "e6d167a8f11d18c3",
+        "type": "debug",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "a96796d7a57369e9",
+        "type": "function",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Parse Data",
+        "func": "msg.payload = {\n    nilaiWaterflow: parseFloat(msg.payload),\n    status: 'send'\n    }\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 540,
+        "wires": [
+            [
+                "e6d167a8f11d18c3",
+                "e70a7eac5aa1292c"
+            ]
+        ]
+    },
+    {
+        "id": "8180848f581502a1",
+        "type": "rpi-gpio in",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Waterflow Pin",
+        "pin": "16",
+        "intype": "up",
+        "debounce": "25",
+        "read": false,
+        "bcm": true,
+        "x": 710,
+        "y": 440,
+        "wires": [
+            [
+                "e70a7eac5aa1292c"
+            ]
+        ]
+    },
+    {
+        "id": "674226255c184b27",
+        "type": "inject",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 250,
+        "y": 540,
+        "wires": [
+            [
+                "f04b7f82a4777b77"
+            ]
+        ]
+    },
+    {
+        "id": "97a3c2112af1fec0",
+        "type": "file",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Data Waterflow",
+        "filename": "/home/arthatronic/Documents/waterflow.txt",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1600,
+        "y": 460,
+        "wires": [
+            [
+                "ee35fa8f00e5fb60",
+                "8259c8deb91a5620"
+            ]
+        ]
+    },
+    {
+        "id": "ee35fa8f00e5fb60",
+        "type": "debug",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Rset",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1770,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "813a5d152d4efffd",
+        "type": "file",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Data Waterflow",
+        "filename": "/home/arthatronic/Documents/waterflow.txt",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1320,
+        "y": 520,
+        "wires": [
+            [
+                "9e715bfcb567f4aa"
+            ]
+        ]
+    },
+    {
+        "id": "f1c25ce41202d813",
+        "type": "function",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "function 1",
+        "func": "msg.payload = msg.payload.volumeliters;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1140,
+        "y": 520,
+        "wires": [
+            [
+                "813a5d152d4efffd"
+            ]
+        ]
+    },
+    {
+        "id": "9e715bfcb567f4aa",
+        "type": "debug",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Out Waterflow",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1500,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "8259c8deb91a5620",
+        "type": "link out",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Waterflow",
+        "mode": "link",
+        "links": [
+            "ab6dc3d12e5bfd40"
+        ],
+        "x": 1755,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "ab6dc3d12e5bfd40",
+        "type": "link in",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "link in 3",
+        "links": [
+            "8259c8deb91a5620"
+        ],
+        "x": 315,
+        "y": 500,
+        "wires": [
+            [
+                "f04b7f82a4777b77"
+            ]
+        ]
     }
 ]
