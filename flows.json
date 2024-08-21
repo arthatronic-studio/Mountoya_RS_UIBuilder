@@ -1069,7 +1069,7 @@
         "appendNewline": false,
         "createDir": true,
         "overwriteFile": "true",
-        "encoding": "none",
+        "encoding": "utf8",
         "x": 1320,
         "y": 520,
         "wires": [
