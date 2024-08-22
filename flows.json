@@ -84,7 +84,8 @@
             "50b6f25f9e528175",
             "f9aa1d109722cb6c",
             "48bafd69869123e8",
-            "e6ca943feedd4647"
+            "e6ca943feedd4647",
+            "2a8c8835057e1ea4"
         ],
         "x": 54,
         "y": -1,
@@ -1378,7 +1379,9 @@
         "x": 980,
         "y": 620,
         "wires": [
-            []
+            [
+                "2a8c8835057e1ea4"
+            ]
         ]
     },
     {
@@ -1481,6 +1484,28 @@
                 "46337193735388b3"
             ]
         ]
+    },
+    {
+        "id": "2a8c8835057e1ea4",
+        "type": "ui_text",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "group": "2e6f5aa5cd893557",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "IR Sensor Status",
+        "label": "Sensor IR Bawah",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 1270,
+        "y": 620,
+        "wires": []
     },
     {
         "id": "1c4565af3db20a1f",
