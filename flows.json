@@ -281,7 +281,7 @@
         "width": 6
     },
     {
-        "id": "59959e8939e47942",
+        "id": "fc652eb872a49dd1",
         "type": "ui_spacer",
         "z": "e1fca49e72b6731a",
         "name": "spacer",
@@ -291,7 +291,7 @@
         "height": 1
     },
     {
-        "id": "1af803cb960e16d2",
+        "id": "87b06a4987929983",
         "type": "ui_spacer",
         "z": "e1fca49e72b6731a",
         "name": "spacer",
@@ -301,7 +301,7 @@
         "height": 1
     },
     {
-        "id": "82ef022bbae7010b",
+        "id": "7d573cacdeeb5525",
         "type": "ui_spacer",
         "z": "e1fca49e72b6731a",
         "name": "spacer",
@@ -311,7 +311,7 @@
         "height": 1
     },
     {
-        "id": "24e29df37b0a712f",
+        "id": "1c4d04db40fa900a",
         "type": "ui_spacer",
         "z": "e1fca49e72b6731a",
         "name": "spacer",
@@ -321,7 +321,7 @@
         "height": 1
     },
     {
-        "id": "69dc520f63cb253f",
+        "id": "7665fd777749fb57",
         "type": "ui_spacer",
         "z": "e1fca49e72b6731a",
         "name": "spacer",
@@ -2146,8 +2146,8 @@
         "group": "cca3d86c822ecc84",
         "name": "Button with Link",
         "order": 1,
-        "width": "6",
-        "height": "4",
+        "width": 0,
+        "height": 0,
         "format": "<button onclick=\"window.location.href='http://192.168.18.22:1880/refill/index.html';\">Back</button>",
         "storeOutMessages": true,
         "fwdInMessages": true,
