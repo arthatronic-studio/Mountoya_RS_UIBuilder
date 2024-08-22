@@ -1783,7 +1783,7 @@
         "type": "ui_numeric",
         "z": "e1fca49e72b6731a",
         "name": "Set Number",
-        "label": "coba",
+        "label": "cobanumber",
         "tooltip": "",
         "group": "2c8dac57508989f9",
         "order": 1,
