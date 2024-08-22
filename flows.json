@@ -1386,7 +1386,7 @@
         "width": 6,
         "height": 2,
         "passthru": false,
-        "label": "reset galon",
+        "label": "<h1>reset galon</h1>",
         "tooltip": "",
         "color": "",
         "bgcolor": "",
@@ -1396,7 +1396,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1410,
+        "x": 1440,
         "y": 460,
         "wires": [
             [
@@ -2189,7 +2189,7 @@
         "width": 12,
         "height": 2,
         "passthru": false,
-        "label": "250n",
+        "label": "<h1>250n</h1>",
         "tooltip": "",
         "color": "",
         "bgcolor": "",
@@ -2199,7 +2199,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 810,
+        "x": 840,
         "y": 260,
         "wires": [
             [
@@ -2217,7 +2217,7 @@
         "width": 12,
         "height": 2,
         "passthru": false,
-        "label": "250c",
+        "label": "<h1>250c</h1>",
         "tooltip": "",
         "color": "",
         "bgcolor": "",
@@ -2227,7 +2227,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 810,
+        "x": 840,
         "y": 320,
         "wires": [
             [
@@ -2245,7 +2245,7 @@
         "width": 12,
         "height": 2,
         "passthru": false,
-        "label": "500h",
+        "label": "<h1>500h</h1>",
         "tooltip": "",
         "color": "",
         "bgcolor": "",
@@ -2255,7 +2255,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 810,
+        "x": 840,
         "y": 380,
         "wires": [
             [
@@ -2273,7 +2273,7 @@
         "width": 12,
         "height": 2,
         "passthru": false,
-        "label": "500n",
+        "label": "<h1>500n</h1>",
         "tooltip": "",
         "color": "",
         "bgcolor": "",
@@ -2283,7 +2283,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 810,
+        "x": 840,
         "y": 440,
         "wires": [
             [
@@ -2301,7 +2301,7 @@
         "width": 12,
         "height": 2,
         "passthru": false,
-        "label": "500c",
+        "label": "<h1>500c</h1>",
         "tooltip": "",
         "color": "",
         "bgcolor": "",
@@ -2311,7 +2311,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 810,
+        "x": 840,
         "y": 500,
         "wires": [
             [
