@@ -1558,9 +1558,9 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "1",
+        "payload": "button 1",
         "payloadType": "str",
-        "x": 70,
+        "x": 80,
         "y": 400,
         "wires": [
             [
@@ -1578,12 +1578,12 @@
         "rules": [
             {
                 "t": "eq",
-                "v": "1",
+                "v": "button 1",
                 "vt": "str"
             },
             {
                 "t": "eq",
-                "v": "0",
+                "v": "button 2",
                 "vt": "str"
             }
         ],
@@ -1636,9 +1636,9 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "0",
+        "payload": "button 2",
         "payloadType": "str",
-        "x": 70,
+        "x": 80,
         "y": 460,
         "wires": [
             [
