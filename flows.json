@@ -76,11 +76,7 @@
             "f1c25ce41202d813",
             "9e715bfcb567f4aa",
             "8259c8deb91a5620",
-            "ab6dc3d12e5bfd40",
-            "0c1ab6ea34322aa5",
-            "6cf898a71e2e550d",
-            "96d9a43c0f63fe0a",
-            "83b0f2a8a22a315d"
+            "ab6dc3d12e5bfd40"
         ],
         "x": 74,
         "y": -1,
@@ -314,10 +310,7 @@
         "x": 1120,
         "y": 240,
         "wires": [
-            [
-                "6cf898a71e2e550d",
-                "83b0f2a8a22a315d"
-            ],
+            [],
             [
                 "758999591f8ebe39"
             ],
@@ -396,7 +389,9 @@
         "x": 1410,
         "y": 120,
         "wires": [
-            []
+            [
+                "8a9efa6ca4907eb8"
+            ]
         ]
     },
     {
@@ -1299,85 +1294,6 @@
         ]
     },
     {
-        "id": "0c1ab6ea34322aa5",
-        "type": "link in",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "link in 4",
-        "links": [
-            "0df575165c85a4ae"
-        ],
-        "x": 1585,
-        "y": 40,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "6cf898a71e2e550d",
-        "type": "debug",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "debug 5",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1180,
-        "y": 40,
-        "wires": []
-    },
-    {
-        "id": "96d9a43c0f63fe0a",
-        "type": "debug",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "debug 6",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1740,
-        "y": 60,
-        "wires": []
-    },
-    {
-        "id": "83b0f2a8a22a315d",
-        "type": "ui_numeric",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "Set Number",
-        "label": "panas250",
-        "tooltip": "",
-        "group": "2c8dac57508989f9",
-        "order": 1,
-        "width": 4,
-        "height": 1,
-        "wrap": false,
-        "passthru": true,
-        "topic": "",
-        "topicType": "str",
-        "format": "{{value}}",
-        "min": 0,
-        "max": 100,
-        "step": 1,
-        "className": "",
-        "x": 1350,
-        "y": 60,
-        "wires": [
-            [
-                "8a9efa6ca4907eb8",
-                "96d9a43c0f63fe0a"
-            ]
-        ]
-    },
-    {
         "id": "1c4565af3db20a1f",
         "type": "ui_numeric",
         "z": "e1fca49e72b6731a",
@@ -1397,12 +1313,11 @@
         "max": "30",
         "step": "0.5",
         "className": "",
-        "x": 350,
+        "x": 270,
         "y": 400,
         "wires": [
             [
-                "0df575165c85a4ae",
-                "052b17099cf36cdb"
+                "dc26363ff11329b0"
             ]
         ]
     },
@@ -1426,11 +1341,11 @@
         "max": "30",
         "step": "0.5",
         "className": "",
-        "x": 390,
+        "x": 270,
         "y": 460,
         "wires": [
             [
-                "98ef176b2fad551a"
+                "d0b80d240c3c53ec"
             ]
         ]
     },
@@ -1457,7 +1372,9 @@
         "x": 260,
         "y": 520,
         "wires": [
-            []
+            [
+                "3552c9db48e3f0c5"
+            ]
         ]
     },
     {
@@ -1483,7 +1400,9 @@
         "x": 250,
         "y": 600,
         "wires": [
-            []
+            [
+                "db52d612f56843c8"
+            ]
         ]
     },
     {
@@ -1509,7 +1428,9 @@
         "x": 270,
         "y": 660,
         "wires": [
-            []
+            [
+                "0c08af9743dd7c2f"
+            ]
         ]
     },
     {
@@ -1535,119 +1456,8 @@
         "x": 260,
         "y": 720,
         "wires": [
-            []
-        ]
-    },
-    {
-        "id": "0df575165c85a4ae",
-        "type": "link out",
-        "z": "e1fca49e72b6731a",
-        "name": "link out 12",
-        "mode": "link",
-        "links": [
-            "0c1ab6ea34322aa5"
-        ],
-        "x": 545,
-        "y": 400,
-        "wires": []
-    },
-    {
-        "id": "052b17099cf36cdb",
-        "type": "debug",
-        "z": "e1fca49e72b6731a",
-        "name": "debug 3",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 540,
-        "y": 340,
-        "wires": []
-    },
-    {
-        "id": "6f38073228830ed9",
-        "type": "link out",
-        "z": "e1fca49e72b6731a",
-        "name": "link out 13",
-        "mode": "link",
-        "links": [],
-        "x": 515,
-        "y": 460,
-        "wires": []
-    },
-    {
-        "id": "76a823974337d4df",
-        "type": "link out",
-        "z": "e1fca49e72b6731a",
-        "name": "link out 14",
-        "mode": "link",
-        "links": [],
-        "x": 455,
-        "y": 520,
-        "wires": []
-    },
-    {
-        "id": "bc329688a64d3552",
-        "type": "link out",
-        "z": "e1fca49e72b6731a",
-        "name": "link out 15",
-        "mode": "link",
-        "links": [],
-        "x": 445,
-        "y": 600,
-        "wires": []
-    },
-    {
-        "id": "70bda8a488c77341",
-        "type": "link out",
-        "z": "e1fca49e72b6731a",
-        "name": "link out 16",
-        "mode": "link",
-        "links": [],
-        "x": 445,
-        "y": 660,
-        "wires": []
-    },
-    {
-        "id": "fdd899258ceb3ba1",
-        "type": "link out",
-        "z": "e1fca49e72b6731a",
-        "name": "link out 17",
-        "mode": "link",
-        "links": [],
-        "x": 445,
-        "y": 720,
-        "wires": []
-    },
-    {
-        "id": "3fb095b9e59ac25a",
-        "type": "inject",
-        "z": "e1fca49e72b6731a",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 80,
-        "y": 400,
-        "wires": [
             [
-                "1c4565af3db20a1f"
+                "6412e4b6e82ce819"
             ]
         ]
     },
@@ -1666,33 +1476,6 @@
         "x": 680,
         "y": 520,
         "wires": []
-    },
-    {
-        "id": "877a0c03ea840ee4",
-        "type": "inject",
-        "z": "e1fca49e72b6731a",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "button 2",
-        "payloadType": "str",
-        "x": 80,
-        "y": 460,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "numeric_node",
@@ -1944,7 +1727,9 @@
             [],
             [],
             [],
-            []
+            [
+                "2bb077c9dcdc1562"
+            ]
         ]
     },
     {
@@ -2043,15 +1828,15 @@
         "type": "function",
         "z": "e1fca49e72b6731a",
         "name": "Retrieve Number",
-        "func": "msg.payload = flow.get('storedNumber');\nreturn msg;",
+        "func": "msg.payload = flow.get('storedNumber1');\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 590,
-        "y": 1200,
+        "x": 670,
+        "y": 1160,
         "wires": [
             [
                 "964c82852dca2933"
@@ -2067,7 +1852,148 @@
         "tosidebar": true,
         "tostatus": false,
         "complete": "payload",
-        "x": 860,
+        "x": 960,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "dc26363ff11329b0",
+        "type": "function",
+        "z": "e1fca49e72b6731a",
+        "name": "Save Number",
+        "func": "flow.set('storedNumber1', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d0b80d240c3c53ec",
+        "type": "function",
+        "z": "e1fca49e72b6731a",
+        "name": "Save Number",
+        "func": "flow.set('storedNumber2', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 508,
+        "y": 461,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3552c9db48e3f0c5",
+        "type": "function",
+        "z": "e1fca49e72b6731a",
+        "name": "Save Number",
+        "func": "flow.set('storedNumber3', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "db52d612f56843c8",
+        "type": "function",
+        "z": "e1fca49e72b6731a",
+        "name": "Save Number",
+        "func": "flow.set('storedNumber4', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0c08af9743dd7c2f",
+        "type": "function",
+        "z": "e1fca49e72b6731a",
+        "name": "Save Number",
+        "func": "flow.set('storedNumber5', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6412e4b6e82ce819",
+        "type": "function",
+        "z": "e1fca49e72b6731a",
+        "name": "Save Number",
+        "func": "flow.set('storedNumber6', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2bb077c9dcdc1562",
+        "type": "function",
+        "z": "e1fca49e72b6731a",
+        "name": "Retrieve Number",
+        "func": "msg.payload = flow.get('storedNumber2');\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 1220,
+        "wires": [
+            [
+                "43e1b6e2b4fc748b"
+            ]
+        ]
+    },
+    {
+        "id": "43e1b6e2b4fc748b",
+        "type": "debug",
+        "z": "e1fca49e72b6731a",
+        "name": "Debug Output",
+        "active": true,
+        "tosidebar": true,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 940,
         "y": 1220,
         "wires": []
     }
