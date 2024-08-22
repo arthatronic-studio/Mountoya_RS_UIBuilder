@@ -56,7 +56,6 @@
             "497afc4d7511892e",
             "5dce08f35cb8b6cf",
             "cfa57155488fe092",
-            "46bc2f93d48c087d",
             "42138cb1cb3b3dcd",
             "f7de393883dfc617",
             "d5c78e7d3ece6868",
@@ -76,7 +75,9 @@
             "f1c25ce41202d813",
             "9e715bfcb567f4aa",
             "8259c8deb91a5620",
-            "ab6dc3d12e5bfd40"
+            "ab6dc3d12e5bfd40",
+            "06812eb9b6ee6560",
+            "46bc2f93d48c087d"
         ],
         "x": 74,
         "y": -1,
@@ -842,27 +843,6 @@
         ]
     },
     {
-        "id": "46bc2f93d48c087d",
-        "type": "function",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "Reset Waterflow",
-        "func": "msg.payload = 0;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1400,
-        "y": 460,
-        "wires": [
-            [
-                "97a3c2112af1fec0"
-            ]
-        ]
-    },
-    {
         "id": "42138cb1cb3b3dcd",
         "type": "function",
         "z": "93cd7eb94b5de81b",
@@ -1291,6 +1271,54 @@
             [
                 "f04b7f82a4777b77"
             ]
+        ]
+    },
+    {
+        "id": "06812eb9b6ee6560",
+        "type": "ui_button",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "",
+        "group": "2c8dac57508989f9",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "reset galon",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "0",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1450,
+        "y": 400,
+        "wires": [
+            [
+                "97a3c2112af1fec0"
+            ]
+        ]
+    },
+    {
+        "id": "46bc2f93d48c087d",
+        "type": "function",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Reset Waterflow",
+        "func": "msg.payload = 0;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1400,
+        "y": 460,
+        "wires": [
+            []
         ]
     },
     {
@@ -1753,32 +1781,6 @@
         "wires": []
     },
     {
-        "id": "b9ae4669f4d58522",
-        "type": "ui_button",
-        "z": "e1fca49e72b6731a",
-        "name": "",
-        "group": "2c8dac57508989f9",
-        "order": 6,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "reset galon",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "0",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 650,
-        "y": 200,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "efbb813771569fd4",
         "type": "ui_template",
         "z": "e1fca49e72b6731a",
@@ -1793,8 +1795,8 @@
         "resendOnRefresh": false,
         "templateScope": "local",
         "className": "",
-        "x": 660,
-        "y": 280,
+        "x": 640,
+        "y": 260,
         "wires": [
             []
         ]
@@ -1964,5 +1966,119 @@
                 "9335b52acd541374"
             ]
         ]
+    },
+    {
+        "id": "466d3e4102d940d6",
+        "type": "rpi-gpio out",
+        "z": "e1fca49e72b6731a",
+        "name": "",
+        "pin": "14",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 690,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "9ce46479f6332f22",
+        "type": "rpi-gpio out",
+        "z": "e1fca49e72b6731a",
+        "name": "",
+        "pin": "7",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 700,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "e3bace4b9f8955e0",
+        "type": "rpi-gpio out",
+        "z": "e1fca49e72b6731a",
+        "name": "",
+        "pin": "8",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 700,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "eeb90c5085d39f34",
+        "type": "ui_button",
+        "z": "e1fca49e72b6731a",
+        "name": "Press Button",
+        "group": "2c8dac57508989f9",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "Press",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "1",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 850,
+        "y": 180,
+        "wires": [
+            [
+                "d02c1f5703cc018d"
+            ]
+        ]
+    },
+    {
+        "id": "951c6682aeb339ac",
+        "type": "ui_button",
+        "z": "e1fca49e72b6731a",
+        "name": "Release Button",
+        "group": "2c8dac57508989f9",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "Release",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "0",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 840,
+        "y": 240,
+        "wires": [
+            [
+                "d02c1f5703cc018d"
+            ]
+        ]
+    },
+    {
+        "id": "d02c1f5703cc018d",
+        "type": "debug",
+        "z": "e1fca49e72b6731a",
+        "name": "Debug Output",
+        "active": true,
+        "tosidebar": true,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 1140,
+        "y": 200,
+        "wires": []
     }
 ]
