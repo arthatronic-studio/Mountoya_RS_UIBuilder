@@ -1675,7 +1675,7 @@
         "type": "ui_numeric",
         "z": "e1fca49e72b6731a",
         "name": "",
-        "label": "hot250",
+        "label": "<h2>hot250</h2>",
         "tooltip": "",
         "group": "2c8dac57508989f9",
         "order": 1,
@@ -1690,7 +1690,7 @@
         "max": "30",
         "step": "0.5",
         "className": "",
-        "x": 290,
+        "x": 330,
         "y": 160,
         "wires": [
             [
