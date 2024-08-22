@@ -1814,18 +1814,26 @@
         "rules": [
             {
                 "t": "eq",
+                "v": "",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
                 "v": "button 1",
                 "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 1,
+        "outputs": 2,
         "x": 270,
         "y": 920,
         "wires": [
             [
                 "54b4cf979c99b330"
+            ],
+            [
+                "function_node"
             ]
         ]
     }
