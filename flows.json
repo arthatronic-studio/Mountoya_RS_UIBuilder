@@ -199,13 +199,6 @@
         "hidden": false
     },
     {
-        "id": "40507c23145c1473",
-        "type": "ui_tab",
-        "name": "Tab 2",
-        "icon": "dashboard",
-        "order": 2
-    },
-    {
         "id": "2c8dac57508989f9",
         "type": "ui_group",
         "name": "kalibrasi refill",
@@ -248,13 +241,6 @@
         "height": 1
     },
     {
-        "id": "eb9312fc56d775c6",
-        "type": "ui_tab",
-        "name": "Tab 4",
-        "icon": "dashboard",
-        "order": 4
-    },
-    {
         "id": "224aa5a7cbd8d726",
         "type": "ui_group",
         "name": "Reset",
@@ -271,6 +257,17 @@
         "name": "Back",
         "tab": "d589d2ac4b631e43",
         "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2e6f5aa5cd893557",
+        "type": "ui_group",
+        "name": "Sensor IR",
+        "tab": "d589d2ac4b631e43",
+        "order": 5,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -1402,7 +1399,7 @@
         "type": "ui_text",
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
-        "group": "2c8dac57508989f9",
+        "group": "2e6f5aa5cd893557",
         "order": 3,
         "width": 0,
         "height": 0,
@@ -1441,7 +1438,7 @@
         "type": "ui_text",
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
-        "group": "2c8dac57508989f9",
+        "group": "2e6f5aa5cd893557",
         "order": 4,
         "width": 0,
         "height": 0,
