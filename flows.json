@@ -1307,54 +1307,6 @@
         ]
     },
     {
-        "id": "cefe4c3a18d4ea8b",
-        "type": "ui_text_input",
-        "z": "e1fca49e72b6731a",
-        "name": "",
-        "label": "",
-        "tooltip": "",
-        "group": "2c8dac57508989f9",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "mode": "text",
-        "delay": 300,
-        "topic": "topic",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "msg",
-        "x": 260,
-        "y": 360,
-        "wires": [
-            [
-                "08b468552bcdbe87"
-            ]
-        ]
-    },
-    {
-        "id": "882e4d7fed906f41",
-        "type": "ui_date_picker",
-        "z": "e1fca49e72b6731a",
-        "name": "",
-        "label": "date",
-        "group": "2c8dac57508989f9",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "topic": "topic",
-        "topicType": "msg",
-        "className": "",
-        "x": 250,
-        "y": 320,
-        "wires": [
-            [
-                "67251905df92266e"
-            ]
-        ]
-    },
-    {
         "id": "649a5c4e7c1b0125",
         "type": "debug",
         "z": "e1fca49e72b6731a",
@@ -1368,38 +1320,6 @@
         "statusType": "auto",
         "x": 480,
         "y": 400,
-        "wires": []
-    },
-    {
-        "id": "08b468552bcdbe87",
-        "type": "debug",
-        "z": "e1fca49e72b6731a",
-        "name": "debug 4",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 440,
-        "y": 360,
-        "wires": []
-    },
-    {
-        "id": "67251905df92266e",
-        "type": "debug",
-        "z": "e1fca49e72b6731a",
-        "name": "debug 5",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 480,
-        "y": 320,
         "wires": []
     }
 ]
