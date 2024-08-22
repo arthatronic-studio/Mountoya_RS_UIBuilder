@@ -1806,7 +1806,7 @@
         "type": "function",
         "z": "e1fca49e72b6731a",
         "name": "Save Number",
-        "func": "flow.set('storedNumber1', msg.payload);\nreturn msg;",
+        "func": "global.set('storedNumber1', msg.payload);\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -1824,7 +1824,7 @@
         "type": "function",
         "z": "e1fca49e72b6731a",
         "name": "Save Number",
-        "func": "flow.set('storedNumber2', msg.payload);\nreturn msg;",
+        "func": "global.set('storedNumber2', msg.payload);\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -1842,7 +1842,7 @@
         "type": "function",
         "z": "e1fca49e72b6731a",
         "name": "Save Number",
-        "func": "flow.set('storedNumber3', msg.payload);\nreturn msg;",
+        "func": "global.set('storedNumber3', msg.payload);\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -1860,7 +1860,7 @@
         "type": "function",
         "z": "e1fca49e72b6731a",
         "name": "Save Number",
-        "func": "flow.set('storedNumber4', msg.payload);\nreturn msg;",
+        "func": "global.set('storedNumber4', msg.payload);\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -1878,7 +1878,7 @@
         "type": "function",
         "z": "e1fca49e72b6731a",
         "name": "Save Number",
-        "func": "flow.set('storedNumber5', msg.payload);\nreturn msg;",
+        "func": "global.set('storedNumber5', msg.payload);\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -1896,7 +1896,7 @@
         "type": "function",
         "z": "e1fca49e72b6731a",
         "name": "Save Number",
-        "func": "flow.set('storedNumber6', msg.payload);\nreturn msg;",
+        "func": "global.set('storedNumber6', msg.payload);\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -1957,8 +1957,284 @@
         "resendOnRefresh": false,
         "templateScope": "local",
         "className": "",
-        "x": 640,
+        "x": 160,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5485f563f5d84436",
+        "type": "ui_button",
+        "z": "e1fca49e72b6731a",
+        "name": "",
+        "group": "2c8dac57508989f9",
+        "order": 13,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "250h",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 810,
+        "y": 200,
+        "wires": [
+            [
+                "ce028be7ce82fd58"
+            ]
+        ]
+    },
+    {
+        "id": "8d6a80f45cc9507a",
+        "type": "ui_button",
+        "z": "e1fca49e72b6731a",
+        "name": "",
+        "group": "2c8dac57508989f9",
+        "order": 14,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "250n",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 810,
         "y": 260,
+        "wires": [
+            [
+                "13299c6a85bdb0b4"
+            ]
+        ]
+    },
+    {
+        "id": "ec5c904ea4828cb5",
+        "type": "ui_button",
+        "z": "e1fca49e72b6731a",
+        "name": "",
+        "group": "2c8dac57508989f9",
+        "order": 15,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "250c",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 810,
+        "y": 320,
+        "wires": [
+            [
+                "d4f719c8189e3e43"
+            ]
+        ]
+    },
+    {
+        "id": "13ce1f5268485649",
+        "type": "ui_button",
+        "z": "e1fca49e72b6731a",
+        "name": "",
+        "group": "2c8dac57508989f9",
+        "order": 16,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "500h",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 810,
+        "y": 380,
+        "wires": [
+            [
+                "17568add2c0efa92"
+            ]
+        ]
+    },
+    {
+        "id": "0b440d797b0354c5",
+        "type": "ui_button",
+        "z": "e1fca49e72b6731a",
+        "name": "",
+        "group": "2c8dac57508989f9",
+        "order": 17,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "500n",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 810,
+        "y": 440,
+        "wires": [
+            [
+                "4e5d7e12797afdae"
+            ]
+        ]
+    },
+    {
+        "id": "1cac0d07b65b7846",
+        "type": "ui_button",
+        "z": "e1fca49e72b6731a",
+        "name": "",
+        "group": "2c8dac57508989f9",
+        "order": 18,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "500c",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 810,
+        "y": 500,
+        "wires": [
+            [
+                "b814ac122c2d5619"
+            ]
+        ]
+    },
+    {
+        "id": "ce028be7ce82fd58",
+        "type": "function",
+        "z": "e1fca49e72b6731a",
+        "name": "Retrieve Number",
+        "func": "msg.payload = global.get('storedNumber1');\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "13299c6a85bdb0b4",
+        "type": "function",
+        "z": "e1fca49e72b6731a",
+        "name": "Retrieve Number",
+        "func": "msg.payload = global.get('storedNumber2');\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d4f719c8189e3e43",
+        "type": "function",
+        "z": "e1fca49e72b6731a",
+        "name": "Retrieve Number",
+        "func": "msg.payload = global.get('storedNumber3');\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "17568add2c0efa92",
+        "type": "function",
+        "z": "e1fca49e72b6731a",
+        "name": "Retrieve Number",
+        "func": "msg.payload = global.get('storedNumber4');\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4e5d7e12797afdae",
+        "type": "function",
+        "z": "e1fca49e72b6731a",
+        "name": "Retrieve Number",
+        "func": "msg.payload = global.get('storedNumber5');\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b814ac122c2d5619",
+        "type": "function",
+        "z": "e1fca49e72b6731a",
+        "name": "Retrieve Number",
+        "func": "msg.payload = global.get('storedNumber6');\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 500,
         "wires": [
             []
         ]
