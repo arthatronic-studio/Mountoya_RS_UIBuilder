@@ -1819,7 +1819,7 @@
         "props": [
             {
                 "p": "payload.type",
-                "v": "button 1",
+                "v": "button1",
                 "vt": "str"
             },
             {
