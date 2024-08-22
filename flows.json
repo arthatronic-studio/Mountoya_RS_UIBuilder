@@ -1462,50 +1462,6 @@
         ]
     },
     {
-        "id": "98ef176b2fad551a",
-        "type": "debug",
-        "z": "e1fca49e72b6731a",
-        "name": "debug 4",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 680,
-        "y": 520,
-        "wires": []
-    },
-    {
-        "id": "numeric_node",
-        "type": "ui_numeric",
-        "z": "e1fca49e72b6731a",
-        "name": "Set Number",
-        "label": "Number",
-        "tooltip": "",
-        "group": "2c8dac57508989f9",
-        "order": 1,
-        "width": 4,
-        "height": 1,
-        "wrap": false,
-        "passthru": true,
-        "topic": "",
-        "topicType": "str",
-        "format": "{{value}}",
-        "min": 0,
-        "max": 100,
-        "step": 1,
-        "className": "",
-        "x": 810,
-        "y": 780,
-        "wires": [
-            [
-                "function_node"
-            ]
-        ]
-    },
-    {
         "id": "inject_node",
         "type": "inject",
         "z": "e1fca49e72b6731a",
@@ -1527,102 +1483,6 @@
         "wires": [
             []
         ]
-    },
-    {
-        "id": "function_node",
-        "type": "function",
-        "z": "e1fca49e72b6731a",
-        "name": "Process Number",
-        "func": "let number = msg.payload; // Pastikan payload adalah angka\nmsg.payload = number; // Menyimpan angka di payload\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 990,
-        "y": 720,
-        "wires": [
-            [
-                "debug_node"
-            ]
-        ]
-    },
-    {
-        "id": "debug_node",
-        "type": "debug",
-        "z": "e1fca49e72b6731a",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "tostatus": false,
-        "complete": "true",
-        "x": 1090,
-        "y": 860,
-        "wires": []
-    },
-    {
-        "id": "75d6ac115f242151",
-        "type": "ui_numeric",
-        "z": "e1fca49e72b6731a",
-        "name": "Set Number",
-        "label": "cobanumber",
-        "tooltip": "",
-        "group": "2c8dac57508989f9",
-        "order": 1,
-        "width": 4,
-        "height": 1,
-        "wrap": false,
-        "passthru": true,
-        "topic": "",
-        "topicType": "str",
-        "format": "{{value}}",
-        "min": 0,
-        "max": 100,
-        "step": 1,
-        "className": "",
-        "x": 390,
-        "y": 1060,
-        "wires": [
-            [
-                "54b4cf979c99b330"
-            ]
-        ]
-    },
-    {
-        "id": "54b4cf979c99b330",
-        "type": "function",
-        "z": "e1fca49e72b6731a",
-        "name": "Extract Number",
-        "func": "// Mengambil angka dari payload\nlet number = msg.payload;\nmsg.payload = \"Received number: \" + number;\nreturn msg;\n",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 780,
-        "y": 1020,
-        "wires": [
-            [
-                "9dc8aa54255b6643"
-            ]
-        ]
-    },
-    {
-        "id": "9dc8aa54255b6643",
-        "type": "debug",
-        "z": "e1fca49e72b6731a",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "tostatus": false,
-        "complete": "payload",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1030,
-        "y": 1000,
-        "wires": []
     },
     {
         "id": "828d50be77520b5e",
@@ -1652,22 +1512,6 @@
                 "4c09ed93cbc593e6"
             ]
         ]
-    },
-    {
-        "id": "5b87e3d787211f74",
-        "type": "debug",
-        "z": "e1fca49e72b6731a",
-        "name": "debug 7",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1000,
-        "y": 920,
-        "wires": []
     },
     {
         "id": "4c09ed93cbc593e6",
@@ -1755,72 +1599,6 @@
             [
                 "4c09ed93cbc593e6"
             ]
-        ]
-    },
-    {
-        "id": "a133056ca0949cfc",
-        "type": "function",
-        "z": "e1fca49e72b6731a",
-        "name": "Combine Payload",
-        "func": "// Mengambil payload dari ui_numeric dan inject\nif (msg.payload && context.get('numericPayload') !== undefined) {\n    msg.payload = context.get('numericPayload');\n    return msg;\n}\nreturn null;\n",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 750,
-        "y": 860,
-        "wires": [
-            [
-                "5b87e3d787211f74"
-            ]
-        ]
-    },
-    {
-        "id": "eae44ffe58f6b444",
-        "type": "ui_numeric",
-        "z": "e1fca49e72b6731a",
-        "name": "Set Number",
-        "label": "kkkkk",
-        "tooltip": "",
-        "group": "2c8dac57508989f9",
-        "order": 1,
-        "width": 4,
-        "height": 1,
-        "wrap": false,
-        "passthru": true,
-        "topic": "",
-        "topicType": "str",
-        "format": "{{value}}",
-        "min": 0,
-        "max": 100,
-        "step": 1,
-        "className": "",
-        "x": 210,
-        "y": 1300,
-        "wires": [
-            [
-                "d007202e276f714d"
-            ]
-        ]
-    },
-    {
-        "id": "d007202e276f714d",
-        "type": "function",
-        "z": "e1fca49e72b6731a",
-        "name": "Save Number",
-        "func": "flow.set('storedNumber', msg.payload);\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 580,
-        "y": 1300,
-        "wires": [
-            []
         ]
     },
     {
