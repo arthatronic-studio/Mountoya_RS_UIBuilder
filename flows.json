@@ -214,7 +214,7 @@
         "disp": true,
         "width": "6",
         "collapse": false,
-        "className": ""
+        "className": "table {   border-collapse: collapse;   width: 100%; }  th, td {   text-align: left;   padding: 8px; }  tr:nth-child(even) {   background-color: #f2f2f2; }  th {   background-color: #4CAF50;   color: white; }  button {   background-color: #4CAF50;    border: none;   color: white;   padding: 10px 20px;   text-align: center;   text-decoration: none;   display: inline-block;   font-size: 16px;   margin: 4px 2px;   cursor: pointer;   border-radius: 5px; }  button:hover {   background-color: #3e8e41; }  .container {   display: flex;   justify-content: center;   align-items: center;   height: 100vh; }  .wrapper {   display: flex;   width: 80%;   background-color: #fff;   padding: 20px;   border-radius: 10px;   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }"
     },
     {
         "id": "dashboard_group",
