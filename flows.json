@@ -1974,165 +1974,6 @@
         ]
     },
     {
-        "id": "913a49ec9c79cffc",
-        "type": "ui_numeric",
-        "z": "e1fca49e72b6731a",
-        "name": "Set Number",
-        "label": "Number23",
-        "tooltip": "",
-        "group": "dashboard_group",
-        "order": 1,
-        "width": 4,
-        "height": 1,
-        "wrap": false,
-        "passthru": true,
-        "topic": "",
-        "topicType": "str",
-        "format": "{{value}}",
-        "min": 0,
-        "max": 100,
-        "step": 1,
-        "className": "",
-        "x": 230,
-        "y": 1280,
-        "wires": [
-            [
-                "96041d47ab12f56a"
-            ]
-        ]
-    },
-    {
-        "id": "251972838c9205b4",
-        "type": "inject",
-        "z": "e1fca49e72b6731a",
-        "name": "Trigger",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 150,
-        "y": 1140,
-        "wires": [
-            [
-                "7548ca8748b98a4f"
-            ]
-        ]
-    },
-    {
-        "id": "ac438678c2fd9bde",
-        "type": "switch",
-        "z": "e1fca49e72b6731a",
-        "name": "Check Number",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "1",
-                "vt": "num"
-            },
-            {
-                "t": "eq",
-                "v": "2",
-                "vt": "num"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 480,
-        "y": 1300,
-        "wires": [
-            [
-                "933fdf12bfb35543"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "933fdf12bfb35543",
-        "type": "function",
-        "z": "e1fca49e72b6731a",
-        "name": "Process Number",
-        "func": "msg.payload = \"Received number: \" + msg.payload;\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 770,
-        "y": 1220,
-        "wires": [
-            [
-                "57a7ba05a301d132"
-            ]
-        ]
-    },
-    {
-        "id": "57a7ba05a301d132",
-        "type": "debug",
-        "z": "e1fca49e72b6731a",
-        "name": "Debug Output",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1040,
-        "y": 1200,
-        "wires": []
-    },
-    {
-        "id": "96041d47ab12f56a",
-        "type": "function",
-        "z": "e1fca49e72b6731a",
-        "name": "Save Numeric Payload",
-        "func": "context.set('numericPayload', msg.payload);\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 580,
-        "y": 1100,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "7548ca8748b98a4f",
-        "type": "function",
-        "z": "e1fca49e72b6731a",
-        "name": "Combine Payload",
-        "func": "if (msg.payload && context.get('numericPayload') !== undefined) {\n    msg.payload = context.get('numericPayload');\n    return msg;\n}\nreturn null;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 410,
-        "y": 1160,
-        "wires": [
-            [
-                "ac438678c2fd9bde"
-            ]
-        ]
-    },
-    {
         "id": "a133056ca0949cfc",
         "type": "function",
         "z": "e1fca49e72b6731a",
@@ -2151,5 +1992,97 @@
                 "5b87e3d787211f74"
             ]
         ]
+    },
+    {
+        "id": "eae44ffe58f6b444",
+        "type": "ui_numeric",
+        "z": "e1fca49e72b6731a",
+        "name": "Set Number",
+        "label": "Number",
+        "tooltip": "",
+        "group": "dashboard_group",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "topic": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "x": 230,
+        "y": 1260,
+        "wires": [
+            [
+                "d007202e276f714d"
+            ]
+        ]
+    },
+    {
+        "id": "d007202e276f714d",
+        "type": "function",
+        "z": "e1fca49e72b6731a",
+        "name": "Save Number",
+        "func": "context.set('storedNumber', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 390,
+        "y": 1260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c4a20e2e44a986ed",
+        "type": "inject",
+        "z": "e1fca49e72b6731a",
+        "name": "Get Stored Number",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 230,
+        "y": 1220,
+        "wires": [
+            [
+                "b3ddcf5cb40d5e1f"
+            ]
+        ]
+    },
+    {
+        "id": "b3ddcf5cb40d5e1f",
+        "type": "function",
+        "z": "e1fca49e72b6731a",
+        "name": "Retrieve Number",
+        "func": "msg.payload = context.get('storedNumber');\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 390,
+        "y": 1220,
+        "wires": [
+            [
+                "964c82852dca2933"
+            ]
+        ]
+    },
+    {
+        "id": "964c82852dca2933",
+        "type": "debug",
+        "z": "e1fca49e72b6731a",
+        "name": "Debug Output",
+        "active": true,
+        "tosidebar": true,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 550,
+        "y": 1220,
+        "wires": []
     }
 ]
