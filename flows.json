@@ -1713,5 +1713,95 @@
         "x": 710,
         "y": 820,
         "wires": []
+    },
+    {
+        "id": "75d6ac115f242151",
+        "type": "ui_numeric",
+        "z": "e1fca49e72b6731a",
+        "name": "Set Number",
+        "label": "coba",
+        "tooltip": "",
+        "group": "2c8dac57508989f9",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "wrap": false,
+        "passthru": true,
+        "topic": "",
+        "topicType": "str",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "className": "",
+        "x": 210,
+        "y": 960,
+        "wires": [
+            [
+                "54b4cf979c99b330"
+            ]
+        ]
+    },
+    {
+        "id": "54b4cf979c99b330",
+        "type": "function",
+        "z": "e1fca49e72b6731a",
+        "name": "Extract Number",
+        "func": "msg.payload = msg.payload; // Assuming msg.payload is a number\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 960,
+        "wires": [
+            [
+                "9dc8aa54255b6643"
+            ]
+        ]
+    },
+    {
+        "id": "9dc8aa54255b6643",
+        "type": "debug",
+        "z": "e1fca49e72b6731a",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 710,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "828d50be77520b5e",
+        "type": "inject",
+        "z": "e1fca49e72b6731a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 200,
+        "y": 900,
+        "wires": [
+            [
+                "54b4cf979c99b330"
+            ]
+        ]
     }
 ]
