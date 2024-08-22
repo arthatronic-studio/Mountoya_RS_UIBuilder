@@ -1643,7 +1643,7 @@
         "passthru": true,
         "topic": "",
         "topicType": "str",
-        "format": "{{value}}",
+        "format": "{{number}}",
         "min": 0,
         "max": 100,
         "step": 1,
