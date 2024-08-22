@@ -1798,8 +1798,8 @@
         "max": 100,
         "step": 1,
         "className": "",
-        "x": 90,
-        "y": 1020,
+        "x": 390,
+        "y": 1060,
         "wires": [
             [
                 "54b4cf979c99b330"
@@ -1811,15 +1811,15 @@
         "type": "function",
         "z": "e1fca49e72b6731a",
         "name": "Extract Number",
-        "func": "msg.payload = msg.payload; // Assuming msg.payload is a number\nreturn msg;",
+        "func": "// Mengambil angka dari payload\nlet number = msg.payload;\nmsg.payload = \"Received number: \" + number;\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 600,
-        "y": 1040,
+        "x": 780,
+        "y": 1020,
         "wires": [
             [
                 "9dc8aa54255b6643"
@@ -1837,8 +1837,8 @@
         "complete": "payload",
         "statusVal": "",
         "statusType": "auto",
-        "x": 830,
-        "y": 1040,
+        "x": 1030,
+        "y": 1000,
         "wires": []
     },
     {
@@ -1882,8 +1882,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 680,
-        "y": 880,
+        "x": 880,
+        "y": 860,
         "wires": []
     },
     {
@@ -1933,8 +1933,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 7,
-        "x": 360,
-        "y": 860,
+        "x": 460,
+        "y": 900,
         "wires": [
             [
                 "5b87e3d787211f74",
