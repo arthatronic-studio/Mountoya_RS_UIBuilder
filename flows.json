@@ -270,6 +270,15 @@
         "className": ""
     },
     {
+        "id": "7f9746a77941d2e0",
+        "type": "ui_group",
+        "name": "Group 6",
+        "tab": "d589d2ac4b631e43",
+        "order": 3,
+        "disp": true,
+        "width": 6
+    },
+    {
         "id": "f7de393883dfc617",
         "type": "file",
         "z": "93cd7eb94b5de81b",
