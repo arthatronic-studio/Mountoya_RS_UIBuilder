@@ -1882,8 +1882,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 880,
-        "y": 860,
+        "x": 1000,
+        "y": 920,
         "wires": []
     },
     {
@@ -1937,8 +1937,8 @@
         "y": 900,
         "wires": [
             [
-                "5b87e3d787211f74",
-                "54b4cf979c99b330"
+                "54b4cf979c99b330",
+                "a133056ca0949cfc"
             ],
             [],
             [],
@@ -2129,6 +2129,26 @@
         "wires": [
             [
                 "ac438678c2fd9bde"
+            ]
+        ]
+    },
+    {
+        "id": "a133056ca0949cfc",
+        "type": "function",
+        "z": "e1fca49e72b6731a",
+        "name": "Combine Payload",
+        "func": "if (msg.payload && context.get('numericPayload') !== undefined) {\n    msg.payload = context.get('numericPayload');\n    return msg;\n}\nreturn null;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 860,
+        "wires": [
+            [
+                "5b87e3d787211f74"
             ]
         ]
     }
