@@ -281,16 +281,6 @@
         "width": 6
     },
     {
-        "id": "9b0471c0f7ec6de5",
-        "type": "ui_spacer",
-        "z": "e1fca49e72b6731a",
-        "name": "spacer",
-        "group": "cca3d86c822ecc84",
-        "order": 2,
-        "width": 6,
-        "height": 1
-    },
-    {
         "id": "21af1c26c3bf471c",
         "type": "ui_spacer",
         "z": "e1fca49e72b6731a",
@@ -2157,7 +2147,7 @@
         "name": "Button with Link",
         "order": 1,
         "width": 6,
-        "height": 1,
+        "height": "4",
         "format": "<button onclick=\"window.location.href='http://192.168.18.22:1880/refill/index.html';\">Back</button>",
         "storeOutMessages": true,
         "fwdInMessages": true,
