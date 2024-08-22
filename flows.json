@@ -1868,11 +1868,11 @@
         "y": 920,
         "wires": [
             [
-                "54b4cf979c99b330",
-                "5b87e3d787211f74"
+                "54b4cf979c99b330"
             ],
             [
-                "function_node"
+                "function_node",
+                "5b87e3d787211f74"
             ]
         ]
     },
@@ -1888,8 +1888,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 480,
-        "y": 900,
+        "x": 600,
+        "y": 880,
         "wires": []
     }
 ]
