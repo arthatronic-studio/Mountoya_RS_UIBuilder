@@ -1558,8 +1558,8 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "button 1",
-        "payloadType": "str",
+        "payload": "",
+        "payloadType": "date",
         "x": 80,
         "y": 400,
         "wires": [
