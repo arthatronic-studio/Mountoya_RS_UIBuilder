@@ -1229,7 +1229,7 @@
         "repeat": "",
         "crontab": "",
         "once": true,
-        "onceDelay": 0.1,
+        "onceDelay": "3",
         "topic": "",
         "payload": "1",
         "payloadType": "num",
