@@ -272,16 +272,7 @@
         "className": ""
     },
     {
-        "id": "7f9746a77941d2e0",
-        "type": "ui_group",
-        "name": "Group 6",
-        "tab": "d589d2ac4b631e43",
-        "order": 4,
-        "disp": true,
-        "width": 6
-    },
-    {
-        "id": "fc652eb872a49dd1",
+        "id": "927599c5aae2a9ff",
         "type": "ui_spacer",
         "z": "e1fca49e72b6731a",
         "name": "spacer",
@@ -291,7 +282,7 @@
         "height": 1
     },
     {
-        "id": "87b06a4987929983",
+        "id": "3b53459a7cb58a9f",
         "type": "ui_spacer",
         "z": "e1fca49e72b6731a",
         "name": "spacer",
@@ -301,7 +292,7 @@
         "height": 1
     },
     {
-        "id": "7d573cacdeeb5525",
+        "id": "4c280bcd58de80b4",
         "type": "ui_spacer",
         "z": "e1fca49e72b6731a",
         "name": "spacer",
@@ -311,7 +302,7 @@
         "height": 1
     },
     {
-        "id": "1c4d04db40fa900a",
+        "id": "d94648ac2f894da3",
         "type": "ui_spacer",
         "z": "e1fca49e72b6731a",
         "name": "spacer",
@@ -321,7 +312,7 @@
         "height": 1
     },
     {
-        "id": "7665fd777749fb57",
+        "id": "e0355133b74bf228",
         "type": "ui_spacer",
         "z": "e1fca49e72b6731a",
         "name": "spacer",
