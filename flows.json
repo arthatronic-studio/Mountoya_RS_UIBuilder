@@ -1375,7 +1375,7 @@
         "y": 60,
         "wires": [
             [
-                "5abc403c3b97e6f1"
+                "8a9efa6ca4907eb8"
             ]
         ]
     },
@@ -1837,6 +1837,8 @@
         "tosidebar": true,
         "tostatus": false,
         "complete": "payload",
+        "statusVal": "",
+        "statusType": "auto",
         "x": 830,
         "y": 1040,
         "wires": []
