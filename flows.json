@@ -1938,7 +1938,8 @@
         "wires": [
             [
                 "54b4cf979c99b330",
-                "a133056ca0949cfc"
+                "a133056ca0949cfc",
+                "b3ddcf5cb40d5e1f"
             ],
             [],
             [],
@@ -2037,31 +2038,6 @@
         "y": 1300,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "c4a20e2e44a986ed",
-        "type": "inject",
-        "z": "e1fca49e72b6731a",
-        "name": "Get Stored Number",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 230,
-        "y": 1220,
-        "wires": [
-            [
-                "b3ddcf5cb40d5e1f"
-            ]
         ]
     },
     {
