@@ -198,7 +198,7 @@
     {
         "id": "d589d2ac4b631e43",
         "type": "ui_tab",
-        "name": "Admin",
+        "name": "God Mode",
         "icon": "dashboard",
         "order": 1,
         "disabled": false,
@@ -207,7 +207,7 @@
     {
         "id": "2c8dac57508989f9",
         "type": "ui_group",
-        "name": "kalibrasi refill",
+        "name": "Kalibrasi refill",
         "tab": "d589d2ac4b631e43",
         "order": 1,
         "disp": true,
@@ -228,7 +228,7 @@
     {
         "id": "97ec7dec260fcfff",
         "type": "ui_group",
-        "name": "refill",
+        "name": "Refill",
         "tab": "d589d2ac4b631e43",
         "order": 2,
         "disp": true,
