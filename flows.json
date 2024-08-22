@@ -1734,8 +1734,8 @@
         "max": 100,
         "step": 1,
         "className": "",
-        "x": 210,
-        "y": 960,
+        "x": 110,
+        "y": 1000,
         "wires": [
             [
                 "54b4cf979c99b330"
@@ -1782,7 +1782,9 @@
         "name": "",
         "props": [
             {
-                "p": "payload"
+                "p": "payload.type",
+                "v": "button 1",
+                "vt": "str"
             },
             {
                 "p": "topic",
@@ -1794,10 +1796,33 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "1",
-        "payloadType": "str",
-        "x": 190,
+        "x": 130,
         "y": 900,
+        "wires": [
+            [
+                "9fe55c18390e48c5"
+            ]
+        ]
+    },
+    {
+        "id": "9fe55c18390e48c5",
+        "type": "switch",
+        "z": "e1fca49e72b6731a",
+        "name": "",
+        "property": "payload.type",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "button 1",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 270,
+        "y": 920,
         "wires": [
             [
                 "54b4cf979c99b330"
