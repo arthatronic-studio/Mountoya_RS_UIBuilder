@@ -77,12 +77,22 @@
             "8259c8deb91a5620",
             "ab6dc3d12e5bfd40",
             "06812eb9b6ee6560",
-            "46bc2f93d48c087d"
+            "46bc2f93d48c087d",
+            "4ca0d30b46b74420",
+            "46337193735388b3",
+            "c5b2ce136caed1a5",
+            "7115ff1cf11d63cf",
+            "e814f0fb741fed72",
+            "e4231969c27002af",
+            "50b6f25f9e528175",
+            "f9aa1d109722cb6c",
+            "48bafd69869123e8",
+            "e6ca943feedd4647"
         ],
-        "x": 74,
+        "x": 54,
         "y": -1,
-        "w": 1842,
-        "h": 582
+        "w": 1862,
+        "h": 682
     },
     {
         "id": "47a9baa3568d6361",
@@ -252,11 +262,12 @@
         "debounce": "25",
         "read": false,
         "bcm": true,
-        "x": 180,
+        "x": 160,
         "y": 280,
         "wires": [
             [
-                "58cd9e4840d784ae"
+                "58cd9e4840d784ae",
+                "f9aa1d109722cb6c"
             ]
         ]
     },
@@ -838,7 +849,8 @@
         "y": 160,
         "wires": [
             [
-                "c261d518ebc079f0"
+                "c261d518ebc079f0",
+                "50b6f25f9e528175"
             ]
         ]
     },
@@ -1322,6 +1334,208 @@
         ]
     },
     {
+        "id": "4ca0d30b46b74420",
+        "type": "ui_gauge",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "IR Sensor Gauge",
+        "group": "2c8dac57508989f9",
+        "order": 1,
+        "width": 6,
+        "height": 4,
+        "gtype": "gage",
+        "title": "IR Sensor Gauge",
+        "label": "Status",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": 1,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1250,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "46337193735388b3",
+        "type": "function",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Process Sensor Data",
+        "func": "if (msg.payload === 1) {\n    msg.payload = \"Sensor ON\";\n} else if (msg.payload === 0) {\n    msg.payload = \"Sensor OFF\";\n} else {\n    msg.payload = \"Unknown Status\";\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 980,
+        "y": 620,
+        "wires": [
+            [
+                "c5b2ce136caed1a5",
+                "4ca0d30b46b74420"
+            ]
+        ]
+    },
+    {
+        "id": "c5b2ce136caed1a5",
+        "type": "ui_text",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "group": "2c8dac57508989f9",
+        "width": "",
+        "height": "",
+        "name": "IR Sensor Status",
+        "label": "Sensor IR Bawah",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 1250,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "7115ff1cf11d63cf",
+        "type": "function",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Process Sensor Data",
+        "func": "if (msg.payload === 1) {\n    msg.payload = \"Sensor ON\";\n} else if (msg.payload === 0) {\n    msg.payload = \"Sensor OFF\";\n} else {\n    msg.payload = \"Unknown Status\";\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 240,
+        "y": 640,
+        "wires": [
+            [
+                "e814f0fb741fed72",
+                "e4231969c27002af"
+            ]
+        ]
+    },
+    {
+        "id": "e814f0fb741fed72",
+        "type": "ui_text",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "group": "2c8dac57508989f9",
+        "width": "",
+        "height": "",
+        "name": "IR Sensor Status",
+        "label": "Sensor IR Atas",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 550,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "e4231969c27002af",
+        "type": "ui_gauge",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "IR Sensor Gauge",
+        "group": "2c8dac57508989f9",
+        "order": 1,
+        "width": 6,
+        "height": 4,
+        "gtype": "gage",
+        "title": "IR Sensor Gauge",
+        "label": "Status",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": 1,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 570,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "50b6f25f9e528175",
+        "type": "link out",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "link out 12",
+        "mode": "link",
+        "links": [
+            "48bafd69869123e8"
+        ],
+        "x": 355,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "f9aa1d109722cb6c",
+        "type": "link out",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "link out 13",
+        "mode": "link",
+        "links": [
+            "e6ca943feedd4647"
+        ],
+        "x": 315,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "48bafd69869123e8",
+        "type": "link in",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "link in 4",
+        "links": [
+            "50b6f25f9e528175"
+        ],
+        "x": 145,
+        "y": 600,
+        "wires": [
+            [
+                "7115ff1cf11d63cf"
+            ]
+        ]
+    },
+    {
+        "id": "e6ca943feedd4647",
+        "type": "link in",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "link in 5",
+        "links": [
+            "f9aa1d109722cb6c"
+        ],
+        "x": 825,
+        "y": 620,
+        "wires": [
+            [
+                "46337193735388b3"
+            ]
+        ]
+    },
+    {
         "id": "1c4565af3db20a1f",
         "type": "ui_numeric",
         "z": "e1fca49e72b6731a",
@@ -1799,172 +2013,6 @@
         "y": 260,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "cb63602c7c5b11cf",
-        "type": "function",
-        "z": "e1fca49e72b6731a",
-        "name": "Process Sensor Data",
-        "func": "if (msg.payload === 1) {\n    msg.payload = \"Sensor ON\";\n} else if (msg.payload === 0) {\n    msg.payload = \"Sensor OFF\";\n} else {\n    msg.payload = \"Unknown Status\";\n}\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 300,
-        "y": 620,
-        "wires": [
-            [
-                "dc51c72b1ed83e53",
-                "cd0cc82dc6551150"
-            ]
-        ]
-    },
-    {
-        "id": "dc51c72b1ed83e53",
-        "type": "ui_text",
-        "z": "e1fca49e72b6731a",
-        "group": "2c8dac57508989f9",
-        "width": "",
-        "height": "",
-        "name": "IR Sensor Status",
-        "label": "Sensor IR Bawah",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
-        "x": 610,
-        "y": 620,
-        "wires": []
-    },
-    {
-        "id": "cd0cc82dc6551150",
-        "type": "ui_gauge",
-        "z": "e1fca49e72b6731a",
-        "name": "IR Sensor Gauge",
-        "group": "2c8dac57508989f9",
-        "order": 1,
-        "width": 6,
-        "height": 4,
-        "gtype": "gage",
-        "title": "IR Sensor Gauge",
-        "label": "Status",
-        "format": "{{msg.payload}}",
-        "min": 0,
-        "max": 1,
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 590,
-        "y": 700,
-        "wires": []
-    },
-    {
-        "id": "ba6be7c0084a2163",
-        "type": "rpi-gpio in",
-        "z": "e1fca49e72b6731a",
-        "name": "",
-        "pin": "24",
-        "intype": "tri",
-        "debounce": "25",
-        "read": false,
-        "bcm": true,
-        "x": 90,
-        "y": 620,
-        "wires": [
-            [
-                "cb63602c7c5b11cf"
-            ]
-        ]
-    },
-    {
-        "id": "9335b52acd541374",
-        "type": "function",
-        "z": "e1fca49e72b6731a",
-        "name": "Process Sensor Data",
-        "func": "if (msg.payload === 1) {\n    msg.payload = \"Sensor ON\";\n} else if (msg.payload === 0) {\n    msg.payload = \"Sensor OFF\";\n} else {\n    msg.payload = \"Unknown Status\";\n}\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 300,
-        "y": 780,
-        "wires": [
-            [
-                "9781f0fa55b60a7f",
-                "3e82592a65ad55d4"
-            ]
-        ]
-    },
-    {
-        "id": "9781f0fa55b60a7f",
-        "type": "ui_text",
-        "z": "e1fca49e72b6731a",
-        "group": "2c8dac57508989f9",
-        "width": "",
-        "height": "",
-        "name": "IR Sensor Status",
-        "label": "Sensor IR Atas",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
-        "x": 610,
-        "y": 780,
-        "wires": []
-    },
-    {
-        "id": "3e82592a65ad55d4",
-        "type": "ui_gauge",
-        "z": "e1fca49e72b6731a",
-        "name": "IR Sensor Gauge",
-        "group": "2c8dac57508989f9",
-        "order": 1,
-        "width": 6,
-        "height": 4,
-        "gtype": "gage",
-        "title": "IR Sensor Gauge",
-        "label": "Status",
-        "format": "{{msg.payload}}",
-        "min": 0,
-        "max": 1,
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 590,
-        "y": 860,
-        "wires": []
-    },
-    {
-        "id": "06164c665df4b039",
-        "type": "rpi-gpio in",
-        "z": "e1fca49e72b6731a",
-        "name": "",
-        "pin": "23",
-        "intype": "tri",
-        "debounce": "25",
-        "read": false,
-        "bcm": true,
-        "x": 90,
-        "y": 780,
-        "wires": [
-            [
-                "9335b52acd541374"
-            ]
         ]
     }
 ]
