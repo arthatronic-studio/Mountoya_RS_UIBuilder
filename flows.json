@@ -1314,7 +1314,7 @@
         "max": "30",
         "step": "0.5",
         "className": "",
-        "x": 250,
+        "x": 350,
         "y": 400,
         "wires": [
             [
@@ -1343,10 +1343,12 @@
         "max": "30",
         "step": "0.5",
         "className": "",
-        "x": 270,
+        "x": 390,
         "y": 460,
         "wires": [
-            []
+            [
+                "98ef176b2fad551a"
+            ]
         ]
     },
     {
@@ -1462,7 +1464,7 @@
         "links": [
             "0c1ab6ea34322aa5"
         ],
-        "x": 445,
+        "x": 545,
         "y": 400,
         "wires": []
     },
@@ -1478,7 +1480,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 480,
+        "x": 540,
         "y": 340,
         "wires": []
     },
@@ -1489,7 +1491,7 @@
         "name": "link out 13",
         "mode": "link",
         "links": [],
-        "x": 455,
+        "x": 515,
         "y": 460,
         "wires": []
     },
@@ -1557,13 +1559,62 @@
         "onceDelay": 0.1,
         "topic": "",
         "payload": "1",
-        "payloadType": "str",
+        "payloadType": "num",
         "x": 70,
         "y": 400,
         "wires": [
             [
-                "1c4565af3db20a1f"
+                "1ce858e924fbea04"
             ]
         ]
+    },
+    {
+        "id": "1ce858e924fbea04",
+        "type": "switch",
+        "z": "e1fca49e72b6731a",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 210,
+        "y": 400,
+        "wires": [
+            [
+                "1c4565af3db20a1f"
+            ],
+            [
+                "020294989a98ee92"
+            ]
+        ]
+    },
+    {
+        "id": "98ef176b2fad551a",
+        "type": "debug",
+        "z": "e1fca49e72b6731a",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 520,
+        "wires": []
     }
 ]
