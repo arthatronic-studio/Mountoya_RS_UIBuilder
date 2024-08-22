@@ -1998,19 +1998,23 @@
         "type": "ui_numeric",
         "z": "e1fca49e72b6731a",
         "name": "Set Number",
-        "label": "Number",
+        "label": "kkkkk",
         "tooltip": "",
         "group": "dashboard_group",
         "order": 1,
         "width": 4,
         "height": 1,
+        "wrap": false,
+        "passthru": true,
         "topic": "",
+        "topicType": "str",
         "format": "{{value}}",
         "min": 0,
         "max": 100,
         "step": 1,
-        "x": 230,
-        "y": 1260,
+        "className": "",
+        "x": 210,
+        "y": 1300,
         "wires": [
             [
                 "d007202e276f714d"
@@ -2025,8 +2029,8 @@
         "func": "context.set('storedNumber', msg.payload);\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 390,
-        "y": 1260,
+        "x": 580,
+        "y": 1300,
         "wires": [
             []
         ]
@@ -2063,9 +2067,13 @@
         "name": "Retrieve Number",
         "func": "msg.payload = context.get('storedNumber');\nreturn msg;",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
-        "x": 390,
-        "y": 1220,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 1200,
         "wires": [
             [
                 "964c82852dca2933"
@@ -2081,7 +2089,7 @@
         "tosidebar": true,
         "tostatus": false,
         "complete": "payload",
-        "x": 550,
+        "x": 860,
         "y": 1220,
         "wires": []
     }
