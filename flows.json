@@ -1969,7 +1969,7 @@
         "type": "function",
         "z": "e1fca49e72b6731a",
         "name": "Retrieve Number",
-        "func": "msg.payload = flow.get('storedNumber2');\nreturn msg;",
+        "func": "msg.payload = flow.get('storedNumber4');\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
