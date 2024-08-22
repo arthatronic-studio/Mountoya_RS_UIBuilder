@@ -230,7 +230,7 @@
         "type": "ui_group",
         "name": "Refill",
         "tab": "d589d2ac4b631e43",
-        "order": 2,
+        "order": 3,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -274,7 +274,7 @@
         "type": "ui_group",
         "name": "Group 6",
         "tab": "d589d2ac4b631e43",
-        "order": 3,
+        "order": 2,
         "disp": true,
         "width": 6
     },
