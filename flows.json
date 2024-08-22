@@ -1686,8 +1686,8 @@
         "max": 100,
         "step": 1,
         "className": "",
-        "x": 150,
-        "y": 860,
+        "x": 810,
+        "y": 780,
         "wires": [
             [
                 "function_node"
@@ -1714,9 +1714,7 @@
         "x": 150,
         "y": 780,
         "wires": [
-            [
-                "function_node"
-            ]
+            []
         ]
     },
     {
@@ -1731,8 +1729,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 450,
-        "y": 840,
+        "x": 990,
+        "y": 720,
         "wires": [
             [
                 "debug_node"
@@ -1748,8 +1746,8 @@
         "tosidebar": true,
         "tostatus": false,
         "complete": "true",
-        "x": 710,
-        "y": 820,
+        "x": 1090,
+        "y": 860,
         "wires": []
     },
     {
@@ -1772,8 +1770,8 @@
         "max": 100,
         "step": 1,
         "className": "",
-        "x": 110,
-        "y": 1000,
+        "x": 90,
+        "y": 1020,
         "wires": [
             [
                 "54b4cf979c99b330"
@@ -1792,8 +1790,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 440,
-        "y": 960,
+        "x": 600,
+        "y": 1040,
         "wires": [
             [
                 "9dc8aa54255b6643"
@@ -1809,8 +1807,8 @@
         "tosidebar": true,
         "tostatus": false,
         "complete": "payload",
-        "x": 710,
-        "y": 960,
+        "x": 830,
+        "y": 1040,
         "wires": []
     },
     {
@@ -1834,45 +1832,11 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 130,
-        "y": 900,
-        "wires": [
-            [
-                "9fe55c18390e48c5"
-            ]
-        ]
-    },
-    {
-        "id": "9fe55c18390e48c5",
-        "type": "switch",
-        "z": "e1fca49e72b6731a",
-        "name": "",
-        "property": "payload.type",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "button 1",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 270,
+        "x": 150,
         "y": 920,
         "wires": [
             [
-                "54b4cf979c99b330"
-            ],
-            [
-                "function_node",
-                "5b87e3d787211f74"
+                "4c09ed93cbc593e6"
             ]
         ]
     },
@@ -1891,5 +1855,67 @@
         "x": 600,
         "y": 880,
         "wires": []
+    },
+    {
+        "id": "4c09ed93cbc593e6",
+        "type": "switch",
+        "z": "e1fca49e72b6731a",
+        "name": "Switch on type",
+        "property": "payload.type",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "button1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "button2",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "button3",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "button4",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "button5",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "button6",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "reset",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 7,
+        "x": 360,
+        "y": 860,
+        "wires": [
+            [
+                "5b87e3d787211f74",
+                "54b4cf979c99b330"
+            ],
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
     }
 ]
