@@ -8,6 +8,14 @@
         "env": []
     },
     {
+        "id": "e1fca49e72b6731a",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "d578f4fe739b97e1",
         "type": "group",
         "z": "93cd7eb94b5de81b",
@@ -527,7 +535,7 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "Set Relay Time",
-        "func": "\nlet pin_IR_ATAS = 18;\nlet pin_IR_BAWAH = 23;\nlet pin_Relay = 8;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR_ATAS = 0;\nlet state_IR_BAWAH = 0;\n\nconst IR_ATAS = new onoff.Gpio(pin_IR_ATAS, 'in', 'both');\nconst IR_BAWAH = new onoff.Gpio(pin_IR_BAWAH, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nstate_IR_ATAS = IR_ATAS.readSync();\nstate_IR_BAWAH = IR_BAWAH.readSync();\nprevCount = Date.now();\nlet stopTimer = Date.now();\ncount = 0;\n\nwhile (count < timer && Date.now()-stopTimer < 5000) {\n    state_IR_ATAS = IR_ATAS.readSync();\n    state_IR_BAWAH = IR_BAWAH.readSync();\n    if (state_IR_ATAS === 1 || state_IR_BAWAH === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        stopTimer = Date.now();\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nconst d = new Date();\n\nmsg.payload = {\n    finish: 'done',\n    time: d.getHours() + \":\" + d.getMinutes() + \":\" + d.getSeconds(),\n    date: d.getFullYear() + \"-\" + d.getMonth() + \"-\" + d.getDate(),\n    volume: 250,\n    temperature: 'hot'\n}\n\n\nreturn msg",
+        "func": " \nlet pin_IR_ATAS = 18;\nlet pin_IR_BAWAH = 23;\nlet pin_Relay = 8;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR_ATAS = 0;\nlet state_IR_BAWAH = 0;\n\nconst IR_ATAS = new onoff.Gpio(pin_IR_ATAS, 'in', 'both');\nconst IR_BAWAH = new onoff.Gpio(pin_IR_BAWAH, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nstate_IR_ATAS = IR_ATAS.readSync();\nstate_IR_BAWAH = IR_BAWAH.readSync();\nprevCount = Date.now();\nlet stopTimer = Date.now();\ncount = 0;\n\nwhile (count < timer && Date.now()-stopTimer < 5000) {\n    state_IR_ATAS = IR_ATAS.readSync();\n    state_IR_BAWAH = IR_BAWAH.readSync();\n    if (state_IR_ATAS === 1 || state_IR_BAWAH === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        stopTimer = Date.now();\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nconst d = new Date();\n\nmsg.payload = {\n    finish: 'done',\n    time: d.getHours() + \":\" + d.getMinutes() + \":\" + d.getSeconds(),\n    date: d.getFullYear() + \"-\" + d.getMonth() + \"-\" + d.getDate(),\n    volume: 250,\n    temperature: 'hot'\n}\n\n\nreturn msg",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -1147,5 +1155,126 @@
                 "f04b7f82a4777b77"
             ]
         ]
+    },
+    {
+        "id": "1c4565af3db20a1f",
+        "type": "ui_numeric",
+        "z": "e1fca49e72b6731a",
+        "name": "",
+        "label": "numeric",
+        "tooltip": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "className": "",
+        "x": 260,
+        "y": 400,
+        "wires": [
+            [
+                "649a5c4e7c1b0125"
+            ]
+        ]
+    },
+    {
+        "id": "cefe4c3a18d4ea8b",
+        "type": "ui_text_input",
+        "z": "e1fca49e72b6731a",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 260,
+        "y": 360,
+        "wires": [
+            [
+                "08b468552bcdbe87"
+            ]
+        ]
+    },
+    {
+        "id": "882e4d7fed906f41",
+        "type": "ui_date_picker",
+        "z": "e1fca49e72b6731a",
+        "name": "",
+        "label": "date",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 250,
+        "y": 320,
+        "wires": [
+            [
+                "67251905df92266e"
+            ]
+        ]
+    },
+    {
+        "id": "649a5c4e7c1b0125",
+        "type": "debug",
+        "z": "e1fca49e72b6731a",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "08b468552bcdbe87",
+        "type": "debug",
+        "z": "e1fca49e72b6731a",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "67251905df92266e",
+        "type": "debug",
+        "z": "e1fca49e72b6731a",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 320,
+        "wires": []
     }
 ]
