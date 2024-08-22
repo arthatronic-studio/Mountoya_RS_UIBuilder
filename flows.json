@@ -207,6 +207,23 @@
         "className": ""
     },
     {
+        "id": "dashboard_group",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "dashboard_tab",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false
+    },
+    {
+        "id": "dashboard_tab",
+        "type": "ui_tab",
+        "name": "Dashboard",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
         "id": "f7de393883dfc617",
         "type": "file",
         "z": "93cd7eb94b5de81b",
@@ -1610,5 +1627,91 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "numeric_node",
+        "type": "ui_numeric",
+        "z": "e1fca49e72b6731a",
+        "name": "Set Number",
+        "label": "Number",
+        "tooltip": "",
+        "group": "2c8dac57508989f9",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "wrap": false,
+        "passthru": true,
+        "topic": "",
+        "topicType": "str",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "className": "",
+        "x": 150,
+        "y": 860,
+        "wires": [
+            [
+                "function_node"
+            ]
+        ]
+    },
+    {
+        "id": "inject_node",
+        "type": "inject",
+        "z": "e1fca49e72b6731a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 780,
+        "wires": [
+            [
+                "function_node"
+            ]
+        ]
+    },
+    {
+        "id": "function_node",
+        "type": "function",
+        "z": "e1fca49e72b6731a",
+        "name": "Process Number",
+        "func": "msg.payload = { number: msg.payload };\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 840,
+        "wires": [
+            [
+                "debug_node"
+            ]
+        ]
+    },
+    {
+        "id": "debug_node",
+        "type": "debug",
+        "z": "e1fca49e72b6731a",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "tostatus": false,
+        "complete": "true",
+        "x": 710,
+        "y": 820,
+        "wires": []
     }
 ]
