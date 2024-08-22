@@ -192,9 +192,11 @@
     {
         "id": "d589d2ac4b631e43",
         "type": "ui_tab",
-        "name": "Tab 1",
+        "name": "Admin",
         "icon": "dashboard",
-        "order": 1
+        "order": 1,
+        "disabled": false,
+        "hidden": false
     },
     {
         "id": "40507c23145c1473",
@@ -206,7 +208,7 @@
     {
         "id": "2c8dac57508989f9",
         "type": "ui_group",
-        "name": "admin",
+        "name": "kalibrasi refill",
         "tab": "d589d2ac4b631e43",
         "order": 1,
         "disp": true,
@@ -218,18 +220,11 @@
         "id": "dashboard_group",
         "type": "ui_group",
         "name": "Default",
-        "tab": "dashboard_tab",
+        "tab": "",
         "order": 1,
         "disp": true,
         "width": 6,
         "collapse": false
-    },
-    {
-        "id": "dashboard_tab",
-        "type": "ui_tab",
-        "name": "Dashboard",
-        "icon": "dashboard",
-        "order": 1
     },
     {
         "id": "97ec7dec260fcfff",
@@ -251,6 +246,35 @@
         "order": 1,
         "width": 6,
         "height": 1
+    },
+    {
+        "id": "eb9312fc56d775c6",
+        "type": "ui_tab",
+        "name": "Tab 4",
+        "icon": "dashboard",
+        "order": 4
+    },
+    {
+        "id": "224aa5a7cbd8d726",
+        "type": "ui_group",
+        "name": "Reset",
+        "tab": "d589d2ac4b631e43",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "cca3d86c822ecc84",
+        "type": "ui_group",
+        "name": "Back",
+        "tab": "d589d2ac4b631e43",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "f7de393883dfc617",
@@ -1310,7 +1334,7 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "",
-        "group": "2c8dac57508989f9",
+        "group": "224aa5a7cbd8d726",
         "order": 2,
         "width": 0,
         "height": 0,
@@ -1959,7 +1983,7 @@
         "id": "efbb813771569fd4",
         "type": "ui_template",
         "z": "e1fca49e72b6731a",
-        "group": "2c8dac57508989f9",
+        "group": "cca3d86c822ecc84",
         "name": "Button with Link",
         "order": 5,
         "width": 6,
@@ -1970,7 +1994,7 @@
         "resendOnRefresh": false,
         "templateScope": "local",
         "className": "",
-        "x": 160,
+        "x": 120,
         "y": 140,
         "wires": [
             []
