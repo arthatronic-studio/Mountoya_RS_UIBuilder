@@ -1680,10 +1680,6 @@
         "props": [
             {
                 "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
             }
         ],
         "repeat": "",
@@ -1693,7 +1689,7 @@
         "topic": "",
         "payload": "12345",
         "payloadType": "num",
-        "x": 1130,
+        "x": 1150,
         "y": 500,
         "wires": [
             [
