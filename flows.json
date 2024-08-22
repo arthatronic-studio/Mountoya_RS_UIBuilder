@@ -79,7 +79,8 @@
             "ab6dc3d12e5bfd40",
             "0c1ab6ea34322aa5",
             "6cf898a71e2e550d",
-            "96d9a43c0f63fe0a"
+            "96d9a43c0f63fe0a",
+            "83b0f2a8a22a315d"
         ],
         "x": 74,
         "y": -1,
@@ -385,14 +386,14 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "Button 1 Action 250 ml hot",
-        "func": "msg.payload = 7\n\nreturn msg;",
+        "func": "msg.payload = msg.payload; // Assuming msg.payload is a number\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1430,
+        "x": 1410,
         "y": 120,
         "wires": [
             [
@@ -1328,8 +1329,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1320,
-        "y": 80,
+        "x": 1180,
+        "y": 40,
         "wires": []
     },
     {
@@ -1345,9 +1346,38 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1600,
-        "y": 80,
+        "x": 1740,
+        "y": 60,
         "wires": []
+    },
+    {
+        "id": "83b0f2a8a22a315d",
+        "type": "ui_numeric",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Set Number",
+        "label": "panas250",
+        "tooltip": "",
+        "group": "2c8dac57508989f9",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "wrap": false,
+        "passthru": true,
+        "topic": "",
+        "topicType": "str",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "className": "",
+        "x": 1350,
+        "y": 60,
+        "wires": [
+            [
+                "5abc403c3b97e6f1"
+            ]
+        ]
     },
     {
         "id": "1c4565af3db20a1f",
@@ -1852,7 +1882,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 600,
+        "x": 680,
         "y": 880,
         "wires": []
     },
