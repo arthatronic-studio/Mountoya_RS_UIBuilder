@@ -1800,5 +1800,26 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "efbb813771569fd4",
+        "type": "ui_template",
+        "z": "e1fca49e72b6731a",
+        "group": "2c8dac57508989f9",
+        "name": "Button with Link",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "format": "<button onclick=\"window.location.href='http://192.168.18.22:1880/refill/index.html';\">Go to Example</button>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 780,
+        "y": 680,
+        "wires": [
+            []
+        ]
     }
 ]
