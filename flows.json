@@ -1947,5 +1947,122 @@
             [],
             []
         ]
+    },
+    {
+        "id": "495561107f0d756f",
+        "type": "ui_numeric",
+        "z": "e1fca49e72b6731a",
+        "name": "Set Number",
+        "label": "testing",
+        "tooltip": "",
+        "group": "2c8dac57508989f9",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "wrap": false,
+        "passthru": true,
+        "topic": "",
+        "topicType": "str",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "className": "",
+        "x": 630,
+        "y": 1300,
+        "wires": [
+            [
+                "66e9f13f98fb243a"
+            ]
+        ]
+    },
+    {
+        "id": "727e2d20f539982d",
+        "type": "inject",
+        "z": "e1fca49e72b6731a",
+        "name": "Trigger",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 290,
+        "y": 1200,
+        "wires": [
+            [
+                "f9da09b311c5ab0b"
+            ]
+        ]
+    },
+    {
+        "id": "f9da09b311c5ab0b",
+        "type": "switch",
+        "z": "e1fca49e72b6731a",
+        "name": "Check Number",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 560,
+        "y": 1200,
+        "wires": [
+            [
+                "66e9f13f98fb243a"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "66e9f13f98fb243a",
+        "type": "function",
+        "z": "e1fca49e72b6731a",
+        "name": "Process Number",
+        "func": "msg.payload = \"Received number: \" + msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 1200,
+        "wires": [
+            [
+                "ee9aa9a15bb61755"
+            ]
+        ]
+    },
+    {
+        "id": "ee9aa9a15bb61755",
+        "type": "debug",
+        "z": "e1fca49e72b6731a",
+        "name": "Debug Output",
+        "active": true,
+        "tosidebar": true,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 1000,
+        "y": 1200,
+        "wires": []
     }
 ]
