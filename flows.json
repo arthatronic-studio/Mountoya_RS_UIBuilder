@@ -1686,7 +1686,7 @@
         "type": "function",
         "z": "e1fca49e72b6731a",
         "name": "Process Number",
-        "func": "msg.payload = { number: msg.payload };\nreturn msg;",
+        "func": "let number = msg.payload; // Pastikan payload adalah angka\nmsg.payload = number; // Menyimpan angka di payload\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
