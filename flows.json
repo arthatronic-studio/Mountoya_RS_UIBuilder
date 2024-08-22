@@ -2466,35 +2466,6 @@
         "wires": []
     },
     {
-        "id": "076b676350be4fa3",
-        "type": "inject",
-        "z": "e1fca49e72b6731a",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "7",
-        "payloadType": "num",
-        "x": 110,
-        "y": 160,
-        "wires": [
-            [
-                "1c4565af3db20a1f"
-            ]
-        ]
-    },
-    {
         "id": "090737221db70eaa",
         "type": "debug",
         "z": "e1fca49e72b6731a",
