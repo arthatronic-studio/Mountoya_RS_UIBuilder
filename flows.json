@@ -1396,8 +1396,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1440,
-        "y": 460,
+        "x": 1500,
+        "y": 480,
         "wires": [
             []
         ]
