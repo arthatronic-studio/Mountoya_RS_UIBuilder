@@ -1868,11 +1868,28 @@
         "y": 920,
         "wires": [
             [
-                "54b4cf979c99b330"
+                "54b4cf979c99b330",
+                "5b87e3d787211f74"
             ],
             [
                 "function_node"
             ]
         ]
+    },
+    {
+        "id": "5b87e3d787211f74",
+        "type": "debug",
+        "z": "e1fca49e72b6731a",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 900,
+        "wires": []
     }
 ]
