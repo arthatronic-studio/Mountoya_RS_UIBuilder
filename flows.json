@@ -2046,14 +2046,14 @@
             }
         ],
         "checkall": "true",
-        "outputs": 3,
+        "repair": false,
+        "outputs": 2,
         "x": 480,
         "y": 1300,
         "wires": [
             [
                 "933fdf12bfb35543"
             ],
-            [],
             []
         ]
     },
@@ -2064,7 +2064,11 @@
         "name": "Process Number",
         "func": "msg.payload = \"Received number: \" + msg.payload;\nreturn msg;",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 770,
         "y": 1220,
         "wires": [
@@ -2093,7 +2097,11 @@
         "name": "Save Numeric Payload",
         "func": "context.set('numericPayload', msg.payload);\nreturn msg;",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 580,
         "y": 1100,
         "wires": [
@@ -2107,7 +2115,11 @@
         "name": "Combine Payload",
         "func": "if (msg.payload && context.get('numericPayload') !== undefined) {\n    msg.payload = context.get('numericPayload');\n    return msg;\n}\nreturn null;",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 410,
         "y": 1160,
         "wires": [
