@@ -70,7 +70,6 @@
             "8180848f581502a1",
             "674226255c184b27",
             "ee35fa8f00e5fb60",
-            "813a5d152d4efffd",
             "f1c25ce41202d813",
             "9e715bfcb567f4aa",
             "8259c8deb91a5620",
@@ -90,7 +89,9 @@
             "7ff9c42d38112d9f",
             "e490dd3073442360",
             "0e93fd7bfc25cd6d",
-            "eda127c63177076f"
+            "eda127c63177076f",
+            "813a5d152d4efffd",
+            "062c2fd80de87db2"
         ],
         "x": 54,
         "y": -1,
@@ -1255,29 +1256,9 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1770,
-        "y": 600,
+        "x": 1550,
+        "y": 500,
         "wires": []
-    },
-    {
-        "id": "813a5d152d4efffd",
-        "type": "file",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "Data Waterflow",
-        "filename": "/home/arthatronic/Documents/waterflow.txt",
-        "filenameType": "str",
-        "appendNewline": false,
-        "createDir": true,
-        "overwriteFile": "true",
-        "encoding": "utf8",
-        "x": 1320,
-        "y": 560,
-        "wires": [
-            [
-                "9e715bfcb567f4aa"
-            ]
-        ]
     },
     {
         "id": "f1c25ce41202d813",
@@ -1370,10 +1351,12 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1500,
-        "y": 480,
+        "x": 1240,
+        "y": 500,
         "wires": [
-            []
+            [
+                "062c2fd80de87db2"
+            ]
         ]
     },
     {
@@ -1639,6 +1622,46 @@
         "wires": [
             [
                 "5dce08f35cb8b6cf"
+            ]
+        ]
+    },
+    {
+        "id": "813a5d152d4efffd",
+        "type": "file",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Data Waterflow",
+        "filename": "/home/arthatronic/Documents/waterflow.txt",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "utf8",
+        "x": 1320,
+        "y": 560,
+        "wires": [
+            [
+                "9e715bfcb567f4aa"
+            ]
+        ]
+    },
+    {
+        "id": "062c2fd80de87db2",
+        "type": "file",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Data Waterflow",
+        "filename": "/home/arthatronic/Documents/waterflow.txt",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "utf8",
+        "x": 1420,
+        "y": 500,
+        "wires": [
+            [
+                "ee35fa8f00e5fb60"
             ]
         ]
     },
