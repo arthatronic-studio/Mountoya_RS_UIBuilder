@@ -1945,7 +1945,9 @@
             [],
             [],
             [],
-            []
+            [
+                "66e9f13f98fb243a"
+            ]
         ]
     },
     {
@@ -1983,7 +1985,9 @@
         "name": "Trigger",
         "props": [
             {
-                "p": "payload"
+                "p": "payload.type",
+                "v": "reset",
+                "vt": "str"
             }
         ],
         "repeat": "",
@@ -1991,45 +1995,12 @@
         "once": false,
         "onceDelay": "",
         "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 290,
-        "y": 1200,
+        "x": 130,
+        "y": 980,
         "wires": [
             [
-                "f9da09b311c5ab0b"
+                "4c09ed93cbc593e6"
             ]
-        ]
-    },
-    {
-        "id": "f9da09b311c5ab0b",
-        "type": "switch",
-        "z": "e1fca49e72b6731a",
-        "name": "Check Number",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "1",
-                "vt": "num"
-            },
-            {
-                "t": "eq",
-                "v": "2",
-                "vt": "num"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 560,
-        "y": 1200,
-        "wires": [
-            [
-                "66e9f13f98fb243a"
-            ],
-            []
         ]
     },
     {
