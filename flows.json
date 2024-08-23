@@ -1257,7 +1257,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1550,
+        "x": 1670,
         "y": 500,
         "wires": []
     },
@@ -1310,7 +1310,7 @@
         "links": [
             "ab6dc3d12e5bfd40"
         ],
-        "x": 1875,
+        "x": 1635,
         "y": 460,
         "wires": []
     },
@@ -1662,7 +1662,8 @@
         "y": 500,
         "wires": [
             [
-                "ee35fa8f00e5fb60"
+                "ee35fa8f00e5fb60",
+                "8259c8deb91a5620"
             ]
         ]
     },
