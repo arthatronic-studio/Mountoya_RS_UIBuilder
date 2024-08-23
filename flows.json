@@ -1350,7 +1350,7 @@
         "className": "",
         "icon": "",
         "payload": "0",
-        "payloadType": "str",
+        "payloadType": "num",
         "topic": "topic",
         "topicType": "msg",
         "x": 1240,
