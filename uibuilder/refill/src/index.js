@@ -9,10 +9,12 @@ document.getElementById('logo').addEventListener('click', function () {
   if(Number(localStorage.getItem("admin"))<5){
     console.log(Number(localStorage.getItem("admin")));
     localStorage.setItem("admin", Number(localStorage.getItem("admin")) + 1);
+    
   } else {
     localStorage.setItem("admin", 0);
     localStorage.setItem("totalVolume",19000);
-    
+    window.location.href = 'http://192.168.18.22:1880/ui/';
+
     let payload = {};
     payload = { type: 'reset', value: '1' };
     uibuilder.send({ payload: payload });
