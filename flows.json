@@ -16,6 +16,14 @@
         "env": []
     },
     {
+        "id": "11ad88330f2860d1",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "d578f4fe739b97e1",
         "type": "group",
         "z": "93cd7eb94b5de81b",
@@ -2857,5 +2865,89 @@
                 "7ac0c499d93ec047"
             ]
         ]
+    },
+    {
+        "id": "flowSetter",
+        "type": "function",
+        "z": "11ad88330f2860d1",
+        "name": "Set Flow Data",
+        "func": "flow.set('myData', { temperature: 25, humidity: 60 });\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 340,
+        "wires": [
+            [
+                "flowGetter"
+            ]
+        ]
+    },
+    {
+        "id": "flowGetter",
+        "type": "function",
+        "z": "11ad88330f2860d1",
+        "name": "Get Flow Data",
+        "func": "msg.payload = flow.get('myData');\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 340,
+        "wires": [
+            [
+                "uibuilder"
+            ]
+        ]
+    },
+    {
+        "id": "uibuilder",
+        "type": "uibuilder",
+        "z": "11ad88330f2860d1",
+        "name": "",
+        "topic": "",
+        "url": "aaa",
+        "okToGo": true,
+        "fwdInMessages": false,
+        "allowScripts": true,
+        "allowStyles": true,
+        "copyIndex": true,
+        "templateFolder": "blank",
+        "extTemplate": "",
+        "showfolder": false,
+        "reload": false,
+        "sourceFolder": "src",
+        "deployedVersion": "6.8.2",
+        "showMsgUib": false,
+        "title": "",
+        "descr": "",
+        "x": 770,
+        "y": 340,
+        "wires": [
+            [
+                "debug"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "debug",
+        "type": "debug",
+        "z": "11ad88330f2860d1",
+        "name": "Debug Output",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 980,
+        "y": 340,
+        "wires": []
     }
 ]
