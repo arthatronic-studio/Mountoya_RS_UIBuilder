@@ -2028,8 +2028,7 @@
         "y": 200,
         "wires": [
             [
-                "076402fc92265db2",
-                "7c56952fb3a42b61"
+                "076402fc92265db2"
             ]
         ]
     },
@@ -2564,7 +2563,7 @@
         "createDir": true,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 750,
+        "x": 710,
         "y": 200,
         "wires": [
             []
@@ -2833,21 +2832,5 @@
                 "7ac0c499d93ec047"
             ]
         ]
-    },
-    {
-        "id": "7c56952fb3a42b61",
-        "type": "debug",
-        "z": "e1fca49e72b6731a",
-        "name": "debug 3",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 880,
-        "y": 120,
-        "wires": []
     }
 ]
