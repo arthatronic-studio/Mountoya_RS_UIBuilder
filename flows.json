@@ -2873,6 +2873,7 @@
         "name": "Set Flow Data",
         "func": "flow.set('myData', { temperature: 25, humidity: 60 });\nreturn msg;",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
