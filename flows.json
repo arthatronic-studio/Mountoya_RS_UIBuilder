@@ -1702,7 +1702,7 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "Set to flow",
-        "func": "Number(flow.set(\"volume_total\", msg.payload));\nreturn msg;",
+        "func": "flow.set(\"volume_total\", msg.payload);\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
