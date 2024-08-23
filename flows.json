@@ -95,8 +95,7 @@
             "6b4d9b52899931b8",
             "5180a2ce4586db3d",
             "2d928adc3cc055f2",
-            "bb5f22f88a9e9d21",
-            "332c2d1ad6cef168"
+            "bb5f22f88a9e9d21"
         ],
         "x": 54,
         "y": -1,
@@ -1749,30 +1748,9 @@
         "once": true,
         "onceDelay": "4",
         "topic": "",
-        "payload": "1",
-        "payloadType": "num",
-        "x": 250,
-        "y": 580,
-        "wires": [
-            [
-                "332c2d1ad6cef168"
-            ]
-        ]
-    },
-    {
-        "id": "332c2d1ad6cef168",
-        "type": "function",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "Parse Data",
-        "func": "flow.set('volumeliters', parseFloat(msg.payload))\nmsg.payload = {\n    nilaiWaterflow: parseFloat(msg.payload),\n    status: 'send'\n    }\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 630,
+        "payload": "reset_volume",
+        "payloadType": "str",
+        "x": 280,
         "y": 580,
         "wires": [
             []
