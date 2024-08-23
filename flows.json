@@ -2658,15 +2658,15 @@
         "id": "fb95436e670bd7d2",
         "type": "file in",
         "z": "e1fca49e72b6731a",
-        "name": "",
-        "filename": "",
+        "name": "250h",
+        "filename": "/home/arthatronic/Documents/data_payload/payload_250h.txt",
         "filenameType": "str",
         "format": "utf8",
         "chunk": false,
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 200,
+        "x": 190,
         "y": 200,
         "wires": [
             [
