@@ -93,12 +93,12 @@
             "813a5d152d4efffd",
             "062c2fd80de87db2",
             "6b4d9b52899931b8",
-            "309f83d01960d79c"
+            "5180a2ce4586db3d"
         ],
         "x": 54,
         "y": -1,
         "w": 1862,
-        "h": 682
+        "h": 742
     },
     {
         "id": "47a9baa3568d6361",
@@ -1276,7 +1276,7 @@
         "finalize": "",
         "libs": [],
         "x": 1140,
-        "y": 560,
+        "y": 620,
         "wires": [
             [
                 "813a5d152d4efffd"
@@ -1298,7 +1298,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1480,
-        "y": 560,
+        "y": 620,
         "wires": []
     },
     {
@@ -1357,7 +1357,8 @@
         "y": 500,
         "wires": [
             [
-                "062c2fd80de87db2"
+                "062c2fd80de87db2",
+                "5180a2ce4586db3d"
             ]
         ]
     },
@@ -1374,8 +1375,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1220,
-        "y": 460,
+        "x": 1100,
+        "y": 360,
         "wires": [
             []
         ]
@@ -1394,7 +1395,7 @@
         "finalize": "",
         "libs": [],
         "x": 980,
-        "y": 620,
+        "y": 700,
         "wires": [
             [
                 "2a8c8835057e1ea4"
@@ -1495,7 +1496,7 @@
             "f9aa1d109722cb6c"
         ],
         "x": 815,
-        "y": 620,
+        "y": 700,
         "wires": [
             [
                 "46337193735388b3"
@@ -1521,7 +1522,7 @@
         "fontSize": "",
         "color": "#000000",
         "x": 1270,
-        "y": 620,
+        "y": 700,
         "wires": []
     },
     {
@@ -1640,7 +1641,7 @@
         "overwriteFile": "true",
         "encoding": "utf8",
         "x": 1320,
-        "y": 560,
+        "y": 620,
         "wires": [
             [
                 "9e715bfcb567f4aa"
@@ -1659,7 +1660,7 @@
         "createDir": true,
         "overwriteFile": "true",
         "encoding": "utf8",
-        "x": 1420,
+        "x": 1460,
         "y": 500,
         "wires": [
             [
@@ -1697,33 +1698,22 @@
         ]
     },
     {
-        "id": "309f83d01960d79c",
-        "type": "inject",
+        "id": "5180a2ce4586db3d",
+        "type": "function",
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "0",
-        "payloadType": "str",
-        "x": 1410,
-        "y": 460,
+        "name": "Set to flow",
+        "func": "flow.set(\"volume_total\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1450,
+        "y": 540,
         "wires": [
-            [
-                "8259c8deb91a5620"
-            ]
+            []
         ]
     },
     {
