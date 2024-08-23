@@ -2575,7 +2575,7 @@
         "type": "file",
         "z": "e1fca49e72b6731a",
         "name": "250n",
-        "filename": " /home/arthatronic/Documents/data_payload/payload_250n.txt",
+        "filename": "/home/arthatronic/Documents/data_payload/payload_250n.txt",
         "filenameType": "str",
         "appendNewline": false,
         "createDir": true,
