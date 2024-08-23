@@ -2027,7 +2027,9 @@
         "x": 480,
         "y": 200,
         "wires": [
-            []
+            [
+                "076402fc92265db2"
+            ]
         ]
     },
     {
@@ -2045,7 +2047,9 @@
         "x": 480,
         "y": 260,
         "wires": [
-            []
+            [
+                "4fb7abda3eb2708b"
+            ]
         ]
     },
     {
@@ -2063,7 +2067,9 @@
         "x": 480,
         "y": 320,
         "wires": [
-            []
+            [
+                "85e99355785af348"
+            ]
         ]
     },
     {
@@ -2081,7 +2087,9 @@
         "x": 480,
         "y": 380,
         "wires": [
-            []
+            [
+                "2f6aead61592ebe9"
+            ]
         ]
     },
     {
@@ -2099,7 +2107,9 @@
         "x": 480,
         "y": 440,
         "wires": [
-            []
+            [
+                "84348ebc960b1262"
+            ]
         ]
     },
     {
@@ -2117,7 +2127,9 @@
         "x": 480,
         "y": 500,
         "wires": [
-            []
+            [
+                "092feb32c6746730"
+            ]
         ]
     },
     {
@@ -2539,5 +2551,107 @@
         "x": 1175,
         "y": 380,
         "wires": []
+    },
+    {
+        "id": "076402fc92265db2",
+        "type": "file",
+        "z": "e1fca49e72b6731a",
+        "name": "",
+        "filename": "",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 620,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4fb7abda3eb2708b",
+        "type": "file",
+        "z": "e1fca49e72b6731a",
+        "name": "",
+        "filename": "",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 620,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "85e99355785af348",
+        "type": "file",
+        "z": "e1fca49e72b6731a",
+        "name": "",
+        "filename": "",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 620,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2f6aead61592ebe9",
+        "type": "file",
+        "z": "e1fca49e72b6731a",
+        "name": "",
+        "filename": "",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 620,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "84348ebc960b1262",
+        "type": "file",
+        "z": "e1fca49e72b6731a",
+        "name": "",
+        "filename": "",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 620,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "092feb32c6746730",
+        "type": "file",
+        "z": "e1fca49e72b6731a",
+        "name": "",
+        "filename": "",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 620,
+        "y": 500,
+        "wires": [
+            []
+        ]
     }
 ]
