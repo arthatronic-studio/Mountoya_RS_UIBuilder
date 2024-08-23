@@ -93,7 +93,8 @@
             "813a5d152d4efffd",
             "062c2fd80de87db2",
             "6b4d9b52899931b8",
-            "5180a2ce4586db3d"
+            "5180a2ce4586db3d",
+            "5853fa795fb8a7f3"
         ],
         "x": 54,
         "y": -1,
@@ -1358,7 +1359,7 @@
         "wires": [
             [
                 "062c2fd80de87db2",
-                "5180a2ce4586db3d"
+                "5853fa795fb8a7f3"
             ]
         ]
     },
@@ -1710,9 +1711,38 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1450,
+        "x": 1270,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5853fa795fb8a7f3",
+        "type": "uibuilder",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "",
+        "topic": "",
+        "url": "dummy",
+        "okToGo": true,
+        "fwdInMessages": false,
+        "allowScripts": false,
+        "allowStyles": false,
+        "copyIndex": true,
+        "templateFolder": "blank",
+        "extTemplate": "",
+        "showfolder": false,
+        "reload": false,
+        "sourceFolder": "src",
+        "deployedVersion": "6.8.2",
+        "showMsgUib": false,
+        "title": "",
+        "descr": "",
+        "x": 1440,
         "y": 540,
         "wires": [
+            [],
             []
         ]
     },
