@@ -2592,7 +2592,7 @@
         "type": "file",
         "z": "e1fca49e72b6731a",
         "name": "250c",
-        "filename": " /home/arthatronic/Documents/data_payload/payload_250c.txt",
+        "filename": "/home/arthatronic/Documents/data_payload/payload_250c.txt",
         "filenameType": "str",
         "appendNewline": false,
         "createDir": true,
