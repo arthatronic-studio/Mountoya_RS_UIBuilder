@@ -2180,7 +2180,7 @@
         "resendOnRefresh": false,
         "templateScope": "local",
         "className": "",
-        "x": 380,
+        "x": 640,
         "y": 120,
         "wires": [
             []
@@ -2790,6 +2790,46 @@
                 "4a2b9c37693d8210",
                 "ae79e37159f03029",
                 "16a6feeb2bdf65b8"
+            ]
+        ]
+    },
+    {
+        "id": "7ac0c499d93ec047",
+        "type": "link out",
+        "z": "e1fca49e72b6731a",
+        "name": "link out 21",
+        "mode": "link",
+        "links": [],
+        "x": 275,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "c8f0204fcf5e9f77",
+        "type": "inject",
+        "z": "e1fca49e72b6731a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "2",
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 130,
+        "y": 120,
+        "wires": [
+            [
+                "7ac0c499d93ec047"
             ]
         ]
     }
