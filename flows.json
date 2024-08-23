@@ -2780,7 +2780,9 @@
         "type": "link in",
         "z": "e1fca49e72b6731a",
         "name": "link in 12",
-        "links": [],
+        "links": [
+            "7ac0c499d93ec047"
+        ],
         "x": 65,
         "y": 340,
         "wires": [
@@ -2800,7 +2802,9 @@
         "z": "e1fca49e72b6731a",
         "name": "link out 21",
         "mode": "link",
-        "links": [],
+        "links": [
+            "62efae6ae7b4b3ad"
+        ],
         "x": 275,
         "y": 120,
         "wires": []
