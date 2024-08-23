@@ -13,7 +13,7 @@ document.getElementById('logo').addEventListener('click', function () {
   } else {
     localStorage.setItem("admin", 0);
     localStorage.setItem("totalVolume",19000);
-    window.location.href = 'http://192.168.18.22:1880/ui/';
+    window.location.href = 'http://localhost:1880/ui/';
 
     let payload = {};
     payload = { type: 'reset', value: '1' };
