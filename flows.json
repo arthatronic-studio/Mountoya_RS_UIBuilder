@@ -2017,7 +2017,7 @@
         "type": "function",
         "z": "e1fca49e72b6731a",
         "name": "Save Number",
-        "func": "msg.payload = global.set('storedNumber1', msg.payload);\nreturn msg;",
+        "func": "global.set('storedNumber1', msg.payload);\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
