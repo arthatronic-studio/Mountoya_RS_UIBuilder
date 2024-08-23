@@ -1297,7 +1297,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1480,
+        "x": 1440,
         "y": 620,
         "wires": []
     },
@@ -1640,7 +1640,7 @@
         "createDir": true,
         "overwriteFile": "true",
         "encoding": "utf8",
-        "x": 1320,
+        "x": 1280,
         "y": 620,
         "wires": [
             [
