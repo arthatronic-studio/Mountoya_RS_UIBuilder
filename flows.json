@@ -94,7 +94,8 @@
             "062c2fd80de87db2",
             "5180a2ce4586db3d",
             "2d928adc3cc055f2",
-            "9752ffcf9c75866b"
+            "9752ffcf9c75866b",
+            "8a8d742cb0ab5b58"
         ],
         "x": 54,
         "y": -1,
@@ -1721,8 +1722,32 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 170,
-        "y": 400,
+        "x": 190,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8a8d742cb0ab5b58",
+        "type": "inject",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "",
+        "props": [
+            {
+                "p": "payload.messageGalon",
+                "v": "0",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 190,
+        "y": 420,
         "wires": [
             []
         ]
