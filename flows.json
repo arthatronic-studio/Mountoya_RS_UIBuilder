@@ -1746,7 +1746,7 @@
         "overrideDelay": false,
         "units": "s",
         "reset": "",
-        "bytopic": "topic",
+        "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
         "x": 320,
