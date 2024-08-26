@@ -93,7 +93,9 @@
             "813a5d152d4efffd",
             "062c2fd80de87db2",
             "5180a2ce4586db3d",
-            "2d928adc3cc055f2"
+            "2d928adc3cc055f2",
+            "9752ffcf9c75866b",
+            "d8e8ec7f10b4a4e7"
         ],
         "x": 54,
         "y": -1,
@@ -1700,6 +1702,53 @@
         "links": [],
         "x": 1565,
         "y": 540,
+        "wires": []
+    },
+    {
+        "id": "9752ffcf9c75866b",
+        "type": "inject",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "",
+        "props": [
+            {
+                "p": "payload.messageGalon",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 400,
+        "wires": [
+            [
+                "d8e8ec7f10b4a4e7"
+            ]
+        ]
+    },
+    {
+        "id": "d8e8ec7f10b4a4e7",
+        "type": "debug",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 300,
+        "y": 400,
         "wires": []
     },
     {
