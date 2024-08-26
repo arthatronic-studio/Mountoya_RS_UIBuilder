@@ -1748,13 +1748,14 @@
         "reset": "",
         "bytopic": "all",
         "topic": "topic",
-        "outputs": 1,
+        "outputs": 2,
         "x": 320,
         "y": 380,
         "wires": [
             [
                 "e4ddd0c5f31830dd"
-            ]
+            ],
+            []
         ]
     },
     {
