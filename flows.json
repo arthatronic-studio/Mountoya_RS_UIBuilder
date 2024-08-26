@@ -1714,9 +1714,7 @@
         "name": "",
         "props": [
             {
-                "p": "payload.messageGalon",
-                "v": "0",
-                "vt": "str"
+                "p": "payload"
             }
         ],
         "repeat": "1",
@@ -1724,6 +1722,8 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
+        "payload": "1",
+        "payloadType": "str",
         "x": 170,
         "y": 700,
         "wires": [
