@@ -98,7 +98,8 @@
             "f626ea1a30184d49",
             "a3affc4c893158f0",
             "3cd506f3784b43bb",
-            "f3883a6dd55ca632"
+            "f3883a6dd55ca632",
+            "72de7a07dffcf16c"
         ],
         "x": 54,
         "y": -1,
@@ -1804,6 +1805,35 @@
             [
                 "ce57fc889764cc90"
             ]
+        ]
+    },
+    {
+        "id": "72de7a07dffcf16c",
+        "type": "uibuilder",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "",
+        "topic": "",
+        "url": "test",
+        "okToGo": true,
+        "fwdInMessages": false,
+        "allowScripts": false,
+        "allowStyles": false,
+        "copyIndex": true,
+        "templateFolder": "blank",
+        "extTemplate": "",
+        "showfolder": false,
+        "reload": false,
+        "sourceFolder": "src",
+        "deployedVersion": "6.8.2",
+        "showMsgUib": false,
+        "title": "",
+        "descr": "",
+        "x": 770,
+        "y": 200,
+        "wires": [
+            [],
+            []
         ]
     },
     {
