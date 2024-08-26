@@ -1718,7 +1718,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "2",
+        "repeat": "1",
         "crontab": "",
         "once": true,
         "onceDelay": 0.1,
