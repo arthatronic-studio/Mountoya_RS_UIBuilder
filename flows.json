@@ -97,7 +97,8 @@
             "8a8d742cb0ab5b58",
             "f626ea1a30184d49",
             "a3affc4c893158f0",
-            "0ce600cf2b5ce0d9"
+            "3cd506f3784b43bb",
+            "f3883a6dd55ca632"
         ],
         "x": 54,
         "y": -1,
@@ -1770,26 +1771,40 @@
         "y": 700,
         "wires": [
             [
-                "0ce600cf2b5ce0d9"
+                "3cd506f3784b43bb"
             ]
         ]
     },
     {
-        "id": "0ce600cf2b5ce0d9",
-        "type": "debug",
+        "id": "3cd506f3784b43bb",
+        "type": "link out",
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
-        "name": "debug 3",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 700,
+        "name": "link out 22",
+        "mode": "link",
+        "links": [
+            "f3883a6dd55ca632"
+        ],
+        "x": 665,
         "y": 700,
         "wires": []
+    },
+    {
+        "id": "f3883a6dd55ca632",
+        "type": "link in",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Update notif",
+        "links": [
+            "3cd506f3784b43bb"
+        ],
+        "x": 275,
+        "y": 420,
+        "wires": [
+            [
+                "ce57fc889764cc90"
+            ]
+        ]
     },
     {
         "id": "1c4565af3db20a1f",
