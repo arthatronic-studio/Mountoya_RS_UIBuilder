@@ -1746,15 +1746,12 @@
         "overrideDelay": false,
         "units": "s",
         "reset": "",
-        "bytopic": "all",
+        "bytopic": "topic",
         "topic": "topic",
-        "outputs": 2,
+        "outputs": 1,
         "x": 320,
         "y": 380,
         "wires": [
-            [
-                "e4ddd0c5f31830dd"
-            ],
             [
                 "e4ddd0c5f31830dd"
             ]
