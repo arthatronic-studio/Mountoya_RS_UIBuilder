@@ -95,7 +95,8 @@
             "5180a2ce4586db3d",
             "2d928adc3cc055f2",
             "9752ffcf9c75866b",
-            "d8e8ec7f10b4a4e7"
+            "d8e8ec7f10b4a4e7",
+            "29d17bf0ed7cd685"
         ],
         "x": 54,
         "y": -1,
@@ -1747,6 +1748,32 @@
         "x": 300,
         "y": 400,
         "wires": []
+    },
+    {
+        "id": "29d17bf0ed7cd685",
+        "type": "inject",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "",
+        "props": [
+            {
+                "p": "payload.messageGalon",
+                "v": "0",
+                "vt": "str"
+            }
+        ],
+        "repeat": "0.5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 460,
+        "wires": [
+            [
+                "d8e8ec7f10b4a4e7"
+            ]
+        ]
     },
     {
         "id": "1c4565af3db20a1f",
