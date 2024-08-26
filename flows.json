@@ -94,9 +94,9 @@
             "062c2fd80de87db2",
             "5180a2ce4586db3d",
             "2d928adc3cc055f2",
-            "9752ffcf9c75866b",
             "8a8d742cb0ab5b58",
-            "1884df26d90d708c"
+            "f626ea1a30184d49",
+            "7945c20f43c7128c"
         ],
         "x": 54,
         "y": -1,
@@ -1706,33 +1706,6 @@
         "wires": []
     },
     {
-        "id": "9752ffcf9c75866b",
-        "type": "inject",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "",
-        "props": [
-            {
-                "p": "payload.messageGalon",
-                "v": "1",
-                "vt": "str"
-            }
-        ],
-        "repeat": "1",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 190,
-        "y": 380,
-        "wires": [
-            [
-                "1884df26d90d708c",
-                "ce57fc889764cc90"
-            ]
-        ]
-    },
-    {
         "id": "8a8d742cb0ab5b58",
         "type": "inject",
         "z": "93cd7eb94b5de81b",
@@ -1750,30 +1723,50 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 190,
-        "y": 420,
+        "x": 150,
+        "y": 400,
         "wires": [
             [
-                "1884df26d90d708c",
-                "ce57fc889764cc90"
+                "f626ea1a30184d49"
             ]
         ]
     },
     {
-        "id": "1884df26d90d708c",
+        "id": "f626ea1a30184d49",
+        "type": "file in",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Data Waterflow",
+        "filename": "/home/arthatronic/Documents/waterflow.txt",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 320,
+        "y": 400,
+        "wires": [
+            [
+                "7945c20f43c7128c"
+            ]
+        ]
+    },
+    {
+        "id": "7945c20f43c7128c",
         "type": "debug",
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "debug 3",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 440,
-        "y": 400,
+        "x": 500,
+        "y": 360,
         "wires": []
     },
     {
