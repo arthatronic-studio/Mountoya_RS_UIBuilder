@@ -1715,16 +1715,11 @@
                 "p": "payload.messageGalon",
                 "v": "1",
                 "vt": "str"
-            },
-            {
-                "p": "payload.messageGalon",
-                "v": "0",
-                "vt": "str"
             }
         ],
-        "repeat": "",
+        "repeat": "0.5",
         "crontab": "",
-        "once": false,
+        "once": true,
         "onceDelay": 0.1,
         "topic": "",
         "x": 150,
