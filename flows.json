@@ -96,7 +96,8 @@
             "2d928adc3cc055f2",
             "8a8d742cb0ab5b58",
             "f626ea1a30184d49",
-            "7945c20f43c7128c"
+            "a3affc4c893158f0",
+            "0ce600cf2b5ce0d9"
         ],
         "x": 54,
         "y": -1,
@@ -1723,8 +1724,8 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 150,
-        "y": 400,
+        "x": 170,
+        "y": 700,
         "wires": [
             [
                 "f626ea1a30184d49"
@@ -1744,16 +1745,37 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 320,
-        "y": 400,
+        "x": 340,
+        "y": 700,
         "wires": [
             [
-                "7945c20f43c7128c"
+                "a3affc4c893158f0"
             ]
         ]
     },
     {
-        "id": "7945c20f43c7128c",
+        "id": "a3affc4c893158f0",
+        "type": "function",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Parse Data",
+        "func": "flow.set('volumeliters', parseFloat(msg.payload))\nmsg.payload = {\n    nilaiWaterflow: parseFloat(msg.payload),\n    status: 'send'\n    }\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 700,
+        "wires": [
+            [
+                "0ce600cf2b5ce0d9"
+            ]
+        ]
+    },
+    {
+        "id": "0ce600cf2b5ce0d9",
         "type": "debug",
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
@@ -1765,8 +1787,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 500,
-        "y": 360,
+        "x": 700,
+        "y": 700,
         "wires": []
     },
     {
