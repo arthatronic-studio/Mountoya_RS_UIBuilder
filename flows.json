@@ -95,7 +95,8 @@
             "5180a2ce4586db3d",
             "2d928adc3cc055f2",
             "9752ffcf9c75866b",
-            "29d17bf0ed7cd685"
+            "d2017debef5241c0",
+            "e4ddd0c5f31830dd"
         ],
         "x": 54,
         "y": -1,
@@ -1717,40 +1718,61 @@
                 "vt": "str"
             }
         ],
-        "repeat": "0.5",
+        "repeat": "0.1",
         "crontab": "",
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
         "x": 150,
-        "y": 400,
+        "y": 380,
         "wires": [
-            []
+            [
+                "d2017debef5241c0"
+            ]
         ]
     },
     {
-        "id": "29d17bf0ed7cd685",
-        "type": "inject",
+        "id": "d2017debef5241c0",
+        "type": "trigger",
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
-        "name": "",
-        "props": [
-            {
-                "p": "payload.messageGalon",
-                "v": "0",
-                "vt": "str"
-            }
-        ],
-        "repeat": "0.5",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 150,
-        "y": 460,
+        "name": "Trigger",
+        "op1": "1",
+        "op2": "0",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "0.5",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 320,
+        "y": 380,
         "wires": [
-            []
+            [
+                "e4ddd0c5f31830dd"
+            ]
         ]
+    },
+    {
+        "id": "e4ddd0c5f31830dd",
+        "type": "debug",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 360,
+        "wires": []
     },
     {
         "id": "1c4565af3db20a1f",
