@@ -1759,7 +1759,7 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "Parse Data",
-        "func": "flow.set('volumeliters', parseFloat(msg.payload))\nmsg.payload = {\n    nilaiWaterflow: parseFloat(msg.payload),\n    status: 'send'\n    }\nreturn msg;",
+        "func": "msg.payload = {\n    messageGalon: parseFloat(msg.payload),\n    }\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
