@@ -343,8 +343,8 @@
         "createDir": false,
         "overwriteFile": "false",
         "encoding": "none",
-        "x": 540,
-        "y": 460,
+        "x": 580,
+        "y": 480,
         "wires": [
             []
         ]
@@ -990,8 +990,8 @@
         "strings": true,
         "include_empty_strings": "",
         "include_null_values": "",
-        "x": 410,
-        "y": 460,
+        "x": 450,
+        "y": 480,
         "wires": [
             [
                 "f7de393883dfc617"
