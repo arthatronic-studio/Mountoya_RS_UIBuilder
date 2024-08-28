@@ -8,6 +8,14 @@
         "env": []
     },
     {
+        "id": "e1fca49e72b6731a",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "d578f4fe739b97e1",
         "type": "group",
         "z": "93cd7eb94b5de81b",
@@ -48,7 +56,6 @@
             "497afc4d7511892e",
             "5dce08f35cb8b6cf",
             "cfa57155488fe092",
-            "46bc2f93d48c087d",
             "42138cb1cb3b3dcd",
             "f7de393883dfc617",
             "d5c78e7d3ece6868",
@@ -62,20 +69,290 @@
             "a96796d7a57369e9",
             "8180848f581502a1",
             "674226255c184b27",
-            "97a3c2112af1fec0",
             "ee35fa8f00e5fb60",
-            "813a5d152d4efffd",
             "f1c25ce41202d813",
             "9e715bfcb567f4aa",
             "8259c8deb91a5620",
-            "ab6dc3d12e5bfd40"
+            "ab6dc3d12e5bfd40",
+            "06812eb9b6ee6560",
+            "46bc2f93d48c087d",
+            "46337193735388b3",
+            "7115ff1cf11d63cf",
+            "e814f0fb741fed72",
+            "50b6f25f9e528175",
+            "f9aa1d109722cb6c",
+            "48bafd69869123e8",
+            "e6ca943feedd4647",
+            "2a8c8835057e1ea4",
+            "420d0ebd10067d69",
+            "40316533332b0fb5",
+            "7ff9c42d38112d9f",
+            "e490dd3073442360",
+            "0e93fd7bfc25cd6d",
+            "eda127c63177076f",
+            "813a5d152d4efffd",
+            "062c2fd80de87db2",
+            "5180a2ce4586db3d",
+            "2d928adc3cc055f2",
+            "8a8d742cb0ab5b58",
+            "f626ea1a30184d49",
+            "a3affc4c893158f0",
+            "3cd506f3784b43bb",
+            "f3883a6dd55ca632",
+            "72de7a07dffcf16c",
+            "d4e0c72ff820e048",
+            "a54cbb1929845ad5"
         ],
-        "x": 74,
+        "x": 54,
         "y": -1,
-        "w": 1842,
-        "h": 582
+        "w": 1862,
+        "h": 742
     },
     {
+        "id": "47a9baa3568d6361",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#000000",
+                "baseFont": "Arial Black,Arial Black,Gadget,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#d6d6d6",
+                "baseFont": "Arial Black,Arial Black,Gadget,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#000000",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#000000",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#262626",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#000000",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "Arial Black,Arial Black,Gadget,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "d589d2ac4b631e43",
+        "type": "ui_tab",
+        "name": "God Mode",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "2c8dac57508989f9",
+        "type": "ui_group",
+        "name": "Kalibrasi refill",
+        "tab": "d589d2ac4b631e43",
+        "order": 1,
+        "disp": true,
+        "width": 17,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "dashboard_group",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "d589d2ac4b631e43",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "97ec7dec260fcfff",
+        "type": "ui_group",
+        "name": "Refill",
+        "tab": "d589d2ac4b631e43",
+        "order": 7,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "224aa5a7cbd8d726",
+        "type": "ui_group",
+        "name": "Reset",
+        "tab": "d589d2ac4b631e43",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "cca3d86c822ecc84",
+        "type": "ui_group",
+        "name": "Back",
+        "tab": "d589d2ac4b631e43",
+        "order": 3,
+        "disp": true,
+        "width": 12,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2e6f5aa5cd893557",
+        "type": "ui_group",
+        "name": "Sensor IR",
+        "tab": "d589d2ac4b631e43",
+        "order": 6,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "927599c5aae2a9ff",
+        "type": "ui_spacer",
+        "z": "e1fca49e72b6731a",
+        "name": "spacer",
+        "group": "97ec7dec260fcfff",
+        "order": 2,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "3b53459a7cb58a9f",
+        "type": "ui_spacer",
+        "z": "e1fca49e72b6731a",
+        "name": "spacer",
+        "group": "97ec7dec260fcfff",
+        "order": 4,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "4c280bcd58de80b4",
+        "type": "ui_spacer",
+        "z": "e1fca49e72b6731a",
+        "name": "spacer",
+        "group": "97ec7dec260fcfff",
+        "order": 6,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "d94648ac2f894da3",
+        "type": "ui_spacer",
+        "z": "e1fca49e72b6731a",
+        "name": "spacer",
+        "group": "97ec7dec260fcfff",
+        "order": 8,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "e0355133b74bf228",
+        "type": "ui_spacer",
+        "z": "e1fca49e72b6731a",
+        "name": "spacer",
+        "group": "97ec7dec260fcfff",
+        "order": 10,
+        "width": 12,
+        "height": 1
+    },
+    {
+<<<<<<< HEAD
+=======
+        "id": "f7de393883dfc617",
+        "type": "file",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Log Data",
+        "filename": "/home/arthatronic/Documents/log_rs.csv",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 580,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+>>>>>>> fd3b0f875062eb042889deee62f52f9a8a3dc949
         "id": "b8c02fcd2c609e5c",
         "type": "rpi-gpio in",
         "z": "93cd7eb94b5de81b",
@@ -86,11 +363,12 @@
         "debounce": "25",
         "read": false,
         "bcm": true,
-        "x": 180,
+        "x": 160,
         "y": 280,
         "wires": [
             [
-                "58cd9e4840d784ae"
+                "58cd9e4840d784ae",
+                "f9aa1d109722cb6c"
             ]
         ]
     },
@@ -264,15 +542,15 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "Button 2 Action 250 ml normal",
-        "func": "msg.payload = 6\nreturn msg;\n",
+        "func": "msg.payload = global.get('storedNumber2');\n//msg.payload = 6\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1450,
-        "y": 160,
+        "x": 1390,
+        "y": 180,
         "wires": [
             [
                 "4095d80339d4fc03"
@@ -285,15 +563,15 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "Button 3 Action 250 ml cold",
-        "func": "// msg.payload = 6 // Calibrated\nmsg.payload = 4\nreturn msg;",
+        "func": "// msg.payload = 6 // Calibrated\n// msg.payload = 4\nmsg.payload = global.get('storedNumber3');\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1440,
-        "y": 200,
+        "x": 1380,
+        "y": 220,
         "wires": [
             [
                 "dc639336ccb6d507"
@@ -306,15 +584,15 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "Button 1 Action 250 ml hot",
-        "func": "msg.payload = 7\n\nreturn msg;",
+        "func": "msg.payload = global.get('storedNumber1');\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1430,
-        "y": 120,
+        "x": 1370,
+        "y": 140,
         "wires": [
             [
                 "8a9efa6ca4907eb8"
@@ -327,14 +605,14 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "Button 5 Action 500 ml normal",
-        "func": "msg.payload = 11.5\nreturn msg",
+        "func": "// msg.payload = 11.5\n// return msg\nmsg.payload = global.get('storedNumber5');\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1450,
+        "x": 1390,
         "y": 300,
         "wires": [
             [
@@ -348,14 +626,14 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "Button 6 Action 500 ml cold",
-        "func": "// msg.payload = 12.5 // Calibrated\nmsg.payload = 10\nreturn msg;",
+        "func": "// // msg.payload = 12.5 // Calibrated\n// msg.payload = 10\n// return msg;\nmsg.payload = global.get('storedNumber6');\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1440,
+        "x": 1380,
         "y": 340,
         "wires": [
             [
@@ -369,14 +647,14 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "Button 4 Action 500 ml hot",
-        "func": "msg.payload = 14\nreturn msg;",
+        "func": "// msg.payload = 14\n// return msg;\nmsg.payload = global.get('storedNumber4');\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1430,
+        "x": 1370,
         "y": 260,
         "wires": [
             [
@@ -595,7 +873,7 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "waterflow_Function v2",
-        "func": "\n\nlet pulseCount = context.get('pulseCount') || 0;\nlet totalLiters = context.get('totalLiters') || 0;\n// let volumeliters = context.get('volumeliters') || 0;\nlet volumeliters = msg.payload.nilaiWaterflow || 0;\nconst calibrationFactor = 1; // Ganti dengan faktor kalibrasi sensor Anda\n\n// Menghitung aliran dan total liter setiap detik\nif (msg.payload === 1) { // Sensor mengirimkan pulsa (misalnya, 1) setiap kali terjadi\n    pulseCount++;\n}\n\nlet sendPulse = pulseCount;\n\nconst duration = 1.0; // durasi dalam detik\nlet flowRate = (pulseCount / calibrationFactor); // aliran dalam liter per detik\nif (msg.payload.status === 'send') {\n    totalLiters = msg.payload.nilaiWaterflow;\n    volumeliters = msg.payload.nilaiWaterflow;\n}\nelse {\n    totalLiters += flowRate * duration; // hitung total liter yang sudah mengalir\n    volumeliters += totalLiters;\n    // volumeliters = volumeliters * 6;\n    volumeliters = 6.647*totalLiters + 9.328;\n}\n\n\npulseCount = 0; // reset pulse count\n\n// Simpan nilai di context\ncontext.set('pulseCount', pulseCount);\ncontext.set('totalLiters', totalLiters);\ncontext.set('volumeliters', volumeliters);\n\nmsg.payload = {\n    flowRate: flowRate.toFixed(2),\n    totalLiters: totalLiters.toFixed(2),\n    volumeliters: parseInt(volumeliters.toFixed(0)),\n    // volumeliters: sendPulse\n};\n\nreturn msg;\n",
+        "func": "\n\nlet pulseCount = context.get('pulseCount') || 0;\nlet totalLiters = context.get('totalLiters') || 0;\nlet volumeliters = flow.get('volumeliters') || 0;\n// let volumeliters = msg.payload.nilaiWaterflow || 0;\nlet last_volumeliters = 0;\nconst calibrationFactor = 1; // Ganti dengan faktor kalibrasi sensor Anda\n\n// Menghitung aliran dan total liter setiap detik\nif (msg.payload === 1) { // Sensor mengirimkan pulsa (misalnya, 1) setiap kali terjadi\n    pulseCount++;\n}\n\nlet sendPulse = pulseCount;\n\nconst duration = 1.0; // durasi dalam detik\nlet flowRate = (pulseCount / calibrationFactor); // aliran dalam liter per detik\nif (msg.payload.status === 'send') {\n    // totalLiters = msg.payload.nilaiWaterflow;\n    volumeliters = msg.payload.nilaiWaterflow;\n    // totalLiters = volumeliters;\n    last_volumeliters = volumeliters;\n}\nelse {\n    totalLiters += flowRate * duration; // hitung total liter yang sudah mengalir\n    // volumeliters += totalLiters;\n    // volumeliters = volumeliters * 6;\n    volumeliters += 6.647 * sendPulse + 9.328;\n    // volumeliters += 2 * sendPulse;\n    last_volumeliters = volumeliters;\n}\n\n\npulseCount = 0; // reset pulse count\n\n// Simpan nilai di context\ncontext.set('pulseCount', pulseCount);\ncontext.set('totalLiters', totalLiters);\nflow.set('volumeliters', volumeliters);\n\nmsg.payload = {\n    flowRate: flowRate.toFixed(2),\n    totalLiters: totalLiters.toFixed(2),\n    volumeliters: parseInt(last_volumeliters.toFixed(0)),\n    // volumeliters: sendPulse\n};\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -617,7 +895,7 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "Set Relay Time",
-        "func": "\nlet pin_IR_ATAS = 18;\nlet pin_IR_BAWAH = 23;\nlet pin_Relay = 8;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR_ATAS = 0;\nlet state_IR_BAWAH = 0;\n\nconst IR_ATAS = new onoff.Gpio(pin_IR_ATAS, 'in', 'both');\nconst IR_BAWAH = new onoff.Gpio(pin_IR_BAWAH, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nstate_IR_ATAS = IR_ATAS.readSync();\nstate_IR_BAWAH = IR_BAWAH.readSync();\nprevCount = Date.now();\nlet stopTimer = Date.now();\ncount = 0;\n\nwhile (count < timer && Date.now()-stopTimer < 5000) {\n    state_IR_ATAS = IR_ATAS.readSync();\n    state_IR_BAWAH = IR_BAWAH.readSync();\n    if (state_IR_ATAS === 1 || state_IR_BAWAH === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        stopTimer = Date.now();\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nconst d = new Date();\n\nmsg.payload = {\n    finish: 'done',\n    time: d.getHours() + \":\" + d.getMinutes() + \":\" + d.getSeconds(),\n    date: d.getFullYear() + \"-\" + d.getMonth() + \"-\" + d.getDate(),\n    volume: 250,\n    temperature: 'hot'\n}\n\n\nreturn msg",
+        "func": " \nlet pin_IR_ATAS = 18;\nlet pin_IR_BAWAH = 23;\nlet pin_Relay = 8;\nlet count = 0;\nlet timer = msg.payload * 1000;\nlet counting = false;\nlet prevCount = 0;\nlet state_IR_ATAS = 0;\nlet state_IR_BAWAH = 0;\n\nconst IR_ATAS = new onoff.Gpio(pin_IR_ATAS, 'in', 'both');\nconst IR_BAWAH = new onoff.Gpio(pin_IR_BAWAH, 'in', 'both');\nconst Relay = new onoff.Gpio(pin_Relay, 'out');\n\nstate_IR_ATAS = IR_ATAS.readSync();\nstate_IR_BAWAH = IR_BAWAH.readSync();\nprevCount = Date.now();\nlet stopTimer = Date.now();\ncount = 0;\n\nwhile (count < timer && Date.now()-stopTimer < 5000) {\n    state_IR_ATAS = IR_ATAS.readSync();\n    state_IR_BAWAH = IR_BAWAH.readSync();\n    if (state_IR_ATAS === 1 || state_IR_BAWAH === 1) {\n        if (!counting) {\n            counting = true;\n            prevCount = Date.now() - count;\n        }\n        stopTimer = Date.now();\n        count = Date.now() - prevCount;\n        Relay.writeSync(1);\n    }\n    else {\n        if (counting) {\n            counting = false;\n        }\n        Relay.writeSync(0);\n    }\n    // setTimeout(() => {\n    //     count += 10;\n    // }, 10);\n}\n\nRelay.writeSync(0);\n\nconst d = new Date();\n\nmsg.payload = {\n    finish: 'done',\n    time: d.getHours() + \":\" + d.getMinutes() + \":\" + d.getSeconds(),\n    date: d.getFullYear() + \"-\" + d.getMonth() + \"-\" + d.getDate(),\n    volume: 250,\n    temperature: 'hot'\n}\n\n\nreturn msg",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -630,7 +908,7 @@
             }
         ],
         "x": 1720,
-        "y": 120,
+        "y": 80,
         "wires": [
             [
                 "f5b5f22f06ec8307"
@@ -655,8 +933,8 @@
                 "module": "onoff"
             }
         ],
-        "x": 1720,
-        "y": 160,
+        "x": 1740,
+        "y": 140,
         "wires": [
             [
                 "eb7f14736e65d017"
@@ -682,7 +960,7 @@
             }
         ],
         "x": 1720,
-        "y": 200,
+        "y": 220,
         "wires": [
             [
                 "312281ef99a7932b"
@@ -708,7 +986,7 @@
             }
         ],
         "x": 1720,
-        "y": 260,
+        "y": 300,
         "wires": [
             [
                 "3fe8a8f19bd636d7"
@@ -734,7 +1012,7 @@
             }
         ],
         "x": 1720,
-        "y": 300,
+        "y": 360,
         "wires": [
             [
                 "626ec8f2db706571"
@@ -760,7 +1038,7 @@
             }
         ],
         "x": 1720,
-        "y": 340,
+        "y": 420,
         "wires": [
             [
                 "a4b0ee05af245390"
@@ -782,28 +1060,8 @@
         "y": 160,
         "wires": [
             [
-                "c261d518ebc079f0"
-            ]
-        ]
-    },
-    {
-        "id": "46bc2f93d48c087d",
-        "type": "function",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "Reset Waterflow",
-        "func": "msg.payload = 0;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1400,
-        "y": 460,
-        "wires": [
-            [
-                "97a3c2112af1fec0"
+                "c261d518ebc079f0",
+                "50b6f25f9e528175"
             ]
         ]
     },
@@ -843,8 +1101,8 @@
         "strings": true,
         "include_empty_strings": "",
         "include_null_values": "",
-        "x": 410,
-        "y": 460,
+        "x": 450,
+        "y": 480,
         "wires": [
             [
                 "f7de393883dfc617"
@@ -905,8 +1163,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 590,
-        "y": 400,
+        "x": 510,
+        "y": 420,
         "wires": []
     },
     {
@@ -936,7 +1194,7 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "debug 2",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -954,7 +1212,7 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "Parse Data",
-        "func": "msg.payload = {\n    nilaiWaterflow: parseFloat(msg.payload),\n    status: 'send'\n    }\nreturn msg;",
+        "func": "flow.set('volumeliters', parseFloat(msg.payload))\nmsg.payload = {\n    nilaiWaterflow: parseFloat(msg.payload),\n    status: 'send'\n    }\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -981,8 +1239,8 @@
         "debounce": "25",
         "read": false,
         "bcm": true,
-        "x": 710,
-        "y": 440,
+        "x": 690,
+        "y": 400,
         "wires": [
             [
                 "e70a7eac5aa1292c"
@@ -998,16 +1256,12 @@
         "props": [
             {
                 "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
             }
         ],
         "repeat": "",
         "crontab": "",
         "once": true,
-        "onceDelay": 0.1,
+        "onceDelay": "5",
         "topic": "",
         "payload": "1",
         "payloadType": "num",
@@ -1016,27 +1270,6 @@
         "wires": [
             [
                 "f04b7f82a4777b77"
-            ]
-        ]
-    },
-    {
-        "id": "97a3c2112af1fec0",
-        "type": "file",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "Data Waterflow",
-        "filename": "/home/arthatronic/Documents/waterflow.txt",
-        "filenameType": "str",
-        "appendNewline": false,
-        "createDir": true,
-        "overwriteFile": "true",
-        "encoding": "none",
-        "x": 1600,
-        "y": 460,
-        "wires": [
-            [
-                "ee35fa8f00e5fb60",
-                "8259c8deb91a5620"
             ]
         ]
     },
@@ -1054,29 +1287,9 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1770,
-        "y": 520,
+        "x": 1670,
+        "y": 500,
         "wires": []
-    },
-    {
-        "id": "813a5d152d4efffd",
-        "type": "file",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "Data Waterflow",
-        "filename": "/home/arthatronic/Documents/waterflow.txt",
-        "filenameType": "str",
-        "appendNewline": false,
-        "createDir": true,
-        "overwriteFile": "true",
-        "encoding": "none",
-        "x": 1320,
-        "y": 520,
-        "wires": [
-            [
-                "9e715bfcb567f4aa"
-            ]
-        ]
     },
     {
         "id": "f1c25ce41202d813",
@@ -1092,7 +1305,7 @@
         "finalize": "",
         "libs": [],
         "x": 1140,
-        "y": 520,
+        "y": 620,
         "wires": [
             [
                 "813a5d152d4efffd"
@@ -1113,8 +1326,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1500,
-        "y": 520,
+        "x": 1680,
+        "y": 620,
         "wires": []
     },
     {
@@ -1127,7 +1340,7 @@
         "links": [
             "ab6dc3d12e5bfd40"
         ],
-        "x": 1755,
+        "x": 1635,
         "y": 460,
         "wires": []
     },
@@ -1145,6 +1358,1699 @@
         "wires": [
             [
                 "f04b7f82a4777b77"
+            ]
+        ]
+    },
+    {
+        "id": "06812eb9b6ee6560",
+        "type": "ui_button",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "",
+        "group": "224aa5a7cbd8d726",
+        "order": 1,
+        "width": 6,
+        "height": 2,
+        "passthru": false,
+        "label": "<h1>reset galon</h1>",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "0",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1240,
+        "y": 500,
+        "wires": [
+            [
+                "062c2fd80de87db2",
+                "5180a2ce4586db3d"
+            ]
+        ]
+    },
+    {
+        "id": "46bc2f93d48c087d",
+        "type": "function",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Reset Waterflow",
+        "func": "msg.payload = 0;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1340,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "46337193735388b3",
+        "type": "function",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Process Sensor Data",
+        "func": "if (msg.payload === 1) {\n    msg.payload = \"Sensor ON\";\n} else if (msg.payload === 0) {\n    msg.payload = \"Sensor OFF\";\n} else {\n    msg.payload = \"Unknown Status\";\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 980,
+        "y": 700,
+        "wires": [
+            [
+                "2a8c8835057e1ea4"
+            ]
+        ]
+    },
+    {
+        "id": "7115ff1cf11d63cf",
+        "type": "function",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Process Sensor Data",
+        "func": "if (msg.payload === 1) {\n    msg.payload = \"Sensor ON\";\n} else if (msg.payload === 0) {\n    msg.payload = \"Sensor OFF\";\n} else {\n    msg.payload = \"Unknown Status\";\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 240,
+        "y": 640,
+        "wires": [
+            [
+                "e814f0fb741fed72"
+            ]
+        ]
+    },
+    {
+        "id": "e814f0fb741fed72",
+        "type": "ui_text",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "group": "2e6f5aa5cd893557",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "IR Sensor Status",
+        "label": "Sensor IR Atas",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 550,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "50b6f25f9e528175",
+        "type": "link out",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "link out 12",
+        "mode": "link",
+        "links": [
+            "48bafd69869123e8"
+        ],
+        "x": 355,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "f9aa1d109722cb6c",
+        "type": "link out",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "link out 13",
+        "mode": "link",
+        "links": [
+            "e6ca943feedd4647"
+        ],
+        "x": 315,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "48bafd69869123e8",
+        "type": "link in",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "link in 4",
+        "links": [
+            "50b6f25f9e528175"
+        ],
+        "x": 145,
+        "y": 600,
+        "wires": [
+            [
+                "7115ff1cf11d63cf"
+            ]
+        ]
+    },
+    {
+        "id": "e6ca943feedd4647",
+        "type": "link in",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "link in 5",
+        "links": [
+            "f9aa1d109722cb6c"
+        ],
+        "x": 815,
+        "y": 700,
+        "wires": [
+            [
+                "46337193735388b3"
+            ]
+        ]
+    },
+    {
+        "id": "2a8c8835057e1ea4",
+        "type": "ui_text",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "group": "2e6f5aa5cd893557",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "IR Sensor Status",
+        "label": "Sensor IR Bawah",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 1270,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "420d0ebd10067d69",
+        "type": "link in",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "link in 6",
+        "links": [
+            "659e2102beec331b"
+        ],
+        "x": 1595,
+        "y": 40,
+        "wires": [
+            [
+                "8a9efa6ca4907eb8"
+            ]
+        ]
+    },
+    {
+        "id": "40316533332b0fb5",
+        "type": "link in",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "link in 7",
+        "links": [
+            "35d233b9f6c471da"
+        ],
+        "x": 1615,
+        "y": 120,
+        "wires": [
+            [
+                "4095d80339d4fc03"
+            ]
+        ]
+    },
+    {
+        "id": "7ff9c42d38112d9f",
+        "type": "link in",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "link in 8",
+        "links": [
+            "1a9cc4b61873ee5e"
+        ],
+        "x": 1595,
+        "y": 180,
+        "wires": [
+            [
+                "dc639336ccb6d507"
+            ]
+        ]
+    },
+    {
+        "id": "e490dd3073442360",
+        "type": "link in",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "link in 9",
+        "links": [
+            "71622eed1b8b4433"
+        ],
+        "x": 1595,
+        "y": 260,
+        "wires": [
+            [
+                "7de43cfe5c5c9225"
+            ]
+        ]
+    },
+    {
+        "id": "0e93fd7bfc25cd6d",
+        "type": "link in",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "link in 10",
+        "links": [
+            "1701912783bc97e7",
+            "a86eafae62d7d0c9"
+        ],
+        "x": 1605,
+        "y": 320,
+        "wires": [
+            [
+                "497afc4d7511892e"
+            ]
+        ]
+    },
+    {
+        "id": "eda127c63177076f",
+        "type": "link in",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "link in 11",
+        "links": [
+            "e2354c0b647ec6bd"
+        ],
+        "x": 1605,
+        "y": 400,
+        "wires": [
+            [
+                "5dce08f35cb8b6cf"
+            ]
+        ]
+    },
+    {
+        "id": "813a5d152d4efffd",
+        "type": "file",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Data Waterflow",
+        "filename": "/home/arthatronic/Documents/waterflow.txt",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "delete",
+        "encoding": "utf8",
+        "x": 1320,
+        "y": 620,
+        "wires": [
+            [
+                "a54cbb1929845ad5"
+            ]
+        ]
+    },
+    {
+        "id": "062c2fd80de87db2",
+        "type": "file",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Data Waterflow",
+        "filename": "/home/arthatronic/Documents/waterflow.txt",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "utf8",
+        "x": 1460,
+        "y": 500,
+        "wires": [
+            [
+                "8259c8deb91a5620",
+                "ee35fa8f00e5fb60"
+            ]
+        ]
+    },
+    {
+        "id": "5180a2ce4586db3d",
+        "type": "function",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Set to flow",
+        "func": "flow.set(\"volume_total\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1450,
+        "y": 540,
+        "wires": [
+            [
+                "2d928adc3cc055f2"
+            ]
+        ]
+    },
+    {
+        "id": "2d928adc3cc055f2",
+        "type": "link out",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Waterflow",
+        "mode": "link",
+        "links": [],
+        "x": 1565,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "8a8d742cb0ab5b58",
+        "type": "inject",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "str",
+        "x": 170,
+        "y": 700,
+        "wires": [
+            [
+                "f626ea1a30184d49"
+            ]
+        ]
+    },
+    {
+        "id": "f626ea1a30184d49",
+        "type": "file in",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Data Waterflow",
+        "filename": "/home/arthatronic/Documents/waterflow.txt",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 340,
+        "y": 700,
+        "wires": [
+            [
+                "a3affc4c893158f0"
+            ]
+        ]
+    },
+    {
+        "id": "a3affc4c893158f0",
+        "type": "function",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Parse Data",
+        "func": "msg.payload = {\n    messageGalon: parseFloat(msg.payload),\n    }\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 700,
+        "wires": [
+            [
+                "3cd506f3784b43bb"
+            ]
+        ]
+    },
+    {
+        "id": "3cd506f3784b43bb",
+        "type": "link out",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "link out 22",
+        "mode": "link",
+        "links": [
+            "f3883a6dd55ca632"
+        ],
+        "x": 665,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "f3883a6dd55ca632",
+        "type": "link in",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Update notif",
+        "links": [
+            "3cd506f3784b43bb"
+        ],
+        "x": 275,
+        "y": 420,
+        "wires": [
+            [
+                "ce57fc889764cc90"
+            ]
+        ]
+    },
+    {
+        "id": "72de7a07dffcf16c",
+        "type": "uibuilder",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "",
+        "topic": "",
+        "url": "test",
+        "okToGo": true,
+        "fwdInMessages": false,
+        "allowScripts": false,
+        "allowStyles": false,
+        "copyIndex": true,
+        "templateFolder": "blank",
+        "extTemplate": "",
+        "showfolder": false,
+        "reload": false,
+        "sourceFolder": "src",
+        "deployedVersion": "6.8.2",
+        "showMsgUib": false,
+        "title": "",
+        "descr": "",
+        "x": 770,
+        "y": 200,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "d4e0c72ff820e048",
+        "type": "inject",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 730,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a54cbb1929845ad5",
+        "type": "file",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Data Waterflow",
+        "filename": "/home/arthatronic/Documents/waterflow.txt",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "utf8",
+        "x": 1500,
+        "y": 620,
+        "wires": [
+            [
+                "9e715bfcb567f4aa"
+            ]
+        ]
+    },
+    {
+        "id": "1c4565af3db20a1f",
+        "type": "ui_numeric",
+        "z": "e1fca49e72b6731a",
+        "name": "",
+        "label": "hot250",
+        "tooltip": "",
+        "group": "2c8dac57508989f9",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "30",
+        "step": "0.5",
+        "className": "",
+        "x": 350,
+        "y": 200,
+        "wires": [
+            [
+                "dc26363ff11329b0"
+            ]
+        ]
+    },
+    {
+        "id": "020294989a98ee92",
+        "type": "ui_numeric",
+        "z": "e1fca49e72b6731a",
+        "name": "",
+        "label": "normal250",
+        "tooltip": "",
+        "group": "2c8dac57508989f9",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "30",
+        "step": "0.5",
+        "className": "",
+        "x": 370,
+        "y": 260,
+        "wires": [
+            [
+                "d0b80d240c3c53ec"
+            ]
+        ]
+    },
+    {
+        "id": "9f0f7c459752e3e5",
+        "type": "ui_numeric",
+        "z": "e1fca49e72b6731a",
+        "name": "",
+        "label": "cold250",
+        "tooltip": "",
+        "group": "2c8dac57508989f9",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "30",
+        "step": "0.5",
+        "className": "",
+        "x": 360,
+        "y": 320,
+        "wires": [
+            [
+                "3552c9db48e3f0c5"
+            ]
+        ]
+    },
+    {
+        "id": "351239395009420c",
+        "type": "ui_numeric",
+        "z": "e1fca49e72b6731a",
+        "name": "",
+        "label": "hot500",
+        "tooltip": "",
+        "group": "2c8dac57508989f9",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "30",
+        "step": "0.5",
+        "className": "",
+        "x": 350,
+        "y": 380,
+        "wires": [
+            [
+                "db52d612f56843c8"
+            ]
+        ]
+    },
+    {
+        "id": "9f968df4f3b7665e",
+        "type": "ui_numeric",
+        "z": "e1fca49e72b6731a",
+        "name": "",
+        "label": "normal500",
+        "tooltip": "",
+        "group": "2c8dac57508989f9",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "30",
+        "step": "0.5",
+        "className": "",
+        "x": 370,
+        "y": 440,
+        "wires": [
+            [
+                "0c08af9743dd7c2f"
+            ]
+        ]
+    },
+    {
+        "id": "da4bb684ee0a2742",
+        "type": "ui_numeric",
+        "z": "e1fca49e72b6731a",
+        "name": "",
+        "label": "cold500",
+        "tooltip": "",
+        "group": "2c8dac57508989f9",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "30",
+        "step": "0.5",
+        "className": "",
+        "x": 360,
+        "y": 500,
+        "wires": [
+            [
+                "6412e4b6e82ce819"
+            ]
+        ]
+    },
+    {
+        "id": "828d50be77520b5e",
+        "type": "inject",
+        "z": "e1fca49e72b6731a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload.type",
+                "v": "button1",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 90,
+        "y": 1200,
+        "wires": [
+            [
+                "4c09ed93cbc593e6"
+            ]
+        ]
+    },
+    {
+        "id": "4c09ed93cbc593e6",
+        "type": "switch",
+        "z": "e1fca49e72b6731a",
+        "name": "Switch on type",
+        "property": "payload.type",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "button1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "button2",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "button3",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "button4",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "button5",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "button6",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "reset",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 7,
+        "x": 400,
+        "y": 1220,
+        "wires": [
+            [
+                "b3ddcf5cb40d5e1f"
+            ],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [
+                "2bb077c9dcdc1562"
+            ]
+        ]
+    },
+    {
+        "id": "727e2d20f539982d",
+        "type": "inject",
+        "z": "e1fca49e72b6731a",
+        "name": "Trigger",
+        "props": [
+            {
+                "p": "payload.type",
+                "v": "reset",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "x": 70,
+        "y": 1340,
+        "wires": [
+            [
+                "4c09ed93cbc593e6"
+            ]
+        ]
+    },
+    {
+        "id": "b3ddcf5cb40d5e1f",
+        "type": "function",
+        "z": "e1fca49e72b6731a",
+        "name": "Retrieve Number",
+        "func": "msg.payload = flow.get('storedNumber1');\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 1160,
+        "wires": [
+            [
+                "964c82852dca2933"
+            ]
+        ]
+    },
+    {
+        "id": "964c82852dca2933",
+        "type": "debug",
+        "z": "e1fca49e72b6731a",
+        "name": "Debug Output",
+        "active": true,
+        "tosidebar": true,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 960,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "dc26363ff11329b0",
+        "type": "function",
+        "z": "e1fca49e72b6731a",
+        "name": "Save Number",
+        "func": "global.set('storedNumber1', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 200,
+        "wires": [
+            [
+                "076402fc92265db2"
+            ]
+        ]
+    },
+    {
+        "id": "d0b80d240c3c53ec",
+        "type": "function",
+        "z": "e1fca49e72b6731a",
+        "name": "Save Number",
+        "func": "global.set('storedNumber2', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 260,
+        "wires": [
+            [
+                "4fb7abda3eb2708b"
+            ]
+        ]
+    },
+    {
+        "id": "3552c9db48e3f0c5",
+        "type": "function",
+        "z": "e1fca49e72b6731a",
+        "name": "Save Number",
+        "func": "global.set('storedNumber3', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 320,
+        "wires": [
+            [
+                "85e99355785af348"
+            ]
+        ]
+    },
+    {
+        "id": "db52d612f56843c8",
+        "type": "function",
+        "z": "e1fca49e72b6731a",
+        "name": "Save Number",
+        "func": "global.set('storedNumber4', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 380,
+        "wires": [
+            [
+                "2f6aead61592ebe9"
+            ]
+        ]
+    },
+    {
+        "id": "0c08af9743dd7c2f",
+        "type": "function",
+        "z": "e1fca49e72b6731a",
+        "name": "Save Number",
+        "func": "global.set('storedNumber5', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 440,
+        "wires": [
+            [
+                "84348ebc960b1262"
+            ]
+        ]
+    },
+    {
+        "id": "6412e4b6e82ce819",
+        "type": "function",
+        "z": "e1fca49e72b6731a",
+        "name": "Save Number",
+        "func": "global.set('storedNumber6', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 500,
+        "wires": [
+            [
+                "092feb32c6746730"
+            ]
+        ]
+    },
+    {
+        "id": "2bb077c9dcdc1562",
+        "type": "function",
+        "z": "e1fca49e72b6731a",
+        "name": "Retrieve Number",
+        "func": "msg.payload = flow.get('storedNumber4');\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 1220,
+        "wires": [
+            [
+                "43e1b6e2b4fc748b"
+            ]
+        ]
+    },
+    {
+        "id": "43e1b6e2b4fc748b",
+        "type": "debug",
+        "z": "e1fca49e72b6731a",
+        "name": "Debug Output",
+        "active": true,
+        "tosidebar": true,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 940,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "efbb813771569fd4",
+        "type": "ui_template",
+        "z": "e1fca49e72b6731a",
+        "group": "cca3d86c822ecc84",
+        "name": "Button with Link",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "format": "<!DOCTYPE html>\n<html>\n\n<head>\n    <title>My Page</title>\n    <style>\n        button {\n            background-color: #000000;\n            /* Green */\n            border: none;\n            color: white;\n            padding: 15px 32px;\n            text-align: center;\n            text-decoration: none;\n            display: inline-block;\n            font-size: 16px;\n            margin: 4px 2px;\n            cursor: pointer;\n            border-radius: 5px;\n            transition: all 0.3s ease;\n            /* Add transition effect */\n        }\n\n        button:hover {\n            background-color: #008CBA;\n            /* Change color on hover */\n            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);\n            /* Add a shadow */\n        }\n\n        button:active {\n            transform: translateY(2px);\n            /* Slightly move down on click */\n            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);\n            /* Add a more pronounced shadow */\n        }\n\n        .back-button {\n            transition: opacity 0.3s ease;\n        }\n\n        .back-button:active {\n            opacity: 0.5;\n        }\n    </style>\n</head>\n\n<body>\n    <button class=\"back-button\" onclick=\"window.location.href='http://localhost:1880/refill/index.html';\"><h1>Back</h1></button>\n</body>\n\n</html>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 560,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5485f563f5d84436",
+        "type": "ui_button",
+        "z": "e1fca49e72b6731a",
+        "name": "",
+        "group": "97ec7dec260fcfff",
+        "order": 1,
+        "width": 12,
+        "height": 2,
+        "passthru": false,
+        "label": "<h1>250h</h1>",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 940,
+        "y": 200,
+        "wires": [
+            [
+                "ce028be7ce82fd58"
+            ]
+        ]
+    },
+    {
+        "id": "8d6a80f45cc9507a",
+        "type": "ui_button",
+        "z": "e1fca49e72b6731a",
+        "name": "",
+        "group": "97ec7dec260fcfff",
+        "order": 3,
+        "width": 12,
+        "height": 2,
+        "passthru": false,
+        "label": "<h1>250n</h1>",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 940,
+        "y": 260,
+        "wires": [
+            [
+                "13299c6a85bdb0b4"
+            ]
+        ]
+    },
+    {
+        "id": "ec5c904ea4828cb5",
+        "type": "ui_button",
+        "z": "e1fca49e72b6731a",
+        "name": "",
+        "group": "97ec7dec260fcfff",
+        "order": 5,
+        "width": 12,
+        "height": 2,
+        "passthru": false,
+        "label": "<h1>250c</h1>",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 940,
+        "y": 320,
+        "wires": [
+            [
+                "d4f719c8189e3e43"
+            ]
+        ]
+    },
+    {
+        "id": "13ce1f5268485649",
+        "type": "ui_button",
+        "z": "e1fca49e72b6731a",
+        "name": "",
+        "group": "97ec7dec260fcfff",
+        "order": 7,
+        "width": 12,
+        "height": 2,
+        "passthru": false,
+        "label": "<h1>500h</h1>",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 940,
+        "y": 380,
+        "wires": [
+            [
+                "17568add2c0efa92"
+            ]
+        ]
+    },
+    {
+        "id": "0b440d797b0354c5",
+        "type": "ui_button",
+        "z": "e1fca49e72b6731a",
+        "name": "",
+        "group": "97ec7dec260fcfff",
+        "order": 9,
+        "width": 12,
+        "height": 2,
+        "passthru": false,
+        "label": "<h1>500n</h1>",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 940,
+        "y": 440,
+        "wires": [
+            [
+                "4e5d7e12797afdae"
+            ]
+        ]
+    },
+    {
+        "id": "1cac0d07b65b7846",
+        "type": "ui_button",
+        "z": "e1fca49e72b6731a",
+        "name": "",
+        "group": "97ec7dec260fcfff",
+        "order": 11,
+        "width": 12,
+        "height": 2,
+        "passthru": false,
+        "label": "<h1>500c</h1>",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 940,
+        "y": 500,
+        "wires": [
+            [
+                "b814ac122c2d5619"
+            ]
+        ]
+    },
+    {
+        "id": "ce028be7ce82fd58",
+        "type": "function",
+        "z": "e1fca49e72b6731a",
+        "name": "Retrieve Number",
+        "func": "msg.payload = global.get('storedNumber1');\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 200,
+        "wires": [
+            [
+                "659e2102beec331b"
+            ]
+        ]
+    },
+    {
+        "id": "13299c6a85bdb0b4",
+        "type": "function",
+        "z": "e1fca49e72b6731a",
+        "name": "Retrieve Number",
+        "func": "msg.payload = global.get('storedNumber2');\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 260,
+        "wires": [
+            [
+                "35d233b9f6c471da"
+            ]
+        ]
+    },
+    {
+        "id": "d4f719c8189e3e43",
+        "type": "function",
+        "z": "e1fca49e72b6731a",
+        "name": "Retrieve Number",
+        "func": "msg.payload = global.get('storedNumber3');\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 320,
+        "wires": [
+            [
+                "1a9cc4b61873ee5e"
+            ]
+        ]
+    },
+    {
+        "id": "17568add2c0efa92",
+        "type": "function",
+        "z": "e1fca49e72b6731a",
+        "name": "Retrieve Number",
+        "func": "msg.payload = global.get('storedNumber4');\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 380,
+        "wires": [
+            [
+                "71622eed1b8b4433"
+            ]
+        ]
+    },
+    {
+        "id": "4e5d7e12797afdae",
+        "type": "function",
+        "z": "e1fca49e72b6731a",
+        "name": "Retrieve Number",
+        "func": "msg.payload = global.get('storedNumber5');\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 440,
+        "wires": [
+            [
+                "a86eafae62d7d0c9"
+            ]
+        ]
+    },
+    {
+        "id": "b814ac122c2d5619",
+        "type": "function",
+        "z": "e1fca49e72b6731a",
+        "name": "Retrieve Number",
+        "func": "msg.payload = global.get('storedNumber6');\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 500,
+        "wires": [
+            [
+                "e2354c0b647ec6bd"
+            ]
+        ]
+    },
+    {
+        "id": "659e2102beec331b",
+        "type": "link out",
+        "z": "e1fca49e72b6731a",
+        "name": "link out 14",
+        "mode": "link",
+        "links": [
+            "420d0ebd10067d69"
+        ],
+        "x": 1275,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "35d233b9f6c471da",
+        "type": "link out",
+        "z": "e1fca49e72b6731a",
+        "name": "link out 15",
+        "mode": "link",
+        "links": [
+            "40316533332b0fb5"
+        ],
+        "x": 1275,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "1a9cc4b61873ee5e",
+        "type": "link out",
+        "z": "e1fca49e72b6731a",
+        "name": "link out 16",
+        "mode": "link",
+        "links": [
+            "7ff9c42d38112d9f"
+        ],
+        "x": 1275,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "a86eafae62d7d0c9",
+        "type": "link out",
+        "z": "e1fca49e72b6731a",
+        "name": "link out 18",
+        "mode": "link",
+        "links": [
+            "0e93fd7bfc25cd6d"
+        ],
+        "x": 1275,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "e2354c0b647ec6bd",
+        "type": "link out",
+        "z": "e1fca49e72b6731a",
+        "name": "link out 19",
+        "mode": "link",
+        "links": [
+            "eda127c63177076f"
+        ],
+        "x": 1275,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "71622eed1b8b4433",
+        "type": "link out",
+        "z": "e1fca49e72b6731a",
+        "name": "link out 20",
+        "mode": "link",
+        "links": [
+            "e490dd3073442360"
+        ],
+        "x": 1275,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "076402fc92265db2",
+        "type": "file",
+        "z": "e1fca49e72b6731a",
+        "name": "250h",
+        "filename": "/home/arthatronic/Documents/data_payload/payload_250h.txt",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 710,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4fb7abda3eb2708b",
+        "type": "file",
+        "z": "e1fca49e72b6731a",
+        "name": "250n",
+        "filename": "/home/arthatronic/Documents/data_payload/payload_250n.txt",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 710,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "85e99355785af348",
+        "type": "file",
+        "z": "e1fca49e72b6731a",
+        "name": "250c",
+        "filename": "/home/arthatronic/Documents/data_payload/payload_250c.txt",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 710,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2f6aead61592ebe9",
+        "type": "file",
+        "z": "e1fca49e72b6731a",
+        "name": "500h",
+        "filename": "/home/arthatronic/Documents/data_payload/payload_500h.txt",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 710,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "84348ebc960b1262",
+        "type": "file",
+        "z": "e1fca49e72b6731a",
+        "name": "500n",
+        "filename": "/home/arthatronic/Documents/data_payload/payload_500n.txt",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 710,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "092feb32c6746730",
+        "type": "file",
+        "z": "e1fca49e72b6731a",
+        "name": "500c",
+        "filename": "/home/arthatronic/Documents/data_payload/payload_500c.txt",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 710,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fb95436e670bd7d2",
+        "type": "file in",
+        "z": "e1fca49e72b6731a",
+        "name": "250h",
+        "filename": "/home/arthatronic/Documents/data_payload/payload_250h.txt",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 190,
+        "y": 200,
+        "wires": [
+            [
+                "1c4565af3db20a1f"
+            ]
+        ]
+    },
+    {
+        "id": "890f1a78b4c270ea",
+        "type": "file in",
+        "z": "e1fca49e72b6731a",
+        "name": "250n",
+        "filename": "/home/arthatronic/Documents/data_payload/payload_250n.txt",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 190,
+        "y": 260,
+        "wires": [
+            [
+                "020294989a98ee92"
+            ]
+        ]
+    },
+    {
+        "id": "753d4fbfdafef34d",
+        "type": "file in",
+        "z": "e1fca49e72b6731a",
+        "name": "250c",
+        "filename": "/home/arthatronic/Documents/data_payload/payload_250c.txt",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 190,
+        "y": 320,
+        "wires": [
+            [
+                "9f0f7c459752e3e5"
+            ]
+        ]
+    },
+    {
+        "id": "4a2b9c37693d8210",
+        "type": "file in",
+        "z": "e1fca49e72b6731a",
+        "name": "500h",
+        "filename": "/home/arthatronic/Documents/data_payload/payload_500h.txt",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 190,
+        "y": 380,
+        "wires": [
+            [
+                "351239395009420c"
+            ]
+        ]
+    },
+    {
+        "id": "ae79e37159f03029",
+        "type": "file in",
+        "z": "e1fca49e72b6731a",
+        "name": "500n",
+        "filename": "/home/arthatronic/Documents/data_payload/payload_500n.txt",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 190,
+        "y": 440,
+        "wires": [
+            [
+                "9f968df4f3b7665e"
+            ]
+        ]
+    },
+    {
+        "id": "16a6feeb2bdf65b8",
+        "type": "file in",
+        "z": "e1fca49e72b6731a",
+        "name": "500c",
+        "filename": "/home/arthatronic/Documents/data_payload/payload_500c.txt",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 190,
+        "y": 500,
+        "wires": [
+            [
+                "da4bb684ee0a2742"
+            ]
+        ]
+    },
+    {
+        "id": "62efae6ae7b4b3ad",
+        "type": "link in",
+        "z": "e1fca49e72b6731a",
+        "name": "link in 12",
+        "links": [
+            "7ac0c499d93ec047"
+        ],
+        "x": 65,
+        "y": 340,
+        "wires": [
+            [
+                "fb95436e670bd7d2",
+                "890f1a78b4c270ea",
+                "753d4fbfdafef34d",
+                "4a2b9c37693d8210",
+                "ae79e37159f03029",
+                "16a6feeb2bdf65b8"
+            ]
+        ]
+    },
+    {
+        "id": "7ac0c499d93ec047",
+        "type": "link out",
+        "z": "e1fca49e72b6731a",
+        "name": "link out 21",
+        "mode": "link",
+        "links": [
+            "62efae6ae7b4b3ad"
+        ],
+        "x": 275,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "c8f0204fcf5e9f77",
+        "type": "inject",
+        "z": "e1fca49e72b6731a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "2",
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 130,
+        "y": 120,
+        "wires": [
+            [
+                "7ac0c499d93ec047"
             ]
         ]
     }
