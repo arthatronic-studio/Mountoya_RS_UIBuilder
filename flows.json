@@ -1,16 +1,16 @@
 [
     {
-        "id": "5bb108e6cb2bd559",
+        "id": "93cd7eb94b5de81b",
         "type": "tab",
-        "label": "Flow 1",
+        "label": "Flow 3",
         "disabled": false,
         "info": "",
         "env": []
     },
     {
-        "id": "93cd7eb94b5de81b",
+        "id": "cd9a83ecd2032a42",
         "type": "tab",
-        "label": "Flow 3",
+        "label": "Flow 1",
         "disabled": false,
         "info": "",
         "env": []
@@ -234,6 +234,89 @@
                 "py": 0
             }
         }
+    },
+    {
+        "id": "aa53cdda6680d84a",
+        "type": "ui_spacer",
+        "z": "cd9a83ecd2032a42",
+        "name": "spacer",
+        "group": "ecda274e5f070971",
+        "order": 2,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "09a853976443644c",
+        "type": "ui_spacer",
+        "z": "cd9a83ecd2032a42",
+        "name": "spacer",
+        "group": "ecda274e5f070971",
+        "order": 4,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "f3086ab3e2bd6851",
+        "type": "ui_spacer",
+        "z": "cd9a83ecd2032a42",
+        "name": "spacer",
+        "group": "ecda274e5f070971",
+        "order": 6,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "7dcb4bf216af540c",
+        "type": "ui_spacer",
+        "z": "cd9a83ecd2032a42",
+        "name": "spacer",
+        "group": "ecda274e5f070971",
+        "order": 8,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "7cd7c1d18cea3884",
+        "type": "ui_spacer",
+        "z": "cd9a83ecd2032a42",
+        "name": "spacer",
+        "group": "ecda274e5f070971",
+        "order": 10,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "c151b06b785c71da",
+        "type": "ui_group",
+        "name": "Kalibrasi refill",
+        "tab": "d589d2ac4b631e43",
+        "order": 1,
+        "disp": true,
+        "width": 17,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d607d8b9e121ed5c",
+        "type": "ui_group",
+        "name": "Back",
+        "tab": "d589d2ac4b631e43",
+        "order": 3,
+        "disp": true,
+        "width": 12,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ecda274e5f070971",
+        "type": "ui_group",
+        "name": "Refill",
+        "tab": "d589d2ac4b631e43",
+        "order": 7,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "f7de393883dfc617",
@@ -1789,6 +1872,1149 @@
         "wires": [
             [
                 "9e715bfcb567f4aa"
+            ]
+        ]
+    },
+    {
+        "id": "26d7c35f76abc909",
+        "type": "ui_numeric",
+        "z": "cd9a83ecd2032a42",
+        "name": "",
+        "label": "hot250",
+        "tooltip": "",
+        "group": "c151b06b785c71da",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "30",
+        "step": "0.5",
+        "className": "",
+        "x": 350,
+        "y": 200,
+        "wires": [
+            [
+                "4694f21d310f46ac"
+            ]
+        ]
+    },
+    {
+        "id": "9eb1022a4a600c0d",
+        "type": "ui_numeric",
+        "z": "cd9a83ecd2032a42",
+        "name": "",
+        "label": "normal250",
+        "tooltip": "",
+        "group": "c151b06b785c71da",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "30",
+        "step": "0.5",
+        "className": "",
+        "x": 370,
+        "y": 260,
+        "wires": [
+            [
+                "29253feb1be453d6"
+            ]
+        ]
+    },
+    {
+        "id": "930cb5aed63f6748",
+        "type": "ui_numeric",
+        "z": "cd9a83ecd2032a42",
+        "name": "",
+        "label": "cold250",
+        "tooltip": "",
+        "group": "c151b06b785c71da",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "30",
+        "step": "0.5",
+        "className": "",
+        "x": 360,
+        "y": 320,
+        "wires": [
+            [
+                "6488ef4171b1b54c"
+            ]
+        ]
+    },
+    {
+        "id": "d1ea36a6a14432fe",
+        "type": "ui_numeric",
+        "z": "cd9a83ecd2032a42",
+        "name": "",
+        "label": "hot500",
+        "tooltip": "",
+        "group": "c151b06b785c71da",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "30",
+        "step": "0.5",
+        "className": "",
+        "x": 350,
+        "y": 380,
+        "wires": [
+            [
+                "a6e30742d3028a26"
+            ]
+        ]
+    },
+    {
+        "id": "24cca6f314cca9cc",
+        "type": "ui_numeric",
+        "z": "cd9a83ecd2032a42",
+        "name": "",
+        "label": "normal500",
+        "tooltip": "",
+        "group": "c151b06b785c71da",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "30",
+        "step": "0.5",
+        "className": "",
+        "x": 370,
+        "y": 440,
+        "wires": [
+            [
+                "b828260f8932637f"
+            ]
+        ]
+    },
+    {
+        "id": "c66ba1d955514b78",
+        "type": "ui_numeric",
+        "z": "cd9a83ecd2032a42",
+        "name": "",
+        "label": "cold500",
+        "tooltip": "",
+        "group": "c151b06b785c71da",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "30",
+        "step": "0.5",
+        "className": "",
+        "x": 360,
+        "y": 500,
+        "wires": [
+            [
+                "20ebec4ad41158ca"
+            ]
+        ]
+    },
+    {
+        "id": "8892ac1cb0621f1f",
+        "type": "inject",
+        "z": "cd9a83ecd2032a42",
+        "name": "",
+        "props": [
+            {
+                "p": "payload.type",
+                "v": "button1",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 90,
+        "y": 1200,
+        "wires": [
+            [
+                "fcd11f74dfc7a3cf"
+            ]
+        ]
+    },
+    {
+        "id": "fcd11f74dfc7a3cf",
+        "type": "switch",
+        "z": "cd9a83ecd2032a42",
+        "name": "Switch on type",
+        "property": "payload.type",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "button1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "button2",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "button3",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "button4",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "button5",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "button6",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "reset",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 7,
+        "x": 400,
+        "y": 1220,
+        "wires": [
+            [
+                "e599e6022f5461ad"
+            ],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [
+                "2509833e9fc9b978"
+            ]
+        ]
+    },
+    {
+        "id": "dcf9431b2cd3bd43",
+        "type": "inject",
+        "z": "cd9a83ecd2032a42",
+        "name": "Trigger",
+        "props": [
+            {
+                "p": "payload.type",
+                "v": "reset",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "x": 70,
+        "y": 1340,
+        "wires": [
+            [
+                "fcd11f74dfc7a3cf"
+            ]
+        ]
+    },
+    {
+        "id": "e599e6022f5461ad",
+        "type": "function",
+        "z": "cd9a83ecd2032a42",
+        "name": "Retrieve Number",
+        "func": "msg.payload = flow.get('storedNumber1');\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 1160,
+        "wires": [
+            [
+                "c82cab383502fe0b"
+            ]
+        ]
+    },
+    {
+        "id": "c82cab383502fe0b",
+        "type": "debug",
+        "z": "cd9a83ecd2032a42",
+        "name": "Debug Output",
+        "active": true,
+        "tosidebar": true,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 960,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "4694f21d310f46ac",
+        "type": "function",
+        "z": "cd9a83ecd2032a42",
+        "name": "Save Number",
+        "func": "global.set('storedNumber1', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 200,
+        "wires": [
+            [
+                "efa1129e91b5b859"
+            ]
+        ]
+    },
+    {
+        "id": "29253feb1be453d6",
+        "type": "function",
+        "z": "cd9a83ecd2032a42",
+        "name": "Save Number",
+        "func": "global.set('storedNumber2', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 260,
+        "wires": [
+            [
+                "6746ef72df7149d0"
+            ]
+        ]
+    },
+    {
+        "id": "6488ef4171b1b54c",
+        "type": "function",
+        "z": "cd9a83ecd2032a42",
+        "name": "Save Number",
+        "func": "global.set('storedNumber3', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 320,
+        "wires": [
+            [
+                "59e169539b39f365"
+            ]
+        ]
+    },
+    {
+        "id": "a6e30742d3028a26",
+        "type": "function",
+        "z": "cd9a83ecd2032a42",
+        "name": "Save Number",
+        "func": "global.set('storedNumber4', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 380,
+        "wires": [
+            [
+                "d3a22658f626aad3"
+            ]
+        ]
+    },
+    {
+        "id": "b828260f8932637f",
+        "type": "function",
+        "z": "cd9a83ecd2032a42",
+        "name": "Save Number",
+        "func": "global.set('storedNumber5', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 440,
+        "wires": [
+            [
+                "164fe3db4f49a0af"
+            ]
+        ]
+    },
+    {
+        "id": "20ebec4ad41158ca",
+        "type": "function",
+        "z": "cd9a83ecd2032a42",
+        "name": "Save Number",
+        "func": "global.set('storedNumber6', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 500,
+        "wires": [
+            [
+                "2762070c284915e3"
+            ]
+        ]
+    },
+    {
+        "id": "2509833e9fc9b978",
+        "type": "function",
+        "z": "cd9a83ecd2032a42",
+        "name": "Retrieve Number",
+        "func": "msg.payload = flow.get('storedNumber4');\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 1220,
+        "wires": [
+            [
+                "c808ff711054c9df"
+            ]
+        ]
+    },
+    {
+        "id": "c808ff711054c9df",
+        "type": "debug",
+        "z": "cd9a83ecd2032a42",
+        "name": "Debug Output",
+        "active": true,
+        "tosidebar": true,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 940,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "2260ea0e6503f561",
+        "type": "ui_template",
+        "z": "cd9a83ecd2032a42",
+        "group": "d607d8b9e121ed5c",
+        "name": "Button with Link",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "format": "<!DOCTYPE html>\n<html>\n\n<head>\n    <title>My Page</title>\n    <style>\n        button {\n            background-color: #000000;\n            /* Green */\n            border: none;\n            color: white;\n            padding: 15px 32px;\n            text-align: center;\n            text-decoration: none;\n            display: inline-block;\n            font-size: 16px;\n            margin: 4px 2px;\n            cursor: pointer;\n            border-radius: 5px;\n            transition: all 0.3s ease;\n            /* Add transition effect */\n        }\n\n        button:hover {\n            background-color: #008CBA;\n            /* Change color on hover */\n            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);\n            /* Add a shadow */\n        }\n\n        button:active {\n            transform: translateY(2px);\n            /* Slightly move down on click */\n            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);\n            /* Add a more pronounced shadow */\n        }\n\n        .back-button {\n            transition: opacity 0.3s ease;\n        }\n\n        .back-button:active {\n            opacity: 0.5;\n        }\n    </style>\n</head>\n\n<body>\n    <button class=\"back-button\" onclick=\"window.location.href='http://localhost:1880/refill/index.html';\"><h1>Back</h1></button>\n</body>\n\n</html>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 560,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "52244513124603cd",
+        "type": "ui_button",
+        "z": "cd9a83ecd2032a42",
+        "name": "",
+        "group": "ecda274e5f070971",
+        "order": 1,
+        "width": 12,
+        "height": 2,
+        "passthru": false,
+        "label": "<h1>250h</h1>",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 940,
+        "y": 200,
+        "wires": [
+            [
+                "97c56e2064fc89e7"
+            ]
+        ]
+    },
+    {
+        "id": "43fdf042ddfec3ae",
+        "type": "ui_button",
+        "z": "cd9a83ecd2032a42",
+        "name": "",
+        "group": "ecda274e5f070971",
+        "order": 3,
+        "width": 12,
+        "height": 2,
+        "passthru": false,
+        "label": "<h1>250n</h1>",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 940,
+        "y": 260,
+        "wires": [
+            [
+                "bc9c189d7ada29c8"
+            ]
+        ]
+    },
+    {
+        "id": "d3a3a812ac46a652",
+        "type": "ui_button",
+        "z": "cd9a83ecd2032a42",
+        "name": "",
+        "group": "ecda274e5f070971",
+        "order": 5,
+        "width": 12,
+        "height": 2,
+        "passthru": false,
+        "label": "<h1>250c</h1>",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 940,
+        "y": 320,
+        "wires": [
+            [
+                "726359c5a1fbcae4"
+            ]
+        ]
+    },
+    {
+        "id": "0321c7aef936a12a",
+        "type": "ui_button",
+        "z": "cd9a83ecd2032a42",
+        "name": "",
+        "group": "ecda274e5f070971",
+        "order": 7,
+        "width": 12,
+        "height": 2,
+        "passthru": false,
+        "label": "<h1>500h</h1>",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 940,
+        "y": 380,
+        "wires": [
+            [
+                "1c5315f3025f6309"
+            ]
+        ]
+    },
+    {
+        "id": "1d3e64203f1ae48a",
+        "type": "ui_button",
+        "z": "cd9a83ecd2032a42",
+        "name": "",
+        "group": "ecda274e5f070971",
+        "order": 9,
+        "width": 12,
+        "height": 2,
+        "passthru": false,
+        "label": "<h1>500n</h1>",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 940,
+        "y": 440,
+        "wires": [
+            [
+                "76e5a9f95d94063e"
+            ]
+        ]
+    },
+    {
+        "id": "0ff33f84ce2b729e",
+        "type": "ui_button",
+        "z": "cd9a83ecd2032a42",
+        "name": "",
+        "group": "ecda274e5f070971",
+        "order": 11,
+        "width": 12,
+        "height": 2,
+        "passthru": false,
+        "label": "<h1>500c</h1>",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 940,
+        "y": 500,
+        "wires": [
+            [
+                "2a5098ef28eac7ce"
+            ]
+        ]
+    },
+    {
+        "id": "97c56e2064fc89e7",
+        "type": "function",
+        "z": "cd9a83ecd2032a42",
+        "name": "Retrieve Number",
+        "func": "msg.payload = global.get('storedNumber1');\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 200,
+        "wires": [
+            [
+                "4c205ff54347fa6e"
+            ]
+        ]
+    },
+    {
+        "id": "bc9c189d7ada29c8",
+        "type": "function",
+        "z": "cd9a83ecd2032a42",
+        "name": "Retrieve Number",
+        "func": "msg.payload = global.get('storedNumber2');\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 260,
+        "wires": [
+            [
+                "7ad2556a12443472"
+            ]
+        ]
+    },
+    {
+        "id": "726359c5a1fbcae4",
+        "type": "function",
+        "z": "cd9a83ecd2032a42",
+        "name": "Retrieve Number",
+        "func": "msg.payload = global.get('storedNumber3');\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 320,
+        "wires": [
+            [
+                "23fa61abd182558c"
+            ]
+        ]
+    },
+    {
+        "id": "1c5315f3025f6309",
+        "type": "function",
+        "z": "cd9a83ecd2032a42",
+        "name": "Retrieve Number",
+        "func": "msg.payload = global.get('storedNumber4');\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 380,
+        "wires": [
+            [
+                "d5259ee5a59d28ec"
+            ]
+        ]
+    },
+    {
+        "id": "76e5a9f95d94063e",
+        "type": "function",
+        "z": "cd9a83ecd2032a42",
+        "name": "Retrieve Number",
+        "func": "msg.payload = global.get('storedNumber5');\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 440,
+        "wires": [
+            [
+                "8abaafef4e45a3b8"
+            ]
+        ]
+    },
+    {
+        "id": "2a5098ef28eac7ce",
+        "type": "function",
+        "z": "cd9a83ecd2032a42",
+        "name": "Retrieve Number",
+        "func": "msg.payload = global.get('storedNumber6');\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 500,
+        "wires": [
+            [
+                "beb008dcec3396b2"
+            ]
+        ]
+    },
+    {
+        "id": "4c205ff54347fa6e",
+        "type": "link out",
+        "z": "cd9a83ecd2032a42",
+        "name": "link out 14",
+        "mode": "link",
+        "links": [
+            "420d0ebd10067d69"
+        ],
+        "x": 1275,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "7ad2556a12443472",
+        "type": "link out",
+        "z": "cd9a83ecd2032a42",
+        "name": "link out 15",
+        "mode": "link",
+        "links": [
+            "40316533332b0fb5"
+        ],
+        "x": 1275,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "23fa61abd182558c",
+        "type": "link out",
+        "z": "cd9a83ecd2032a42",
+        "name": "link out 16",
+        "mode": "link",
+        "links": [
+            "7ff9c42d38112d9f"
+        ],
+        "x": 1275,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "8abaafef4e45a3b8",
+        "type": "link out",
+        "z": "cd9a83ecd2032a42",
+        "name": "link out 18",
+        "mode": "link",
+        "links": [
+            "0e93fd7bfc25cd6d"
+        ],
+        "x": 1275,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "beb008dcec3396b2",
+        "type": "link out",
+        "z": "cd9a83ecd2032a42",
+        "name": "link out 19",
+        "mode": "link",
+        "links": [
+            "eda127c63177076f"
+        ],
+        "x": 1275,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "d5259ee5a59d28ec",
+        "type": "link out",
+        "z": "cd9a83ecd2032a42",
+        "name": "link out 20",
+        "mode": "link",
+        "links": [
+            "e490dd3073442360"
+        ],
+        "x": 1275,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "efa1129e91b5b859",
+        "type": "file",
+        "z": "cd9a83ecd2032a42",
+        "name": "250h",
+        "filename": "/home/arthatronic/Documents/data_payload/payload_250h.txt",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 710,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6746ef72df7149d0",
+        "type": "file",
+        "z": "cd9a83ecd2032a42",
+        "name": "250n",
+        "filename": "/home/arthatronic/Documents/data_payload/payload_250n.txt",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 710,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "59e169539b39f365",
+        "type": "file",
+        "z": "cd9a83ecd2032a42",
+        "name": "250c",
+        "filename": "/home/arthatronic/Documents/data_payload/payload_250c.txt",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 710,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d3a22658f626aad3",
+        "type": "file",
+        "z": "cd9a83ecd2032a42",
+        "name": "500h",
+        "filename": "/home/arthatronic/Documents/data_payload/payload_500h.txt",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 710,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "164fe3db4f49a0af",
+        "type": "file",
+        "z": "cd9a83ecd2032a42",
+        "name": "500n",
+        "filename": "/home/arthatronic/Documents/data_payload/payload_500n.txt",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 710,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2762070c284915e3",
+        "type": "file",
+        "z": "cd9a83ecd2032a42",
+        "name": "500c",
+        "filename": "/home/arthatronic/Documents/data_payload/payload_500c.txt",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 710,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c4a429772b1f16dd",
+        "type": "file in",
+        "z": "cd9a83ecd2032a42",
+        "name": "250h",
+        "filename": "/home/arthatronic/Documents/data_payload/payload_250h.txt",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 190,
+        "y": 200,
+        "wires": [
+            [
+                "26d7c35f76abc909"
+            ]
+        ]
+    },
+    {
+        "id": "e283d7a465b79e8c",
+        "type": "file in",
+        "z": "cd9a83ecd2032a42",
+        "name": "250n",
+        "filename": "/home/arthatronic/Documents/data_payload/payload_250n.txt",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 190,
+        "y": 260,
+        "wires": [
+            [
+                "9eb1022a4a600c0d"
+            ]
+        ]
+    },
+    {
+        "id": "bdc8ab8fe8f07b9b",
+        "type": "file in",
+        "z": "cd9a83ecd2032a42",
+        "name": "250c",
+        "filename": "/home/arthatronic/Documents/data_payload/payload_250c.txt",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 190,
+        "y": 320,
+        "wires": [
+            [
+                "930cb5aed63f6748"
+            ]
+        ]
+    },
+    {
+        "id": "a3b28e2d6ddd8cad",
+        "type": "file in",
+        "z": "cd9a83ecd2032a42",
+        "name": "500h",
+        "filename": "/home/arthatronic/Documents/data_payload/payload_500h.txt",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 190,
+        "y": 380,
+        "wires": [
+            [
+                "d1ea36a6a14432fe"
+            ]
+        ]
+    },
+    {
+        "id": "7066baeec8842594",
+        "type": "file in",
+        "z": "cd9a83ecd2032a42",
+        "name": "500n",
+        "filename": "/home/arthatronic/Documents/data_payload/payload_500n.txt",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 190,
+        "y": 440,
+        "wires": [
+            [
+                "24cca6f314cca9cc"
+            ]
+        ]
+    },
+    {
+        "id": "233a29666f6d2cc0",
+        "type": "file in",
+        "z": "cd9a83ecd2032a42",
+        "name": "500c",
+        "filename": "/home/arthatronic/Documents/data_payload/payload_500c.txt",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 190,
+        "y": 500,
+        "wires": [
+            [
+                "c66ba1d955514b78"
+            ]
+        ]
+    },
+    {
+        "id": "87ae9ade283cf2a9",
+        "type": "link in",
+        "z": "cd9a83ecd2032a42",
+        "name": "link in 12",
+        "links": [
+            "4fc4c95376595622"
+        ],
+        "x": 65,
+        "y": 340,
+        "wires": [
+            [
+                "c4a429772b1f16dd",
+                "e283d7a465b79e8c",
+                "bdc8ab8fe8f07b9b",
+                "a3b28e2d6ddd8cad",
+                "7066baeec8842594",
+                "233a29666f6d2cc0"
+            ]
+        ]
+    },
+    {
+        "id": "4fc4c95376595622",
+        "type": "link out",
+        "z": "cd9a83ecd2032a42",
+        "name": "link out 21",
+        "mode": "link",
+        "links": [
+            "87ae9ade283cf2a9"
+        ],
+        "x": 275,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "9f54d0597c526cf2",
+        "type": "inject",
+        "z": "cd9a83ecd2032a42",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "2",
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 130,
+        "y": 120,
+        "wires": [
+            [
+                "4fc4c95376595622"
             ]
         ]
     }
