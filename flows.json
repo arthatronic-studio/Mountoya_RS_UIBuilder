@@ -319,6 +319,148 @@
         "className": ""
     },
     {
+        "id": "47a9baa3568d6361",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#000000",
+                "baseFont": "Arial Black,Arial Black,Gadget,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#d6d6d6",
+                "baseFont": "Arial Black,Arial Black,Gadget,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#000000",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#000000",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#262626",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#000000",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "Arial Black,Arial Black,Gadget,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "2c8dac57508989f9",
+        "type": "ui_group",
+        "name": "Kalibrasi refill",
+        "tab": "d589d2ac4b631e43",
+        "order": 1,
+        "disp": true,
+        "width": 17,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "dashboard_group",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "d589d2ac4b631e43",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "97ec7dec260fcfff",
+        "type": "ui_group",
+        "name": "Refill",
+        "tab": "d589d2ac4b631e43",
+        "order": 7,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "cca3d86c822ecc84",
+        "type": "ui_group",
+        "name": "Back",
+        "tab": "d589d2ac4b631e43",
+        "order": 3,
+        "disp": true,
+        "width": 12,
+        "collapse": false,
+        "className": ""
+    },
+    {
         "id": "f7de393883dfc617",
         "type": "file",
         "z": "93cd7eb94b5de81b",
@@ -563,7 +705,8 @@
         "g": "d578f4fe739b97e1",
         "name": "",
         "topic": "",
-        "okToGo": false,
+        "url": "refill",
+        "okToGo": true,
         "fwdInMessages": false,
         "allowScripts": false,
         "allowStyles": false,
@@ -577,7 +720,7 @@
         "showMsgUib": false,
         "title": "",
         "descr": "",
-        "x": 790,
+        "x": 780,
         "y": 280,
         "wires": [
             [
@@ -3016,1349 +3159,6 @@
         "wires": [
             [
                 "4fc4c95376595622"
-            ]
-        ]
-    },
-    {
-        "id": "e1fca49e72b6731a",
-        "type": "tab",
-        "label": "Flow 1",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "47a9baa3568d6361",
-        "type": "ui_base",
-        "theme": {
-            "name": "theme-light",
-            "lightTheme": {
-                "default": "#0094CE",
-                "baseColor": "#000000",
-                "baseFont": "Arial Black,Arial Black,Gadget,sans-serif",
-                "edited": true,
-                "reset": false
-            },
-            "darkTheme": {
-                "default": "#097479",
-                "baseColor": "#d6d6d6",
-                "baseFont": "Arial Black,Arial Black,Gadget,sans-serif",
-                "edited": true,
-                "reset": false
-            },
-            "customTheme": {
-                "name": "Untitled Theme 1",
-                "default": "#4B7930",
-                "baseColor": "#4B7930",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-            },
-            "themeState": {
-                "base-color": {
-                    "default": "#0094CE",
-                    "value": "#000000",
-                    "edited": true
-                },
-                "page-titlebar-backgroundColor": {
-                    "value": "#000000",
-                    "edited": false
-                },
-                "page-backgroundColor": {
-                    "value": "#fafafa",
-                    "edited": false
-                },
-                "page-sidebar-backgroundColor": {
-                    "value": "#333333",
-                    "edited": false
-                },
-                "group-textColor": {
-                    "value": "#262626",
-                    "edited": false
-                },
-                "group-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "widget-textColor": {
-                    "value": "#111111",
-                    "edited": false
-                },
-                "widget-backgroundColor": {
-                    "value": "#000000",
-                    "edited": false
-                },
-                "widget-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "base-font": {
-                    "value": "Arial Black,Arial Black,Gadget,sans-serif"
-                }
-            },
-            "angularTheme": {
-                "primary": "indigo",
-                "accents": "blue",
-                "warn": "red",
-                "background": "grey",
-                "palette": "light"
-            }
-        },
-        "site": {
-            "name": "Node-RED Dashboard",
-            "hideToolbar": "false",
-            "allowSwipe": "false",
-            "lockMenu": "false",
-            "allowTempTheme": "true",
-            "dateFormat": "DD/MM/YYYY",
-            "sizes": {
-                "sx": 48,
-                "sy": 48,
-                "gx": 6,
-                "gy": 6,
-                "cx": 6,
-                "cy": 6,
-                "px": 0,
-                "py": 0
-            }
-        }
-    },
-    {
-        "id": "2c8dac57508989f9",
-        "type": "ui_group",
-        "name": "Kalibrasi refill",
-        "tab": "d589d2ac4b631e43",
-        "order": 1,
-        "disp": true,
-        "width": 17,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "dashboard_group",
-        "type": "ui_group",
-        "name": "Default",
-        "tab": "d589d2ac4b631e43",
-        "order": 2,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "97ec7dec260fcfff",
-        "type": "ui_group",
-        "name": "Refill",
-        "tab": "d589d2ac4b631e43",
-        "order": 7,
-        "disp": true,
-        "width": "12",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "cca3d86c822ecc84",
-        "type": "ui_group",
-        "name": "Back",
-        "tab": "d589d2ac4b631e43",
-        "order": 3,
-        "disp": true,
-        "width": 12,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "927599c5aae2a9ff",
-        "type": "ui_spacer",
-        "z": "e1fca49e72b6731a",
-        "name": "spacer",
-        "group": "97ec7dec260fcfff",
-        "order": 2,
-        "width": 12,
-        "height": 1
-    },
-    {
-        "id": "3b53459a7cb58a9f",
-        "type": "ui_spacer",
-        "z": "e1fca49e72b6731a",
-        "name": "spacer",
-        "group": "97ec7dec260fcfff",
-        "order": 4,
-        "width": 12,
-        "height": 1
-    },
-    {
-        "id": "4c280bcd58de80b4",
-        "type": "ui_spacer",
-        "z": "e1fca49e72b6731a",
-        "name": "spacer",
-        "group": "97ec7dec260fcfff",
-        "order": 6,
-        "width": 12,
-        "height": 1
-    },
-    {
-        "id": "d94648ac2f894da3",
-        "type": "ui_spacer",
-        "z": "e1fca49e72b6731a",
-        "name": "spacer",
-        "group": "97ec7dec260fcfff",
-        "order": 8,
-        "width": 12,
-        "height": 1
-    },
-    {
-        "id": "e0355133b74bf228",
-        "type": "ui_spacer",
-        "z": "e1fca49e72b6731a",
-        "name": "spacer",
-        "group": "97ec7dec260fcfff",
-        "order": 10,
-        "width": 12,
-        "height": 1
-    },
-    {
-        "id": "1c4565af3db20a1f",
-        "type": "ui_numeric",
-        "z": "e1fca49e72b6731a",
-        "name": "",
-        "label": "hot250",
-        "tooltip": "",
-        "group": "2c8dac57508989f9",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "wrap": false,
-        "passthru": true,
-        "topic": "topic",
-        "topicType": "msg",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "30",
-        "step": "0.5",
-        "className": "",
-        "x": 350,
-        "y": 200,
-        "wires": [
-            [
-                "dc26363ff11329b0"
-            ]
-        ]
-    },
-    {
-        "id": "020294989a98ee92",
-        "type": "ui_numeric",
-        "z": "e1fca49e72b6731a",
-        "name": "",
-        "label": "normal250",
-        "tooltip": "",
-        "group": "2c8dac57508989f9",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "wrap": false,
-        "passthru": true,
-        "topic": "topic",
-        "topicType": "msg",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "30",
-        "step": "0.5",
-        "className": "",
-        "x": 370,
-        "y": 260,
-        "wires": [
-            [
-                "d0b80d240c3c53ec"
-            ]
-        ]
-    },
-    {
-        "id": "9f0f7c459752e3e5",
-        "type": "ui_numeric",
-        "z": "e1fca49e72b6731a",
-        "name": "",
-        "label": "cold250",
-        "tooltip": "",
-        "group": "2c8dac57508989f9",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "wrap": false,
-        "passthru": true,
-        "topic": "topic",
-        "topicType": "msg",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "30",
-        "step": "0.5",
-        "className": "",
-        "x": 360,
-        "y": 320,
-        "wires": [
-            [
-                "3552c9db48e3f0c5"
-            ]
-        ]
-    },
-    {
-        "id": "351239395009420c",
-        "type": "ui_numeric",
-        "z": "e1fca49e72b6731a",
-        "name": "",
-        "label": "hot500",
-        "tooltip": "",
-        "group": "2c8dac57508989f9",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "wrap": false,
-        "passthru": true,
-        "topic": "topic",
-        "topicType": "msg",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "30",
-        "step": "0.5",
-        "className": "",
-        "x": 350,
-        "y": 380,
-        "wires": [
-            [
-                "db52d612f56843c8"
-            ]
-        ]
-    },
-    {
-        "id": "9f968df4f3b7665e",
-        "type": "ui_numeric",
-        "z": "e1fca49e72b6731a",
-        "name": "",
-        "label": "normal500",
-        "tooltip": "",
-        "group": "2c8dac57508989f9",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "wrap": false,
-        "passthru": true,
-        "topic": "topic",
-        "topicType": "msg",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "30",
-        "step": "0.5",
-        "className": "",
-        "x": 370,
-        "y": 440,
-        "wires": [
-            [
-                "0c08af9743dd7c2f"
-            ]
-        ]
-    },
-    {
-        "id": "da4bb684ee0a2742",
-        "type": "ui_numeric",
-        "z": "e1fca49e72b6731a",
-        "name": "",
-        "label": "cold500",
-        "tooltip": "",
-        "group": "2c8dac57508989f9",
-        "order": 6,
-        "width": 0,
-        "height": 0,
-        "wrap": false,
-        "passthru": true,
-        "topic": "topic",
-        "topicType": "msg",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "30",
-        "step": "0.5",
-        "className": "",
-        "x": 360,
-        "y": 500,
-        "wires": [
-            [
-                "6412e4b6e82ce819"
-            ]
-        ]
-    },
-    {
-        "id": "828d50be77520b5e",
-        "type": "inject",
-        "z": "e1fca49e72b6731a",
-        "name": "",
-        "props": [
-            {
-                "p": "payload.type",
-                "v": "button1",
-                "vt": "str"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 90,
-        "y": 1200,
-        "wires": [
-            [
-                "4c09ed93cbc593e6"
-            ]
-        ]
-    },
-    {
-        "id": "4c09ed93cbc593e6",
-        "type": "switch",
-        "z": "e1fca49e72b6731a",
-        "name": "Switch on type",
-        "property": "payload.type",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "button1",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "button2",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "button3",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "button4",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "button5",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "button6",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "reset",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 7,
-        "x": 400,
-        "y": 1220,
-        "wires": [
-            [
-                "b3ddcf5cb40d5e1f"
-            ],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [
-                "2bb077c9dcdc1562"
-            ]
-        ]
-    },
-    {
-        "id": "727e2d20f539982d",
-        "type": "inject",
-        "z": "e1fca49e72b6731a",
-        "name": "Trigger",
-        "props": [
-            {
-                "p": "payload.type",
-                "v": "reset",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": "",
-        "topic": "",
-        "x": 70,
-        "y": 1340,
-        "wires": [
-            [
-                "4c09ed93cbc593e6"
-            ]
-        ]
-    },
-    {
-        "id": "b3ddcf5cb40d5e1f",
-        "type": "function",
-        "z": "e1fca49e72b6731a",
-        "name": "Retrieve Number",
-        "func": "msg.payload = flow.get('storedNumber1');\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 670,
-        "y": 1160,
-        "wires": [
-            [
-                "964c82852dca2933"
-            ]
-        ]
-    },
-    {
-        "id": "964c82852dca2933",
-        "type": "debug",
-        "z": "e1fca49e72b6731a",
-        "name": "Debug Output",
-        "active": true,
-        "tosidebar": true,
-        "tostatus": false,
-        "complete": "payload",
-        "x": 960,
-        "y": 1180,
-        "wires": []
-    },
-    {
-        "id": "dc26363ff11329b0",
-        "type": "function",
-        "z": "e1fca49e72b6731a",
-        "name": "Save Number",
-        "func": "global.set('storedNumber1', msg.payload);\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 580,
-        "y": 200,
-        "wires": [
-            [
-                "076402fc92265db2"
-            ]
-        ]
-    },
-    {
-        "id": "d0b80d240c3c53ec",
-        "type": "function",
-        "z": "e1fca49e72b6731a",
-        "name": "Save Number",
-        "func": "global.set('storedNumber2', msg.payload);\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 580,
-        "y": 260,
-        "wires": [
-            [
-                "4fb7abda3eb2708b"
-            ]
-        ]
-    },
-    {
-        "id": "3552c9db48e3f0c5",
-        "type": "function",
-        "z": "e1fca49e72b6731a",
-        "name": "Save Number",
-        "func": "global.set('storedNumber3', msg.payload);\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 580,
-        "y": 320,
-        "wires": [
-            [
-                "85e99355785af348"
-            ]
-        ]
-    },
-    {
-        "id": "db52d612f56843c8",
-        "type": "function",
-        "z": "e1fca49e72b6731a",
-        "name": "Save Number",
-        "func": "global.set('storedNumber4', msg.payload);\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 580,
-        "y": 380,
-        "wires": [
-            [
-                "2f6aead61592ebe9"
-            ]
-        ]
-    },
-    {
-        "id": "0c08af9743dd7c2f",
-        "type": "function",
-        "z": "e1fca49e72b6731a",
-        "name": "Save Number",
-        "func": "global.set('storedNumber5', msg.payload);\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 580,
-        "y": 440,
-        "wires": [
-            [
-                "84348ebc960b1262"
-            ]
-        ]
-    },
-    {
-        "id": "6412e4b6e82ce819",
-        "type": "function",
-        "z": "e1fca49e72b6731a",
-        "name": "Save Number",
-        "func": "global.set('storedNumber6', msg.payload);\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 580,
-        "y": 500,
-        "wires": [
-            [
-                "092feb32c6746730"
-            ]
-        ]
-    },
-    {
-        "id": "2bb077c9dcdc1562",
-        "type": "function",
-        "z": "e1fca49e72b6731a",
-        "name": "Retrieve Number",
-        "func": "msg.payload = flow.get('storedNumber4');\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 670,
-        "y": 1220,
-        "wires": [
-            [
-                "43e1b6e2b4fc748b"
-            ]
-        ]
-    },
-    {
-        "id": "43e1b6e2b4fc748b",
-        "type": "debug",
-        "z": "e1fca49e72b6731a",
-        "name": "Debug Output",
-        "active": true,
-        "tosidebar": true,
-        "tostatus": false,
-        "complete": "payload",
-        "x": 940,
-        "y": 1220,
-        "wires": []
-    },
-    {
-        "id": "efbb813771569fd4",
-        "type": "ui_template",
-        "z": "e1fca49e72b6731a",
-        "group": "cca3d86c822ecc84",
-        "name": "Button with Link",
-        "order": 1,
-        "width": "0",
-        "height": "0",
-        "format": "<!DOCTYPE html>\n<html>\n\n<head>\n    <title>My Page</title>\n    <style>\n        button {\n            background-color: #000000;\n            /* Green */\n            border: none;\n            color: white;\n            padding: 15px 32px;\n            text-align: center;\n            text-decoration: none;\n            display: inline-block;\n            font-size: 16px;\n            margin: 4px 2px;\n            cursor: pointer;\n            border-radius: 5px;\n            transition: all 0.3s ease;\n            /* Add transition effect */\n        }\n\n        button:hover {\n            background-color: #008CBA;\n            /* Change color on hover */\n            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);\n            /* Add a shadow */\n        }\n\n        button:active {\n            transform: translateY(2px);\n            /* Slightly move down on click */\n            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);\n            /* Add a more pronounced shadow */\n        }\n\n        .back-button {\n            transition: opacity 0.3s ease;\n        }\n\n        .back-button:active {\n            opacity: 0.5;\n        }\n    </style>\n</head>\n\n<body>\n    <button class=\"back-button\" onclick=\"window.location.href='http://localhost:1880/refill/index.html';\"><h1>Back</h1></button>\n</body>\n\n</html>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": false,
-        "templateScope": "local",
-        "className": "",
-        "x": 560,
-        "y": 120,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "5485f563f5d84436",
-        "type": "ui_button",
-        "z": "e1fca49e72b6731a",
-        "name": "",
-        "group": "97ec7dec260fcfff",
-        "order": 1,
-        "width": 12,
-        "height": 2,
-        "passthru": false,
-        "label": "<h1>250h</h1>",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 940,
-        "y": 200,
-        "wires": [
-            [
-                "ce028be7ce82fd58"
-            ]
-        ]
-    },
-    {
-        "id": "8d6a80f45cc9507a",
-        "type": "ui_button",
-        "z": "e1fca49e72b6731a",
-        "name": "",
-        "group": "97ec7dec260fcfff",
-        "order": 3,
-        "width": 12,
-        "height": 2,
-        "passthru": false,
-        "label": "<h1>250n</h1>",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 940,
-        "y": 260,
-        "wires": [
-            [
-                "13299c6a85bdb0b4"
-            ]
-        ]
-    },
-    {
-        "id": "ec5c904ea4828cb5",
-        "type": "ui_button",
-        "z": "e1fca49e72b6731a",
-        "name": "",
-        "group": "97ec7dec260fcfff",
-        "order": 5,
-        "width": 12,
-        "height": 2,
-        "passthru": false,
-        "label": "<h1>250c</h1>",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 940,
-        "y": 320,
-        "wires": [
-            [
-                "d4f719c8189e3e43"
-            ]
-        ]
-    },
-    {
-        "id": "13ce1f5268485649",
-        "type": "ui_button",
-        "z": "e1fca49e72b6731a",
-        "name": "",
-        "group": "97ec7dec260fcfff",
-        "order": 7,
-        "width": 12,
-        "height": 2,
-        "passthru": false,
-        "label": "<h1>500h</h1>",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 940,
-        "y": 380,
-        "wires": [
-            [
-                "17568add2c0efa92"
-            ]
-        ]
-    },
-    {
-        "id": "0b440d797b0354c5",
-        "type": "ui_button",
-        "z": "e1fca49e72b6731a",
-        "name": "",
-        "group": "97ec7dec260fcfff",
-        "order": 9,
-        "width": 12,
-        "height": 2,
-        "passthru": false,
-        "label": "<h1>500n</h1>",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 940,
-        "y": 440,
-        "wires": [
-            [
-                "4e5d7e12797afdae"
-            ]
-        ]
-    },
-    {
-        "id": "1cac0d07b65b7846",
-        "type": "ui_button",
-        "z": "e1fca49e72b6731a",
-        "name": "",
-        "group": "97ec7dec260fcfff",
-        "order": 11,
-        "width": 12,
-        "height": 2,
-        "passthru": false,
-        "label": "<h1>500c</h1>",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 940,
-        "y": 500,
-        "wires": [
-            [
-                "b814ac122c2d5619"
-            ]
-        ]
-    },
-    {
-        "id": "ce028be7ce82fd58",
-        "type": "function",
-        "z": "e1fca49e72b6731a",
-        "name": "Retrieve Number",
-        "func": "msg.payload = global.get('storedNumber1');\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1090,
-        "y": 200,
-        "wires": [
-            [
-                "659e2102beec331b"
-            ]
-        ]
-    },
-    {
-        "id": "13299c6a85bdb0b4",
-        "type": "function",
-        "z": "e1fca49e72b6731a",
-        "name": "Retrieve Number",
-        "func": "msg.payload = global.get('storedNumber2');\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1090,
-        "y": 260,
-        "wires": [
-            [
-                "35d233b9f6c471da"
-            ]
-        ]
-    },
-    {
-        "id": "d4f719c8189e3e43",
-        "type": "function",
-        "z": "e1fca49e72b6731a",
-        "name": "Retrieve Number",
-        "func": "msg.payload = global.get('storedNumber3');\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1090,
-        "y": 320,
-        "wires": [
-            [
-                "1a9cc4b61873ee5e"
-            ]
-        ]
-    },
-    {
-        "id": "17568add2c0efa92",
-        "type": "function",
-        "z": "e1fca49e72b6731a",
-        "name": "Retrieve Number",
-        "func": "msg.payload = global.get('storedNumber4');\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1090,
-        "y": 380,
-        "wires": [
-            [
-                "71622eed1b8b4433"
-            ]
-        ]
-    },
-    {
-        "id": "4e5d7e12797afdae",
-        "type": "function",
-        "z": "e1fca49e72b6731a",
-        "name": "Retrieve Number",
-        "func": "msg.payload = global.get('storedNumber5');\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1090,
-        "y": 440,
-        "wires": [
-            [
-                "a86eafae62d7d0c9"
-            ]
-        ]
-    },
-    {
-        "id": "b814ac122c2d5619",
-        "type": "function",
-        "z": "e1fca49e72b6731a",
-        "name": "Retrieve Number",
-        "func": "msg.payload = global.get('storedNumber6');\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1090,
-        "y": 500,
-        "wires": [
-            [
-                "e2354c0b647ec6bd"
-            ]
-        ]
-    },
-    {
-        "id": "659e2102beec331b",
-        "type": "link out",
-        "z": "e1fca49e72b6731a",
-        "name": "link out 14",
-        "mode": "link",
-        "links": [
-            "420d0ebd10067d69"
-        ],
-        "x": 1275,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "35d233b9f6c471da",
-        "type": "link out",
-        "z": "e1fca49e72b6731a",
-        "name": "link out 15",
-        "mode": "link",
-        "links": [
-            "40316533332b0fb5"
-        ],
-        "x": 1275,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "1a9cc4b61873ee5e",
-        "type": "link out",
-        "z": "e1fca49e72b6731a",
-        "name": "link out 16",
-        "mode": "link",
-        "links": [
-            "7ff9c42d38112d9f"
-        ],
-        "x": 1275,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "a86eafae62d7d0c9",
-        "type": "link out",
-        "z": "e1fca49e72b6731a",
-        "name": "link out 18",
-        "mode": "link",
-        "links": [
-            "0e93fd7bfc25cd6d"
-        ],
-        "x": 1275,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "e2354c0b647ec6bd",
-        "type": "link out",
-        "z": "e1fca49e72b6731a",
-        "name": "link out 19",
-        "mode": "link",
-        "links": [
-            "eda127c63177076f"
-        ],
-        "x": 1275,
-        "y": 500,
-        "wires": []
-    },
-    {
-        "id": "71622eed1b8b4433",
-        "type": "link out",
-        "z": "e1fca49e72b6731a",
-        "name": "link out 20",
-        "mode": "link",
-        "links": [
-            "e490dd3073442360"
-        ],
-        "x": 1275,
-        "y": 380,
-        "wires": []
-    },
-    {
-        "id": "076402fc92265db2",
-        "type": "file",
-        "z": "e1fca49e72b6731a",
-        "name": "250h",
-        "filename": "/home/arthatronic/Documents/data_payload/payload_250h.txt",
-        "filenameType": "str",
-        "appendNewline": false,
-        "createDir": true,
-        "overwriteFile": "true",
-        "encoding": "none",
-        "x": 710,
-        "y": 200,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "4fb7abda3eb2708b",
-        "type": "file",
-        "z": "e1fca49e72b6731a",
-        "name": "250n",
-        "filename": "/home/arthatronic/Documents/data_payload/payload_250n.txt",
-        "filenameType": "str",
-        "appendNewline": false,
-        "createDir": true,
-        "overwriteFile": "true",
-        "encoding": "none",
-        "x": 710,
-        "y": 260,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "85e99355785af348",
-        "type": "file",
-        "z": "e1fca49e72b6731a",
-        "name": "250c",
-        "filename": "/home/arthatronic/Documents/data_payload/payload_250c.txt",
-        "filenameType": "str",
-        "appendNewline": false,
-        "createDir": true,
-        "overwriteFile": "true",
-        "encoding": "none",
-        "x": 710,
-        "y": 320,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "2f6aead61592ebe9",
-        "type": "file",
-        "z": "e1fca49e72b6731a",
-        "name": "500h",
-        "filename": "/home/arthatronic/Documents/data_payload/payload_500h.txt",
-        "filenameType": "str",
-        "appendNewline": false,
-        "createDir": true,
-        "overwriteFile": "true",
-        "encoding": "none",
-        "x": 710,
-        "y": 380,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "84348ebc960b1262",
-        "type": "file",
-        "z": "e1fca49e72b6731a",
-        "name": "500n",
-        "filename": "/home/arthatronic/Documents/data_payload/payload_500n.txt",
-        "filenameType": "str",
-        "appendNewline": false,
-        "createDir": true,
-        "overwriteFile": "true",
-        "encoding": "none",
-        "x": 710,
-        "y": 440,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "092feb32c6746730",
-        "type": "file",
-        "z": "e1fca49e72b6731a",
-        "name": "500c",
-        "filename": "/home/arthatronic/Documents/data_payload/payload_500c.txt",
-        "filenameType": "str",
-        "appendNewline": false,
-        "createDir": true,
-        "overwriteFile": "true",
-        "encoding": "none",
-        "x": 710,
-        "y": 500,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "fb95436e670bd7d2",
-        "type": "file in",
-        "z": "e1fca49e72b6731a",
-        "name": "250h",
-        "filename": "/home/arthatronic/Documents/data_payload/payload_250h.txt",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 190,
-        "y": 200,
-        "wires": [
-            [
-                "1c4565af3db20a1f"
-            ]
-        ]
-    },
-    {
-        "id": "890f1a78b4c270ea",
-        "type": "file in",
-        "z": "e1fca49e72b6731a",
-        "name": "250n",
-        "filename": "/home/arthatronic/Documents/data_payload/payload_250n.txt",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 190,
-        "y": 260,
-        "wires": [
-            [
-                "020294989a98ee92"
-            ]
-        ]
-    },
-    {
-        "id": "753d4fbfdafef34d",
-        "type": "file in",
-        "z": "e1fca49e72b6731a",
-        "name": "250c",
-        "filename": "/home/arthatronic/Documents/data_payload/payload_250c.txt",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 190,
-        "y": 320,
-        "wires": [
-            [
-                "9f0f7c459752e3e5"
-            ]
-        ]
-    },
-    {
-        "id": "4a2b9c37693d8210",
-        "type": "file in",
-        "z": "e1fca49e72b6731a",
-        "name": "500h",
-        "filename": "/home/arthatronic/Documents/data_payload/payload_500h.txt",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 190,
-        "y": 380,
-        "wires": [
-            [
-                "351239395009420c"
-            ]
-        ]
-    },
-    {
-        "id": "ae79e37159f03029",
-        "type": "file in",
-        "z": "e1fca49e72b6731a",
-        "name": "500n",
-        "filename": "/home/arthatronic/Documents/data_payload/payload_500n.txt",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 190,
-        "y": 440,
-        "wires": [
-            [
-                "9f968df4f3b7665e"
-            ]
-        ]
-    },
-    {
-        "id": "16a6feeb2bdf65b8",
-        "type": "file in",
-        "z": "e1fca49e72b6731a",
-        "name": "500c",
-        "filename": "/home/arthatronic/Documents/data_payload/payload_500c.txt",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 190,
-        "y": 500,
-        "wires": [
-            [
-                "da4bb684ee0a2742"
-            ]
-        ]
-    },
-    {
-        "id": "62efae6ae7b4b3ad",
-        "type": "link in",
-        "z": "e1fca49e72b6731a",
-        "name": "link in 12",
-        "links": [
-            "7ac0c499d93ec047"
-        ],
-        "x": 65,
-        "y": 340,
-        "wires": [
-            [
-                "fb95436e670bd7d2",
-                "890f1a78b4c270ea",
-                "753d4fbfdafef34d",
-                "4a2b9c37693d8210",
-                "ae79e37159f03029",
-                "16a6feeb2bdf65b8"
-            ]
-        ]
-    },
-    {
-        "id": "7ac0c499d93ec047",
-        "type": "link out",
-        "z": "e1fca49e72b6731a",
-        "name": "link out 21",
-        "mode": "link",
-        "links": [
-            "62efae6ae7b4b3ad"
-        ],
-        "x": 275,
-        "y": 120,
-        "wires": []
-    },
-    {
-        "id": "c8f0204fcf5e9f77",
-        "type": "inject",
-        "z": "e1fca49e72b6731a",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "2",
-        "topic": "",
-        "payload": "1",
-        "payloadType": "num",
-        "x": 130,
-        "y": 120,
-        "wires": [
-            [
-                "7ac0c499d93ec047"
             ]
         ]
     }
