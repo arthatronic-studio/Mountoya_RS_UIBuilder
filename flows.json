@@ -1723,7 +1723,7 @@
                 "p": "payload"
             }
         ],
-        "repeat": "1",
+        "repeat": "0.5",
         "crontab": "",
         "once": true,
         "onceDelay": 0.1,
