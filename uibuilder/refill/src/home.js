@@ -9,8 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const initialVolume = 19000; // Initial volume in ml
     const waktuTimeout = 30000;
 
-    let volumeliters = 0;
-
     let selectedOption = '';
 
     // Inisialisasi volume dari localStorage atau nilai default
@@ -127,17 +125,29 @@ document.addEventListener('DOMContentLoaded', function () {
             console.log('Unexpected payload:', msg.payload);
         }
         // Update volumeliters with the value received from Node-RED
-        if (msg.payload && msg.payload.volumeliters !== undefined) {
-            volumeliters = msg.payload.volumeliters;
+        // if (msg.payload && msg.payload.volumeliters !== undefined) {
+        //     let volumeliters = msg.payload.volumeliters;
+        //     // localStorage.setItem('volumeliters', volumeliters);
+        //     // x -= volumeliters;
+        //     x = initialVolume - volumeliters;
+        //     localStorage.setItem('totalVolume', x);
+        //     localStorage.setItem('waterFlow', volumeliters);
+        //     updateTotalVolumeDisplay();
+        // } else {
+        //     console.log('Payload does not contain volumeliters:', msg.payload);
+        // }
+
+        // Update 29-08-24 ///////////////////
+        if (msg.payload.messageGalon >= 0) {
+            let volumeliters = msg.payload.messageGalon;
             // localStorage.setItem('volumeliters', volumeliters);
             // x -= volumeliters;
             x = initialVolume - volumeliters;
             localStorage.setItem('totalVolume', x);
             localStorage.setItem('waterFlow', volumeliters);
             updateTotalVolumeDisplay();
-        } else {
-            console.log('Payload does not contain volumeliters:', msg.payload);
         }
+        ///////////////////////////////////////
 
         clearTimeout(timeOutBalik);
         timeOutBalik = setTimeout(function () {
