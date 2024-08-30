@@ -101,12 +101,14 @@
             "72de7a07dffcf16c",
             "d4e0c72ff820e048",
             "a54cbb1929845ad5",
-            "011c7d3566838961"
+            "011c7d3566838961",
+            "de2361cf3e35d705",
+            "a4b070f17af03980"
         ],
         "x": 54,
         "y": -1,
         "w": 1862,
-        "h": 742
+        "h": 749.5
     },
     {
         "id": "47a9baa3568d6361",
@@ -1897,6 +1899,57 @@
             [
                 "f1c25ce41202d813"
             ]
+        ]
+    },
+    {
+        "id": "de2361cf3e35d705",
+        "type": "inject",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "300",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 1490,
+        "y": 700,
+        "wires": [
+            [
+                "a4b070f17af03980"
+            ]
+        ]
+    },
+    {
+        "id": "a4b070f17af03980",
+        "type": "exec",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "command": "rm -rf ~/.cache/chromium",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 1690,
+        "y": 700,
+        "wires": [
+            [],
+            [],
+            []
         ]
     },
     {
