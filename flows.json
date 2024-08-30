@@ -1222,9 +1222,7 @@
         "x": 690,
         "y": 400,
         "wires": [
-            [
-                "e70a7eac5aa1292c"
-            ]
+            []
         ]
     },
     {
@@ -1838,9 +1836,9 @@
                 "vt": "str"
             }
         ],
-        "repeat": "",
+        "repeat": "1",
         "crontab": "",
-        "once": false,
+        "once": true,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "1",
