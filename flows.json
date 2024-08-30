@@ -1273,7 +1273,7 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "Save data waterflow",
-        "func": "msg.payload = flow.get(\"volumeliters\");;\nreturn msg;",
+        "func": "msg.payload = parseInt(flow.get(\"volumeliters\"));\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
