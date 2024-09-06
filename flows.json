@@ -71,7 +71,6 @@
             "674226255c184b27",
             "ee35fa8f00e5fb60",
             "f1c25ce41202d813",
-            "9e715bfcb567f4aa",
             "8259c8deb91a5620",
             "ab6dc3d12e5bfd40",
             "06812eb9b6ee6560",
@@ -101,7 +100,8 @@
             "72de7a07dffcf16c",
             "d4e0c72ff820e048",
             "a54cbb1929845ad5",
-            "011c7d3566838961"
+            "011c7d3566838961",
+            "9e715bfcb567f4aa"
         ],
         "x": 54,
         "y": -1,
@@ -804,7 +804,8 @@
         "y": 440,
         "wires": [
             [
-                "ce57fc889764cc90"
+                "ce57fc889764cc90",
+                "9e715bfcb567f4aa"
             ]
         ]
     },
@@ -1320,24 +1321,6 @@
                 "a54cbb1929845ad5"
             ]
         ]
-    },
-    {
-        "id": "9e715bfcb567f4aa",
-        "type": "debug",
-        "z": "93cd7eb94b5de81b",
-        "g": "d578f4fe739b97e1",
-        "name": "Out Waterflow",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1680,
-        "y": 620,
-        "wires": []
     },
     {
         "id": "8259c8deb91a5620",
@@ -1897,9 +1880,7 @@
         "x": 1480,
         "y": 620,
         "wires": [
-            [
-                "9e715bfcb567f4aa"
-            ]
+            []
         ]
     },
     {
@@ -1931,6 +1912,24 @@
                 "f1c25ce41202d813"
             ]
         ]
+    },
+    {
+        "id": "9e715bfcb567f4aa",
+        "type": "debug",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "Out Waterflow",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1180,
+        "y": 440,
+        "wires": []
     },
     {
         "id": "26d7c35f76abc909",
