@@ -1846,11 +1846,12 @@
         "topic": "",
         "payload": "0",
         "payloadType": "num",
-        "x": 1050,
+        "x": 1230,
         "y": 540,
         "wires": [
             [
-                "06812eb9b6ee6560"
+                "062c2fd80de87db2",
+                "5180a2ce4586db3d"
             ]
         ]
     },
