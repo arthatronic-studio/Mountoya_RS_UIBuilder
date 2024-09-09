@@ -1844,12 +1844,14 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "1",
+        "payload": "0",
         "payloadType": "num",
-        "x": 730,
-        "y": 360,
+        "x": 1050,
+        "y": 540,
         "wires": [
-            []
+            [
+                "06812eb9b6ee6560"
+            ]
         ]
     },
     {
