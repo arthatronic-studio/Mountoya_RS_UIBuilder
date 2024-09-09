@@ -1839,9 +1839,9 @@
                 "vt": "str"
             }
         ],
-        "repeat": "0.1",
+        "repeat": "",
         "crontab": "",
-        "once": true,
+        "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "0",
