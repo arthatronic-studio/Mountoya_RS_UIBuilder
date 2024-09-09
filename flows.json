@@ -1880,7 +1880,7 @@
         "type": "exec",
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
-        "command": "sudo rm -rf /tmp",
+        "command": "sudo rm -rf /tmp/",
         "addpay": "",
         "append": "",
         "useSpawn": "false",
