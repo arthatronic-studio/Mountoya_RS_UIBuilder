@@ -765,7 +765,7 @@
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
         "name": "waterflow_Function v3",
-        "func": "let pulseCount = context.get('pulseCount') || 0;\nlet volumeliters = flow.get('volumeliters') || 0;\nlet last_volumeliters = 0;\nlet waterFlow = 0;\n\n\nif (msg.payload.status === 'send') {\n    volumeliters = msg.payload.nilaiWaterflow;\n    }\nelse {\n    if (msg.payload === 1){\n        volumeliters += 1000 / 150;\n        }\n    }\n\n\ncontext.set('pulseCount', pulseCount);\nflow.set('volumeliters', volumeliters);\n\nmsg.payload = {\n    pulseCount: pulseCount.toFixed(2),\n    volumeliters: parseInt(flow.get(\"volumeliters\"))\n};\n\nreturn msg;\n",
+        "func": "\nlet volumeliters = flow.get('volumeliters') || 0;\nlet last_volumeliters = 0;\nlet waterFlow = 0;\n\n\nif (msg.payload.status === 'send') {\n    volumeliters = msg.payload.nilaiWaterflow;\n    }\nelse {\n    if (msg.payload === 1){\n        volumeliters += 1000 / 150;\n        }\n    }\n\nflow.set('volumeliters', volumeliters);\n\nmsg.payload = {\n    volumeliters: parseInt(flow.get(\"volumeliters\"))\n};\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
