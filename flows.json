@@ -104,7 +104,8 @@
             "a4b070f17af03980",
             "0966792429c23b01",
             "2f540420e1765090",
-            "a6a0bd6b7f11761d"
+            "a6a0bd6b7f11761d",
+            "1600d7216e1a5921"
         ],
         "x": 54,
         "y": -1,
@@ -1954,6 +1955,32 @@
         "y": 360,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "1600d7216e1a5921",
+        "type": "inject",
+        "z": "93cd7eb94b5de81b",
+        "g": "d578f4fe739b97e1",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "5",
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 1470,
+        "y": 700,
+        "wires": [
+            [
+                "a4b070f17af03980"
+            ]
         ]
     },
     {
