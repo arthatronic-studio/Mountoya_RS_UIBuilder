@@ -1880,7 +1880,7 @@
         "type": "exec",
         "z": "93cd7eb94b5de81b",
         "g": "d578f4fe739b97e1",
-        "command": "rm -rf ~/.cache/chromium",
+        "command": "sudo rm -rf /tmp",
         "addpay": "",
         "append": "",
         "useSpawn": "false",
@@ -1888,7 +1888,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 1690,
+        "x": 1660,
         "y": 700,
         "wires": [
             [],
@@ -1968,10 +1968,10 @@
                 "p": "payload"
             }
         ],
-        "repeat": "",
+        "repeat": "3600",
         "crontab": "",
-        "once": false,
-        "onceDelay": "5",
+        "once": true,
+        "onceDelay": "1",
         "topic": "",
         "payload": "1",
         "payloadType": "num",
